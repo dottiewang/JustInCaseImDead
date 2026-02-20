@@ -1,0 +1,12 @@
+const cartItems = document.getElementById("cart-items");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const productName = button.parentElement.querySelector("h2").innerText;
+        const productPrice = button.parentElement.querySelector("p").innerText;
+        const li = document.createElement("li");
+        li.innerText = `${productName} - ${productPrice}`;
+        cartItems.appendChild(li);
+    });
+});
