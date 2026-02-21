@@ -67,7 +67,7 @@ h1 {
     margin-bottom: 8px;
 }
 
-body:has(.subscriptions-header) #premium-plan {
+.subscriptions-page #premium-plan {
     margin-top: -24px;
 }
 
