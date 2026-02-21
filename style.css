@@ -2,30 +2,32 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
+    background-color: #000;
+    color: #fff;
 }
 
 header {
-    background-color: #635BFF;
-    color: white;
+    background-color: #000;
+    color: #fff;
     padding: 10px;
     margin-bottom: 20px;
 }
 
 .product {
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     padding: 10px;
     margin: 10px;
     display: inline-block;
 }
 
 button {
-    background-color: #635BFF;
-    color: white;
-    border: none;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
     padding: 5px 10px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #4a44c1;
+    background-color: #000;
 }
