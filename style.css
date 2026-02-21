@@ -61,7 +61,7 @@ h1 {
 
 .premium-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 24px;
     text-align: left;
 }
@@ -78,6 +78,16 @@ h1 {
 
 .premium-column ol {
     padding-left: 20px;
+}
+
+.premium-columns .premium-column:last-child ol {
+    columns: 2;
+    column-gap: 28px;
+}
+
+.premium-columns .premium-column:last-child ol > li {
+    break-inside: avoid;
+    margin-bottom: 12px;
 }
 
 .premium-column ul {
