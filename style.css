@@ -8,7 +8,6 @@ body {
     margin: 20px;
     background-color: #000;
     color: #fff;
-    line-height: 1.4;
 }
 
 img {
@@ -234,8 +233,6 @@ button:hover {
 @media (max-width: 768px) {
     body {
         margin: 12px;
-        font-size: 18px;
-        line-height: 1.55;
     }
 
     html {
@@ -252,22 +249,7 @@ button:hover {
     }
 
     h1 {
-        font-size: 1.55rem;
-    }
-
-    h2 {
         font-size: 1.35rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    p,
-    li,
-    a,
-    button {
-        font-size: 1rem;
     }
 
     .premium-columns {
@@ -302,11 +284,6 @@ button:hover {
 
     #checkout-summary {
         width: 100%;
-    }
-
-    button {
-        min-height: 44px;
-        padding: 10px 14px;
     }
 
     .subscriptions-page {
@@ -394,5 +371,6 @@ button:hover {
     .subscriptions-page button {
         font-size: 0.95rem;
         padding: 8px 10px;
+        min-height: 40px;
     }
 }
