@@ -30,6 +30,20 @@ h1 {
     margin: 0;
 }
 
+#templates ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+#templates li {
+    margin: 6px 0;
+}
+
+#templates a {
+    color: #fff;
+}
+
 .product {
     border: 1px solid #fff;
     padding: 10px;
