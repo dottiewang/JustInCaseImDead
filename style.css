@@ -13,6 +13,23 @@ header {
     margin-bottom: 20px;
 }
 
+.tagline-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.site-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+h1 {
+    margin: 0;
+}
+
 .product {
     border: 1px solid #fff;
     padding: 10px;
