@@ -99,7 +99,7 @@ h1 {
 .price-options {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 6px;
+    gap: 14px;
     justify-content: center;
     margin-top: -12px;
 }
