@@ -368,3 +368,31 @@ button:hover {
         font-size: 15px;
     }
 }
+
+@media (max-width: 430px) {
+    .subscriptions-page {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .subscriptions-page h1 {
+        font-size: 1.2rem;
+    }
+
+    .subscriptions-page h2 {
+        font-size: 1.05rem;
+    }
+
+    .subscriptions-page h3 {
+        font-size: 1rem;
+    }
+
+    .subscriptions-page .premium-column {
+        padding: 8px;
+    }
+
+    .subscriptions-page button {
+        font-size: 0.95rem;
+        padding: 8px 10px;
+    }
+}
