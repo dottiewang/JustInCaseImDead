@@ -44,6 +44,12 @@ h1 {
     color: #fff;
 }
 
+#recommendations ul,
+#cart ul {
+    list-style: none;
+    padding: 0;
+}
+
 .product {
     border: 1px solid #fff;
     padding: 10px;
