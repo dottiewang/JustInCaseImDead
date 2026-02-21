@@ -94,19 +94,13 @@ h1 {
 
 .premium-columns .premium-column:first-child h2 {
     text-decoration: underline;
-    margin-bottom: 6px;
-}
-
-.premium-title-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 .price-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
-    margin-top: 0;
+    margin-top: -12px;
 }
 
 .price-option {
