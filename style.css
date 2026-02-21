@@ -80,6 +80,10 @@ h1 {
     margin-top: -10px;
 }
 
+.premium-columns .premium-column:first-child h2 {
+    text-decoration: underline;
+}
+
 .premium-columns .premium-column:last-child h3 {
     text-align: center;
 }
