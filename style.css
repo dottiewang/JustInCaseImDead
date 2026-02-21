@@ -90,6 +90,7 @@ h1 {
 
 .premium-columns .premium-column:last-child {
     border: 1px solid #fff;
+    margin-top: -14px;
 }
 
 .premium-column ol {
