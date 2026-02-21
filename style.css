@@ -435,7 +435,7 @@ button:hover {
     }
 
     .subscriptions-page .price-options {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         max-width: 100%;
         gap: 12px;
     }
