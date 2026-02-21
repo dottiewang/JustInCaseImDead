@@ -108,11 +108,11 @@ h1 {
 }
 
 .price-options .price-option:first-child {
-    margin-left: 42px;
+    margin-left: 72px;
 }
 
 .price-options .price-option:last-child {
-    margin-right: 42px;
+    margin-right: 72px;
 }
 
 .price-option p {
