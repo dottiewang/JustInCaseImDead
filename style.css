@@ -59,6 +59,18 @@ h1 {
     margin: 0 auto;
 }
 
+.subscriptions-tagline-row {
+    justify-content: flex-start;
+}
+
+.subscriptions-header {
+    margin-bottom: 8px;
+}
+
+body:has(.subscriptions-header) #premium-plan {
+    margin-top: -24px;
+}
+
 .premium-columns {
     display: grid;
     grid-template-columns: 1fr;
