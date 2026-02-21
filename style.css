@@ -348,8 +348,8 @@ button:hover {
 
 @media (max-width: 430px) {
     .subscriptions-page {
-        font-size: 13px;
-        line-height: 1.3;
+        font-size: 12px;
+        line-height: 1.25;
     }
 
     .subscriptions-page main {
@@ -362,42 +362,42 @@ button:hover {
     }
 
     .subscriptions-page h1 {
-        font-size: 1.05rem;
-    }
-
-    .subscriptions-page h2 {
         font-size: 0.95rem;
     }
 
-    .subscriptions-page h3 {
+    .subscriptions-page h2 {
         font-size: 0.9rem;
+    }
+
+    .subscriptions-page h3 {
+        font-size: 0.85rem;
     }
 
     .subscriptions-page p,
     .subscriptions-page li,
     .subscriptions-page a,
     .subscriptions-page button {
-        font-size: 0.85rem;
+        font-size: 0.78rem;
     }
 
     .subscriptions-page .premium-column {
-        padding: 6px;
+        padding: 5px;
     }
 
     .subscriptions-page .premium-columns {
-        gap: 14px;
+        gap: 10px;
     }
 
     .subscriptions-page .premium-feature-columns {
-        gap: 8px;
+        gap: 6px;
     }
 
     .subscriptions-page .premium-feature-columns ol > li {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
     .subscriptions-page button {
-        padding: 6px 8px;
-        min-height: 34px;
+        padding: 5px 7px;
+        min-height: 30px;
     }
 }
