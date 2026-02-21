@@ -96,6 +96,16 @@ h1 {
     text-decoration: underline;
 }
 
+.price-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.price-option p {
+    margin: 0 0 10px 0;
+}
+
 .premium-columns .premium-column:last-child h3 {
     text-align: center;
 }
