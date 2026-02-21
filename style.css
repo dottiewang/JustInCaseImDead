@@ -96,12 +96,17 @@ h1 {
     padding-left: 20px;
 }
 
-.premium-columns .premium-column:last-child ol {
-    columns: 2;
-    column-gap: 28px;
+.premium-feature-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
 }
 
-.premium-columns .premium-column:last-child ol > li {
+.premium-feature-columns ol {
+    margin: 0;
+}
+
+.premium-feature-columns ol > li {
     break-inside: avoid;
     margin-bottom: 12px;
 }
