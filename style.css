@@ -63,6 +63,13 @@ h1 {
     margin: 0 auto;
 }
 
+#checkout-summary {
+    max-width: 520px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
 .subscriptions-tagline-row {
     justify-content: center;
 }
