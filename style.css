@@ -102,7 +102,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
-    margin-top: 14px;
+    margin-top: 6px;
 }
 
 .price-option {
