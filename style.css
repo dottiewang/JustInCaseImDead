@@ -93,14 +93,16 @@ h1 {
 }
 
 .premium-columns .premium-column:first-child h2 {
-    text-decoration: underline;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 4px 12px;
 }
 
 .price-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
-    margin-top: -12px;
+    margin-top: 14px;
 }
 
 .price-option {
@@ -108,11 +110,11 @@ h1 {
 }
 
 .price-options .price-option:first-child {
-    margin-left: 72px;
+    margin-left: 300px;
 }
 
 .price-options .price-option:last-child {
-    margin-right: 72px;
+    margin-right: 300px;
 }
 
 .price-option p {
