@@ -67,7 +67,6 @@ h1 {
 }
 
 .premium-column {
-    border: 1px solid #fff;
     padding: 16px;
 }
 
@@ -78,6 +77,7 @@ h1 {
 
 .premium-columns .premium-column:first-child {
     text-align: center;
+    margin-top: -10px;
 }
 
 .premium-columns .premium-column:last-child h3 {
