@@ -7,21 +7,8 @@
     <link rel="stylesheet" href="style.css?v=20260221-1">
     <style>
         @media (max-width: 430px) {
-            .subscriptions-page .price-options {
-                display: flex !important;
-                flex-direction: row !important;
-                flex-wrap: nowrap !important;
-                gap: 8px !important;
-            }
-
-            .subscriptions-page .price-option {
-                width: 50% !important;
-                max-width: 50% !important;
-                flex: 0 0 50% !important;
-            }
-
             .subscriptions-page #premium-plan {
-                margin-top: -8px !important;
+                margin-top: -12px !important;
             }
         }
     </style>
@@ -39,12 +26,12 @@
             <div class="premium-columns">
                 <div class="premium-column">
                     <h2>Premium Plan</h2>
-                    <div class="price-options">
-                        <div class="price-option">
+                    <div class="price-options" style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:8px; max-width:100%; margin:6px auto 0;">
+                        <div class="price-option" style="flex:1 1 0; width:50%; max-width:50%; min-width:0;">
                             <p>$9.99 per month</p>
                             <button data-plan="Premium Plan - Monthly" data-price="$9.99" data-billing="per month">Add to Cart</button>
                         </div>
-                        <div class="price-option">
+                        <div class="price-option" style="flex:1 1 0; width:50%; max-width:50%; min-width:0;">
                             <p>$100 per year</p>
                             <p class="billed-note">(billed annually in advance)</p>
                             <button data-plan="Premium Plan - Yearly" data-price="$100" data-billing="per year (billed annually in advance)">Add to Cart</button>
