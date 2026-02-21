@@ -429,13 +429,18 @@ button:hover {
         gap: 16px;
     }
 
+    .subscriptions-page #premium-plan {
+        margin-top: -8px;
+    }
+
     .subscriptions-page .premium-columns .premium-column:first-child,
     .subscriptions-page .premium-columns .premium-column:last-child {
         margin-top: 0;
     }
 
     .subscriptions-page .price-options {
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-wrap: nowrap;
         max-width: 100%;
         gap: 12px;
     }
@@ -445,6 +450,8 @@ button:hover {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        flex: 1 1 0;
+        min-width: 0;
         min-height: 170px;
     }
 
