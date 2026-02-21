@@ -99,7 +99,7 @@ h1 {
 .price-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2px;
+    gap: 0;
 }
 
 .price-option p {
@@ -112,7 +112,7 @@ h1 {
 
 .premium-columns .premium-column:last-child {
     border: 1px solid #fff;
-    margin-top: -26px;
+    margin-top: -40px;
 }
 
 .premium-column ol {
