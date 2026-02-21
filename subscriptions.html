@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just In Case - Subscriptions</title>
     <link rel="stylesheet" href="style.css?v=20260221-1">
+    <style>
+        @media (max-width: 430px) {
+            .subscriptions-page .price-options {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                gap: 8px !important;
+            }
+
+            .subscriptions-page .price-option {
+                width: 50% !important;
+                max-width: 50% !important;
+                flex: 0 0 50% !important;
+            }
+
+            .subscriptions-page #premium-plan {
+                margin-top: -8px !important;
+            }
+        }
+    </style>
 </head>
 <body class="subscriptions-page">
     <header class="subscriptions-header">
