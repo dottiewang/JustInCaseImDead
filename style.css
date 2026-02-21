@@ -100,10 +100,11 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
+    margin-top: -12px;
 }
 
 .price-option p {
-    margin: 0 0 10px 0;
+    margin: 0 0 4px 0;
 }
 
 .premium-columns .premium-column:last-child h3 {
