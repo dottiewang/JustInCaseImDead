@@ -98,14 +98,21 @@ h1 {
 
 .price-options {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     gap: 14px;
-    justify-content: center;
     margin-top: -12px;
+}
+
+.price-option {
+    text-align: center;
 }
 
 .price-option p {
     margin: 0 0 4px 0;
+}
+
+.billed-note {
+    text-align: center;
 }
 
 .premium-columns .premium-column:last-child h3 {
