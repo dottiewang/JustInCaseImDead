@@ -50,6 +50,10 @@ h1 {
     padding: 0;
 }
 
+#cart {
+    margin-top: 24px;
+}
+
 .product {
     border: 1px solid #fff;
     padding: 10px;
