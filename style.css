@@ -1,9 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
     background-color: #000;
     color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
 }
 
 a {
@@ -22,6 +37,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 .site-logo {
@@ -32,6 +48,7 @@ header {
 
 h1 {
     margin: 0;
+    line-height: 1.2;
 }
 
 #templates ul {
@@ -114,6 +131,9 @@ h1 {
     grid-template-columns: 1fr 1fr;
     gap: 14px;
     margin-top: 6px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .price-option {
@@ -121,11 +141,11 @@ h1 {
 }
 
 .price-options .price-option:first-child {
-    margin-left: 300px;
+    margin-left: 0;
 }
 
 .price-options .price-option:last-child {
-    margin-right: 300px;
+    margin-right: 0;
 }
 
 .price-option p {
@@ -208,4 +228,91 @@ button {
 
 button:hover {
     background-color: #000;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 12px;
+    }
+
+    header {
+        padding: 8px;
+    }
+
+    .site-logo {
+        width: 56px;
+        height: 56px;
+    }
+
+    h1 {
+        font-size: 1.35rem;
+    }
+
+    .premium-columns {
+        gap: 24px;
+    }
+
+    .premium-column {
+        padding: 12px;
+    }
+
+    .premium-columns .premium-column:first-child,
+    .premium-columns .premium-column:last-child {
+        margin-top: 0;
+    }
+
+    .price-options {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .premium-feature-columns {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .premium-feature-columns .feature-bottom {
+        grid-column: auto;
+        max-width: 100%;
+        margin: 0;
+        transform: none;
+    }
+
+    #checkout-summary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        margin: 8px;
+    }
+
+    main {
+        padding: 0 8px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    h2,
+    h3 {
+        font-size: 1rem;
+    }
+
+    .premium-column {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 8px 10px;
+    }
+
+    .premium-feature-columns ol,
+    .premium-column ul,
+    .premium-column li {
+        overflow-wrap: anywhere;
+    }
 }
