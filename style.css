@@ -396,6 +396,16 @@ button:hover {
         margin-bottom: 6px;
     }
 
+    .subscriptions-page .premium-column ol,
+    .subscriptions-page .premium-column ul {
+        padding-left: 12px;
+        margin: 0;
+    }
+
+    .subscriptions-page .premium-column li {
+        margin-bottom: 2px;
+    }
+
     .subscriptions-page button {
         padding: 5px 7px;
         min-height: 30px;
