@@ -80,6 +80,10 @@ h1 {
     text-align: center;
 }
 
+.premium-columns .premium-column:last-child h3 {
+    text-align: center;
+}
+
 .premium-column ol {
     padding-left: 20px;
 }
