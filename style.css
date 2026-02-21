@@ -41,7 +41,11 @@ h1 {
 }
 
 #templates li {
-    margin: 6px 0;
+    margin: 10px 0;
+}
+
+#recommendations li {
+    margin: 10px 0;
 }
 
 #recommendations ul,
@@ -51,7 +55,7 @@ h1 {
 }
 
 #cart {
-    margin-top: 44px;
+    margin-top: 24px;
 }
 
 #premium-plan {
@@ -68,7 +72,7 @@ h1 {
 }
 
 .subscriptions-page #premium-plan {
-    margin-top: 20px;
+    margin-top: 2px;
 }
 
 .premium-columns {
