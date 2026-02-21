@@ -132,10 +132,25 @@ h1 {
 .premium-columns .premium-column:last-child {
     border: 1px solid #fff;
     margin-top: -40px;
+    text-align: center;
+}
+
+.premium-columns .premium-column:last-child ol,
+.premium-columns .premium-column:last-child ul {
+    padding-left: 0;
+    list-style-position: inside;
 }
 
 .premium-column ol {
     padding-left: 20px;
+}
+
+.subscriptions-page .premium-column ol li::marker {
+    text-decoration: underline;
+}
+
+.subscriptions-page .premium-feature-columns > ol > li > strong {
+    text-decoration: underline;
 }
 
 .premium-feature-columns {
@@ -146,6 +161,12 @@ h1 {
 
 .premium-feature-columns ol {
     margin: 0;
+}
+
+.premium-feature-columns .feature-bottom {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: -10px auto 0;
 }
 
 .premium-feature-columns ol > li {
