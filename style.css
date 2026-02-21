@@ -107,6 +107,14 @@ h1 {
     text-align: center;
 }
 
+.price-options .price-option:first-child {
+    margin-left: 14px;
+}
+
+.price-options .price-option:last-child {
+    margin-right: 14px;
+}
+
 .price-option p {
     margin: 0 0 4px 0;
 }
