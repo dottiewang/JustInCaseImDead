@@ -60,21 +60,21 @@ h1 {
 }
 
 .subscriptions-tagline-row {
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .subscriptions-header {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 .subscriptions-page #premium-plan {
-    margin-top: -24px;
+    margin-top: 20px;
 }
 
 .premium-columns {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 56px;
     text-align: left;
 }
 
@@ -89,7 +89,7 @@ h1 {
 
 .premium-columns .premium-column:first-child {
     text-align: center;
-    margin-top: -20px;
+    margin-top: 0;
 }
 
 .premium-columns .premium-column:first-child h2 {
@@ -102,7 +102,7 @@ h1 {
 
 .premium-columns .premium-column:last-child {
     border: 1px solid #fff;
-    margin-top: -48px;
+    margin-top: 0;
 }
 
 .premium-column ol {
