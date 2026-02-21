@@ -6,6 +6,10 @@ body {
     color: #fff;
 }
 
+a {
+    color: gold;
+}
+
 header {
     background-color: #000;
     color: #fff;
@@ -38,10 +42,6 @@ h1 {
 
 #templates li {
     margin: 6px 0;
-}
-
-#templates a {
-    color: #fff;
 }
 
 #recommendations ul,
