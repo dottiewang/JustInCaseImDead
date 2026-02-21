@@ -54,6 +54,37 @@ h1 {
     margin-top: 44px;
 }
 
+#premium-plan {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.premium-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    text-align: left;
+}
+
+.premium-column {
+    border: 1px solid #fff;
+    padding: 16px;
+}
+
+.premium-column h2,
+.premium-column h3 {
+    margin-top: 0;
+}
+
+.premium-column ol {
+    padding-left: 20px;
+}
+
+.premium-column ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
 .product {
     border: 1px solid #fff;
     padding: 10px;
