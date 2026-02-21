@@ -84,6 +84,10 @@ h1 {
     text-align: center;
 }
 
+.premium-columns .premium-column:last-child {
+    border: 1px solid #fff;
+}
+
 .premium-column ol {
     padding-left: 20px;
 }
