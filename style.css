@@ -99,6 +99,10 @@ h1 {
     margin-top: 2px;
 }
 
+.subscriptions-page {
+    overflow-x: hidden;
+}
+
 .premium-columns {
     display: grid;
     grid-template-columns: 1fr;
@@ -409,5 +413,47 @@ button:hover {
     .subscriptions-page button {
         padding: 5px 7px;
         min-height: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .subscriptions-page main,
+    .subscriptions-page #premium-plan,
+    .subscriptions-page .premium-columns,
+    .subscriptions-page .premium-column {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .subscriptions-page .premium-columns {
+        gap: 16px;
+    }
+
+    .subscriptions-page .premium-columns .premium-column:first-child,
+    .subscriptions-page .premium-columns .premium-column:last-child {
+        margin-top: 0;
+    }
+
+    .subscriptions-page .price-options {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        gap: 12px;
+    }
+
+    .subscriptions-page .premium-feature-columns {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .subscriptions-page .premium-feature-columns .feature-bottom {
+        grid-column: auto;
+        max-width: 100%;
+        margin: 0;
+        transform: none;
+    }
+
+    .subscriptions-page .premium-column ol,
+    .subscriptions-page .premium-column ul {
+        padding-left: 16px;
     }
 }
