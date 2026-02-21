@@ -308,6 +308,27 @@ button:hover {
         min-height: 44px;
         padding: 10px 14px;
     }
+
+    .subscriptions-page {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .subscriptions-page h1 {
+        font-size: 1.35rem;
+    }
+
+    .subscriptions-page h2 {
+        font-size: 1.2rem;
+    }
+
+    .subscriptions-page h3 {
+        font-size: 1.1rem;
+    }
+
+    .subscriptions-page .premium-column {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -341,5 +362,9 @@ button:hover {
     .premium-column ul,
     .premium-column li {
         overflow-wrap: anywhere;
+    }
+
+    .subscriptions-page {
+        font-size: 15px;
     }
 }
