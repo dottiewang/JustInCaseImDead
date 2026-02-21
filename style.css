@@ -476,3 +476,20 @@ button:hover {
         padding-left: 16px;
     }
 }
+
+@media (max-width: 430px) {
+    .subscriptions-page .price-options {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px;
+        align-items: start;
+    }
+
+    .subscriptions-page .price-option {
+        min-height: 0;
+    }
+
+    .subscriptions-page .billed-note {
+        line-height: 1.15;
+    }
+}
