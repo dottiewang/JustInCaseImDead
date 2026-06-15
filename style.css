@@ -132,7 +132,7 @@ h1 {
 
 .price-options {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 14px;
     margin-top: 6px;
     max-width: 640px;
@@ -487,9 +487,9 @@ button:hover {
     }
 
     .subscriptions-page .price-option {
-        width: 50% !important;
-        max-width: 50% !important;
-        flex: 0 0 50% !important;
+        width: 33.33% !important;
+        max-width: 33.33% !important;
+        flex: 0 0 33.33% !important;
         min-height: 0;
     }
 
