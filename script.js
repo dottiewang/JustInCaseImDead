@@ -55,14 +55,5 @@ if (checkoutPlan && checkoutPrice && checkoutBilling && checkoutButton) {
     checkoutPrice.textContent = params.get('price') || selectedPlan.price;
     checkoutBilling.textContent = params.get('billing') || selectedPlan.billing;
 
-    checkoutButton.addEventListener('click', async () => {
-        checkoutButton.disabled = true;
-        checkoutButton.textContent = 'Starting secure checkout...';
-
-        if (stripeSetupMessage) {
-            stripeSetupMessage.textContent = 'Redirecting to Stripe...';
-        }
-
-        window.location.href = `/api/create-checkout-session?planKey=${encodeURIComponent(planKey)}`;
-    });
+    checkoutButton.href = `/api/create-checkout-session?planKey=${encodeURIComponent(planKey)}`;
 }
