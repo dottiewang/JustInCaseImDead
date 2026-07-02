@@ -23,8 +23,8 @@ function getBaseUrl(req) {
 }
 
 module.exports = async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
+  if (req.method !== 'POST' && req.method !== 'GET') {
+    res.setHeader('Allow', 'GET, POST');
     return res.status(405).json({ error: 'Method not allowed.' });
   }
 
@@ -38,14 +38,9 @@ module.exports = async function handler(req, res) {
     apiVersion: '2024-06-20',
   });
 
-  let body = {};
-  try {
-    body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body || {};
-  } catch (error) {
-    return res.status(400).json({ error: 'Invalid request body.' });
-  }
-
-  const planKey = body.planKey || 'monthly';
+  const planKey = req.method === 'GET'
+    ? (req.query.planKey || 'monthly')
+    : ((req.body && req.body.planKey) || 'monthly');
   const selectedPlan = planMap[planKey];
 
   if (!selectedPlan || !selectedPlan.priceId) {
@@ -77,6 +72,10 @@ module.exports = async function handler(req, res) {
         plan: selectedPlan.plan,
       },
     });
+
+    if (req.method === 'GET') {
+      return res.redirect(303, session.url);
+    }
 
     return res.status(200).json({ url: session.url });
   } catch (error) {

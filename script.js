@@ -63,29 +63,6 @@ if (checkoutPlan && checkoutPrice && checkoutBilling && checkoutButton) {
             stripeSetupMessage.textContent = 'Redirecting to Stripe...';
         }
 
-        try {
-            const response = await fetch('/api/create-checkout-session', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ planKey }),
-            });
-
-            const result = await response.json();
-
-            if (!response.ok) {
-                throw new Error(result.error || 'Unable to start checkout.');
-            }
-
-            window.location.href = result.url;
-        } catch (error) {
-            checkoutButton.disabled = false;
-            checkoutButton.textContent = 'Continue to Stripe checkout';
-
-            if (stripeSetupMessage) {
-                stripeSetupMessage.textContent = error instanceof Error ? error.message : 'Unable to start Stripe checkout.';
-            }
-        }
+        window.location.href = `/api/create-checkout-session?planKey=${encodeURIComponent(planKey)}`;
     });
 }
