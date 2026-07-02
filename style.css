@@ -87,6 +87,13 @@ h1 {
     text-align: center;
 }
 
+.stripe-note {
+    max-width: 720px;
+    margin: 10px auto 0;
+    font-size: 0.96rem;
+    line-height: 1.5;
+}
+
 .subscriptions-tagline-row {
     justify-content: center;
 }
@@ -232,6 +239,11 @@ button {
 
 button:hover {
     background-color: #000;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 @media (max-width: 768px) {

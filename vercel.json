@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/subscriptions",
+      "destination": "/subscriptions.html"
+    },
+    {
+      "source": "/checkout",
+      "destination": "/checkout.html"
+    }
+  ]
+}

@@ -26,20 +26,21 @@
             <div class="premium-columns">
                 <div class="premium-column">
                     <h2>Premium Plan</h2>
+                    <p class="stripe-note">Secure checkout is handled through Stripe. Choose a billing option below to continue.</p>
                     <div class="price-options" style="display:flex; flex-direction:row; flex-wrap:nowrap; gap:8px; max-width:100%; margin:6px auto 0;">
                         <div class="price-option" style="flex:1 1 0; width:33.33%; max-width:33.33%; min-width:0;">
                             <p>$9.99 per month</p>
-                            <button data-plan="Premium Plan - Monthly" data-price="$9.99" data-billing="per month">Add to Cart</button>
+                            <button type="button" data-plan-key="monthly">Subscribe with Stripe</button>
                         </div>
                         <div class="price-option" style="flex:1 1 0; width:33.33%; max-width:33.33%; min-width:0;">
                             <p>$27.99 per quarter</p>
                             <p class="billed-note">(billed every 3 months)</p>
-                            <button data-plan="Premium Plan - Quarterly" data-price="$27.99" data-billing="per quarter (billed every 3 months)">Add to Cart</button>
+                            <button type="button" data-plan-key="quarterly">Subscribe with Stripe</button>
                         </div>
                         <div class="price-option" style="flex:1 1 0; width:33.33%; max-width:33.33%; min-width:0;">
                             <p>$100 per year</p>
                             <p class="billed-note">(billed annually in advance)</p>
-                            <button data-plan="Premium Plan - Yearly" data-price="$100" data-billing="per year (billed annually in advance)">Add to Cart</button>
+                            <button type="button" data-plan-key="yearly">Subscribe with Stripe</button>
                         </div>
                     </div>
                 </div>

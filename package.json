@@ -1,0 +1,9 @@
+{
+  "name": "just-in-case",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static site with Stripe subscriptions deployed on Vercel",
+  "dependencies": {
+    "stripe": "^16.12.0"
+  }
+}

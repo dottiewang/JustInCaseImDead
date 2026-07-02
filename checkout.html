@@ -20,7 +20,9 @@
             <p><strong>Plan:</strong> <span id="checkout-plan"></span></p>
             <p><strong>Price:</strong> <span id="checkout-price"></span></p>
             <p><strong>Billing:</strong> <span id="checkout-billing"></span></p>
-            <button type="button">Complete Order</button>
+            <p id="stripe-setup-message" class="stripe-note">You will be sent to Stripe to complete payment securely.</p>
+            <p id="checkout-status" class="stripe-note"></p>
+            <button id="stripe-checkout-button" type="button">Continue to Stripe checkout</button>
             <p><a href="subscriptions.html">Back to Subscription Options</a></p>
         </section>
     </main>
