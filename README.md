@@ -33,6 +33,38 @@ Stripe + Vercel setup for the subscription page:
 - Vercel will run the serverless checkout endpoint in `api/create-checkout-session.js`, and the checkout page will redirect customers to Stripe-hosted subscription checkout.
 - No separate backend server is required.
 
+Tracking incoming orders in Neon:
+- Add `DATABASE_URL` in Vercel (from Neon connection string).
+- Add `STRIPE_WEBHOOK_SECRET` in Vercel (from Stripe webhook endpoint signing secret).
+- Create this table in Neon SQL editor:
+
+```sql
+CREATE TABLE IF NOT EXISTS subscription_orders (
+	id BIGSERIAL PRIMARY KEY,
+	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+	stripe_event_id TEXT NOT NULL UNIQUE,
+	stripe_event_type TEXT NOT NULL,
+	stripe_customer_id TEXT,
+	stripe_subscription_id TEXT,
+	stripe_session_id TEXT,
+	customer_email TEXT,
+	customer_name TEXT,
+	plan_key TEXT,
+	plan_name TEXT,
+	status TEXT,
+	amount_total INTEGER,
+	currency TEXT,
+	event_payload JSONB NOT NULL
+);
+```
+
+Stripe webhook setup:
+- In Stripe dashboard, create webhook endpoint: `https://your-domain.com/api/stripe-webhook`.
+- Subscribe to events: `checkout.session.completed`, `invoice.paid`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`.
+- Copy the signing secret and set it as `STRIPE_WEBHOOK_SECRET` in Vercel.
+- Redeploy Vercel after adding env vars.
+- New Stripe events will be stored in Neon table `subscription_orders`.
+
 Vercel setup:
 - Import the repository into Vercel as a static site.
 - Keep `vercel.json` in the project root so `/`, `/subscriptions`, and `/checkout` resolve to the existing HTML pages.

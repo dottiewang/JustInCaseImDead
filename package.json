@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Static site with Stripe subscriptions deployed on Vercel",
   "dependencies": {
+    "pg": "^8.12.0",
     "stripe": "^16.12.0"
   }
 }
