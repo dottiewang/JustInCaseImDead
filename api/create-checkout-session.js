@@ -1,10 +1,6 @@
 const Stripe = require('stripe');
 
 const planMap = {
-  monthly: {
-    priceId: process.env.STRIPE_PRICE_ID_MONTHLY,
-    plan: 'Premium Plan - Monthly',
-  },
   quarterly: {
     priceId: process.env.STRIPE_PRICE_ID_QUARTERLY,
     plan: 'Premium Plan - Quarterly',
@@ -39,8 +35,8 @@ module.exports = async function handler(req, res) {
   });
 
   const planKey = req.method === 'GET'
-    ? (req.query.planKey || 'monthly')
-    : ((req.body && req.body.planKey) || 'monthly');
+    ? (req.query.planKey || 'yearly')
+    : ((req.body && req.body.planKey) || 'yearly');
   const selectedPlan = planMap[planKey];
 
   if (!selectedPlan || !selectedPlan.priceId) {

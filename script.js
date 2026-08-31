@@ -1,9 +1,4 @@
 const planConfigs = {
-    monthly: {
-        plan: 'Premium Plan - Monthly',
-        price: '$9.99',
-        billing: 'per month',
-    },
     quarterly: {
         plan: 'Premium Plan - Quarterly',
         price: '$27.99',
@@ -48,8 +43,8 @@ const stripeSetupMessage = document.getElementById('stripe-setup-message');
 
 if (checkoutPlan && checkoutPrice && checkoutBilling && checkoutButton) {
     const params = new URLSearchParams(window.location.search);
-    const planKey = params.get('planKey') || 'monthly';
-    const selectedPlan = planConfigs[planKey] || planConfigs.monthly;
+    const planKey = params.get('planKey') || 'yearly';
+    const selectedPlan = planConfigs[planKey] || planConfigs.yearly;
 
     checkoutPlan.textContent = params.get('plan') || selectedPlan.plan;
     checkoutPrice.textContent = params.get('price') || selectedPlan.price;
