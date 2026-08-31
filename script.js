@@ -1,7 +1,7 @@
 const planConfigs = {
     quarterly: {
         plan: 'Premium Plan - Quarterly',
-        price: '$27.99',
+        price: '$29.99',
         billing: 'per quarter (billed every 3 months)',
     },
     yearly: {
