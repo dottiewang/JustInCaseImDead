@@ -88,10 +88,11 @@ h1 {
 }
 
 .stripe-note {
-    max-width: 720px;
+    max-width: 900px;
     margin: 10px auto 0;
     font-size: 0.96rem;
     line-height: 1.5;
+    text-align: center;
 }
 
 .subscriptions-tagline-row {
@@ -141,7 +142,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 14px;
-    margin-top: 6px;
+    margin-top: 28px;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
@@ -165,6 +166,7 @@ h1 {
 
 .billed-note {
     text-align: center;
+    display: inline;
 }
 
 .premium-columns .premium-column:last-child h3 {
