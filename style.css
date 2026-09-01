@@ -75,9 +75,9 @@ h1 {
     display: inline-block;
     margin: 6px 0 0;
     padding: 6px 10px;
-    border-left: 2px solid gold;
-    border-right: 2px solid gold;
-    color: #f5d76e;
+    border-left: 2px solid #e98b73;
+    border-right: 2px solid #e98b73;
+    color: #f4b29e;
     font-size: 0.9rem;
     font-weight: 600;
 }
