@@ -152,6 +152,12 @@ h1 {
     text-align: center;
 }
 
+.subscriptions-page .price-option {
+    border: 1px solid #fff;
+    background: #111;
+    padding: 14px 12px 12px;
+}
+
 .price-options .price-option:first-child {
     margin-left: 0;
 }
@@ -162,6 +168,12 @@ h1 {
 
 .price-option p {
     margin: 0 0 4px 0;
+}
+
+.subscriptions-page .price-option p:first-child {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
 .billed-note {
@@ -241,6 +253,24 @@ button {
 
 button:hover {
     background-color: #000;
+}
+
+.subscriptions-page .price-option button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-color: #fff;
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+}
+
+.subscriptions-page .price-option button:hover,
+.subscriptions-page .price-option button:focus-visible {
+    background: gold;
+    border-color: gold;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
 }
 
 button:disabled {
