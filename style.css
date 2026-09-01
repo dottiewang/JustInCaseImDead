@@ -516,9 +516,9 @@ button:disabled {
     }
 
     .subscriptions-page .price-option {
-        width: 33.33% !important;
-        max-width: 33.33% !important;
-        flex: 0 0 33.33% !important;
+        width: 50% !important;
+        max-width: 50% !important;
+        flex: 1 1 0 !important;
         min-height: 0;
     }
 
