@@ -235,8 +235,8 @@ h1 {
 .premium-feature-columns .feature-bottom {
     grid-column: 1 / -1;
     max-width: 50%;
-    margin: -32px auto 0;
-    transform: translateX(-44px);
+    margin: 0 auto;
+    transform: none;
 }
 
 .premium-feature-columns ol > li {
