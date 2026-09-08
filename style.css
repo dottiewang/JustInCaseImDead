@@ -123,11 +123,13 @@ h1 {
 .premium-columns {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 56px;
+    gap: 40px;
     text-align: left;
+    justify-items: center;
 }
 
 .premium-column {
+    width: min(100%, 900px);
     padding: 16px;
 }
 
@@ -196,8 +198,10 @@ h1 {
 
 .premium-columns .premium-column:last-child {
     border: 1px solid #fff;
-    margin-top: -60px;
+    margin-top: -32px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .premium-columns .premium-column:last-child ol,
