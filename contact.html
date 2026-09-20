@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Just In Case</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="tagline-row">
+            <a href="index.html"><img src="logo.jpg" alt="Just In Case logo" class="site-logo"></a>
+            <h1>Contact Us</h1>
+        </div>
+    </header>
+
+    <main>
+        <section style="max-width: 700px; margin: 0 auto; padding: 32px 20px;">
+            <form id="support-form" style="display:flex; flex-direction:column; gap:14px;">
+                <label>
+                    Name
+                    <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin-top:6px;">
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin-top:6px;">
+                </label>
+
+                <label>
+                    Subject
+                    <input type="text" id="subject" name="subject" value="Support request" style="width:100%; padding:10px; margin-top:6px;">
+                </label>
+
+                <label>
+                    Message
+                    <textarea id="message" name="message" rows="6" required style="width:100%; padding:10px; margin-top:6px;"></textarea>
+                </label>
+
+                <button type="submit" style="padding:12px 18px; max-width:220px;">Send Message</button>
+            </form>
+
+            <p id="form-response" aria-live="polite" style="margin-top:18px;"></p>
+        </section>
+    </main>
+
+    <script>
+        const form = document.getElementById('support-form');
+        const response = document.getElementById('form-response');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const payload = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+            };
+
+            response.textContent = 'Sending...';
+
+            try {
+                const res = await fetch('/api/send-support-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+
+                const result = await res.json();
+
+                if (!res.ok) {
+                    throw new Error(result.error || 'Unable to send message.');
+                }
+
+                form.reset();
+                response.textContent = 'Your message has been sent successfully.';
+            } catch (error) {
+                response.textContent = error.message || 'Something went wrong.';
+            }
+        });
+    </script>
+</body>
+</html>

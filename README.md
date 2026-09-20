@@ -33,6 +33,12 @@ Stripe + Vercel setup for the subscription page:
 - Vercel will run the serverless checkout endpoint in `api/create-checkout-session.js`, and the checkout page will redirect customers to Stripe-hosted subscription checkout.
 - No separate backend server is required.
 
+Resend email setup:
+- Create a Resend account and verify your domain.
+- Add these environment variables in Vercel: `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `SUPPORT_TO_EMAIL`.
+- A good default is `RESEND_FROM_EMAIL=support@justincaseimdead.com` and `SUPPORT_TO_EMAIL=justincaseimdead@gmail.com` while you are getting the domain verified.
+- Use the serverless endpoint in `api/send-support-email.js` to send support emails from a contact form or admin workflow.
+
 Tracking incoming orders in Neon:
 - Add `DATABASE_URL` in Vercel (from Neon connection string).
 - Add `STRIPE_WEBHOOK_SECRET` in Vercel (from Stripe webhook endpoint signing secret).

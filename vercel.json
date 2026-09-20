@@ -16,6 +16,10 @@
     {
       "source": "/checkout",
       "destination": "/checkout.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
     }
   ]
 }
