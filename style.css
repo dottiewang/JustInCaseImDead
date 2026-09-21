@@ -44,6 +44,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
+    font-size: 0.85rem;
 }
 
 .site-footer a {
