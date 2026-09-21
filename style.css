@@ -32,6 +32,31 @@ header {
     margin-bottom: 20px;
 }
 
+.site-footer {
+    margin-top: 32px;
+    padding: 18px 12px 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+}
+
+.site-footer nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: gold;
+    text-decoration: underline;
+}
+
 .tagline-row {
     display: flex;
     align-items: center;
@@ -59,6 +84,37 @@ h1 {
 
 #templates li {
     margin: 10px 0;
+}
+
+.terms-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 18px 24px;
+}
+
+.legal-copy {
+    text-align: left;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 28px 22px;
+    line-height: 1.7;
+}
+
+.legal-copy h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.legal-copy ul {
+    padding-left: 1.4rem;
+}
+
+.legal-copy li {
+    margin: 0.4em 0;
+}
+
+.last-updated {
+    margin-top: 0;
 }
 
 #recommendations li {
