@@ -43,6 +43,8 @@
   summary::after { content:"+"; position:absolute; right:4px; top:14px; font-size:22px; font-weight:400; color:var(--gold); }
   details[open] summary::after { content:"–"; }
   details p { margin:0 0 20px; font-size:.95rem; color:var(--muted); max-width:38em; }
+  .questions { text-align:center; }
+  .questions details p { margin-left:auto; margin-right:auto; }
   footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--rule); display:flex; justify-content:center; flex-wrap:wrap; gap:16px; font-size:.85rem; }
   footer a { color:var(--ink); }
   @media (max-width:560px) {
@@ -112,7 +114,7 @@
       </li>
     </ol>
 
-    <section>
+    <section class="questions">
       <h2>Questions</h2>
       <details>
         <summary>What if I fall behind?</summary>
