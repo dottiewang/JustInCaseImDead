@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your plan, step by step · Just In Case</title>
+<meta name="description" content="Seven short steps, about 90 minutes in total, spread over five weeks. Here's the whole plan at a glance.">
+<style>
+  :root {
+    --paper:#F1ECE2; --card:#FBF8F2; --ink:#2B2A26; --muted:#6B665C;
+    --rule:#E2DBCD; --green:#2F4A3A; --copper:#A0703F; --sage:#E4EBE3;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper:#1E1D1A; --card:#2A2925; --ink:#EDE8DE; --muted:#B8B1A3; --rule:#45423B; --green:#9FC1A8; --copper:#D2A06E; --sage:#2F3A31; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--serif); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a { color:var(--green); }
+  a:hover { color:var(--copper); }
+  .wrap { max-width:760px; margin:0 auto; padding:40px 24px 80px; }
+  header { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:56px; }
+  header img { width:120px; height:auto; display:block; }
+  header nav { display:flex; gap:20px; font-family:var(--sans); font-size:15px; }
+  header nav a { color:var(--muted); text-decoration:none; }
+  header nav a:hover { color:var(--ink); }
+  .eyebrow { font-family:var(--sans); font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--copper); margin:0 0 16px; }
+  h1 { font-weight:normal; font-size:clamp(34px, 6vw, 48px); line-height:1.12; margin:0 0 20px; text-wrap:balance; }
+  h2 { font-weight:normal; font-size:28px; line-height:1.2; margin:0 0 24px; }
+  .lede { font-size:20px; color:var(--ink); margin:0 0 28px; max-width:36em; text-wrap:pretty; }
+  .facts { display:flex; flex-wrap:wrap; gap:10px 28px; font-family:var(--sans); font-size:15px; color:var(--muted); margin:0 0 56px; padding:0; list-style:none; }
+  .facts strong { color:var(--ink); }
+  .steps { list-style:none; margin:0 0 64px; padding:0; border-top:1px solid var(--rule); }
+  .step { display:grid; grid-template-columns:56px minmax(0,1fr) auto; gap:4px 16px; padding:24px 0; border-bottom:1px solid var(--rule); }
+  .num { font-size:30px; line-height:1; color:var(--copper); }
+  .step h3 { margin:0 0 4px; font-family:var(--sans); font-size:17px; line-height:1.4; }
+  .step p { margin:0; font-family:var(--sans); font-size:15px; line-height:1.55; color:var(--muted); text-wrap:pretty; }
+  .when { font-family:var(--sans); font-size:13px; color:var(--muted); text-align:right; white-space:nowrap; }
+  .time { display:inline-block; margin-top:4px; padding:3px 10px; border-radius:99px; background:var(--sage); color:var(--green); font-weight:600; }
+  .step.finale .num { color:var(--green); }
+  .panel { background:var(--card); border:1px solid var(--rule); border-radius:6px; padding:32px; margin:0 0 64px; }
+  .panel p { margin:0 0 20px; font-family:var(--sans); font-size:16px; color:var(--muted); }
+  .actions { display:flex; flex-wrap:wrap; gap:12px; }
+  .btn { display:inline-block; padding:14px 26px; border-radius:4px; font-family:var(--sans); font-size:16px; font-weight:700; text-decoration:none; }
+  .btn.primary { background:#2F4A3A; color:#FBF8F2; }
+  .btn.primary:hover { background:#243A2D; color:#FBF8F2; }
+  .btn.secondary { border:1px solid var(--green); color:var(--green); }
+  .btn.secondary:hover { background:var(--sage); color:var(--green); }
+  details { border-bottom:1px solid var(--rule); }
+  details:first-of-type { border-top:1px solid var(--rule); }
+  summary { cursor:pointer; list-style:none; padding:18px 32px 18px 0; position:relative; font-family:var(--sans); font-size:17px; font-weight:600; }
+  summary::-webkit-details-marker { display:none; }
+  summary::after { content:"+"; position:absolute; right:4px; top:14px; font-size:22px; font-weight:400; color:var(--copper); }
+  details[open] summary::after { content:"–"; }
+  details p { margin:0 0 20px; font-family:var(--sans); font-size:16px; color:var(--muted); max-width:38em; }
+  footer { margin-top:64px; padding-top:24px; border-top:1px solid var(--rule); display:flex; flex-wrap:wrap; gap:20px; font-family:var(--sans); font-size:14px; }
+  footer a { color:var(--muted); }
+  @media (max-width:560px) {
+    .step { grid-template-columns:40px minmax(0,1fr); }
+    .when { grid-column:2; text-align:left; margin-top:8px; }
+    .panel { padding:24px; }
+    header nav { display:none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a href="/"><img src="https://www.justincaseimdead.com/logo.jpg" alt="Just In Case"></a>
+    <nav>
+      <a href="/faq.html">FAQ</a>
+      <a href="/subscriptions.html">Subscribe</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">Your plan, step by step</p>
+    <h1>Seven short steps. One less thing for your family to figure out.</h1>
+    <p class="lede">We'll email you one small step at a time. Nothing is due, nothing expires &mdash; go at your pace, rush ahead, or pause whenever life gets busy.</p>
+    <ul class="facts">
+      <li><strong>About 90 minutes</strong> in total</li>
+      <li>Spread over <strong>5 weeks</strong></li>
+      <li>Lives in <strong>your own Google Drive</strong></li>
+    </ul>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="num">1</span>
+        <div><h3>Copy your plan to Google Drive</h3><p>One click puts your own copy of the plan in your Google Drive. You own it; we never see it.</p></div>
+        <div class="when">Day 1<br><span class="time">2 min</span></div>
+      </li>
+      <li class="step">
+        <span class="num">2</span>
+        <div><h3>Read This First</h3><p>Who to call, where things are, what matters most. If your family only reads one page, it's this one.</p></div>
+        <div class="when">Day 3<br><span class="time">10 min</span></div>
+      </li>
+      <li class="step">
+        <span class="num">3</span>
+        <div><h3>Digital access</h3><p>Your phone, your main email and your password manager &mdash; the three keys that unlock everything else.</p></div>
+        <div class="when">Week 1<br><span class="time">10 min</span></div>
+      </li>
+      <li class="step">
+        <span class="num">4</span>
+        <div><h3>Money &amp; insurance</h3><p>Accounts, bills, policies. Start by gathering the paperwork; writing it down is quick after that.</p></div>
+        <div class="when">Week 2<br><span class="time">20 min</span></div>
+      </li>
+      <li class="step">
+        <span class="num">5</span>
+        <div><h3>Legal wishes &amp; personal notes</h3><p>Who decides what, where your will lives, and anything you'd want the people you love to hear from you.</p></div>
+        <div class="when">Week 3<br><span class="time">20 min</span></div>
+      </li>
+      <li class="step">
+        <span class="num">6</span>
+        <div><h3>Print a paper copy</h3><p>Phones die and passwords change. Print your plan, sign and date it, so it works even when nothing else does.</p></div>
+        <div class="when">Week 4<br><span class="time">15 min</span></div>
+      </li>
+      <li class="step finale">
+        <span class="num">7</span>
+        <div><h3>Store it safely &amp; tell someone</h3><p>Choose a safe place &mdash; a fire-resistant home safe, a safe deposit box, or your lawyer's office &mdash; and tell one trusted person where it is.</p></div>
+        <div class="when">Week 5<br><span class="time">15 min</span></div>
+      </li>
+    </ol>
+
+    <section class="panel">
+      <h2>Pick up where you left off</h2>
+      <p>Your plan is in your Google Drive, named &ldquo;Just In Case.&rdquo; Open it any time &mdash; you don't need to wait for the next email.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://drive.google.com/drive/search?q=Just%20In%20Case" target="_blank" rel="noopener">Open my plan in Google Drive</a>
+        <a class="btn secondary" href="/worksheets.pdf">Prefer paper? Print the worksheets</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Questions</h2>
+      <details>
+        <summary>What if I fall behind?</summary>
+        <p>Nothing happens. Every email has a &ldquo;Not this week&rdquo; button that pauses for 7 days, and you can always come back to this page and start from any step.</p>
+      </details>
+      <details>
+        <summary>Can I do it all at once?</summary>
+        <p>Yes. Open your plan and work straight through. When you're done, click &ldquo;Done&rdquo; in any email and we'll skip ahead.</p>
+      </details>
+      <details>
+        <summary>Who can see my plan?</summary>
+        <p>Only you, and anyone you choose to share it with from Google Drive. Your copy lives in your account; we have no access to it.</p>
+      </details>
+      <details>
+        <summary>I don't use Google. Can I still do this?</summary>
+        <p>Yes. Print the worksheets, fill them in by hand, and store them the same way as step 7.</p>
+      </details>
+      <details>
+        <summary>What happens if I cancel?</summary>
+        <p>The emails stop, but your plan stays in your Google Drive. It's yours to keep.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/faq.html">FAQ</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/privacy-policy.html">Privacy</a>
+    <a href="/refund-policy.html">Refunds</a>
+    <a href="mailto:hello@justincaseimdead.com">hello@justincaseimdead.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
