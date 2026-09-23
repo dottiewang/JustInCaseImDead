@@ -34,14 +34,6 @@
   .when { font-size:.8rem; color:var(--muted); text-align:right; white-space:nowrap; }
   .time { display:inline-block; margin-top:4px; padding:3px 10px; border:1px solid var(--gold); color:var(--gold); font-weight:600; }
   .step.finale .num { color:var(--ink); }
-  .panel { background:var(--card); border:1px solid var(--rule); padding:28px; margin:0 auto 40px; max-width:900px; }
-  .panel p { margin:0 0 20px; font-size:.95rem; color:var(--muted); }
-  .actions { display:flex; flex-wrap:wrap; gap:12px; }
-  .btn { display:inline-block; padding:12px 20px; border:1px solid var(--gold); font-size:.95rem; font-weight:700; text-decoration:none; }
-  .btn.primary { background:var(--gold); color:#000; }
-  .btn.primary:hover { background:var(--ink); color:#000; }
-  .btn.secondary { color:var(--gold); }
-  .btn.secondary:hover { background:var(--gold); color:#000; }
   details { border-bottom:1px solid var(--rule); }
   details:first-of-type { border-top:1px solid var(--rule); }
   summary { cursor:pointer; list-style:none; padding:18px 32px 18px 0; position:relative; font-size:1rem; font-weight:600; }
@@ -54,7 +46,6 @@
   @media (max-width:560px) {
     .step { grid-template-columns:40px minmax(0,1fr); }
     .when { grid-column:2; text-align:left; margin-top:8px; }
-    .panel { padding:24px; }
     .step { gap:4px 10px; }
   }
 </style>
@@ -113,15 +104,6 @@
         <div class="when">Week 5<br><span class="time">15 min</span></div>
       </li>
     </ol>
-
-    <section class="panel">
-      <h2>Pick up where you left off</h2>
-      <p>Your plan is in your Google Drive, named &ldquo;Just In Case.&rdquo; Open it any time &mdash; you don't need to wait for the next email.</p>
-      <div class="actions">
-        <a class="btn primary" href="https://drive.google.com/drive/search?q=Just%20In%20Case" target="_blank" rel="noopener">Open my plan in Google Drive</a>
-        <a class="btn secondary" href="/worksheets.pdf">Prefer paper? Print the worksheets</a>
-      </div>
-    </section>
 
     <section>
       <h2>Questions</h2>
