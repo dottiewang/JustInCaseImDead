@@ -64,6 +64,26 @@ CREATE TABLE IF NOT EXISTS subscription_orders (
 );
 ```
 
+To audit subscriber emails, create this table in the same Neon database and set `EMAIL_HISTORY_SECRET` in Vercel:
+
+```sql
+CREATE TABLE IF NOT EXISTS sent_emails (
+	id BIGSERIAL PRIMARY KEY,
+	sent_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+	stripe_customer_id TEXT NOT NULL,
+	recipient_email TEXT NOT NULL,
+	email_key TEXT NOT NULL,
+	subject TEXT NOT NULL,
+	resend_id TEXT
+);
+
+CREATE INDEX IF NOT EXISTS sent_emails_recipient_email_idx
+	ON sent_emails (LOWER(recipient_email), sent_at DESC);
+```
+
+After setup, query a user's history with:
+`GET /api/email-history?email=user@example.com` and the header `Authorization: Bearer $EMAIL_HISTORY_SECRET`.
+
 Stripe webhook setup:
 - In Stripe dashboard, create webhook endpoint: `https://your-domain.com/api/stripe-webhook`.
 - Subscribe to events: `checkout.session.completed`, `invoice.paid`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`.
