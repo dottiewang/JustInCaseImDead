@@ -348,8 +348,8 @@ body.terms-page header {
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 8px;
-    font-size: clamp(1.25rem, 1.8vw, 2rem);
-    line-height: 1.25;
+    font-size: 1.1rem;
+    line-height: 1.3;
     font-weight: 700;
 }
 
@@ -405,7 +405,7 @@ body.terms-page header {
 .premium-column li {
     margin: 0 0 6px;
     line-height: 1.5;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .product {
