@@ -323,7 +323,7 @@ body.terms-page header {
 .premium-feature-columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 32px;
+    gap: 18px 30px;
     align-items: start;
     text-align: left;
 }
@@ -331,7 +331,7 @@ body.terms-page header {
 .feature-column {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 18px;
 }
 
 .feature-item,
@@ -339,22 +339,22 @@ body.terms-page header {
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.02);
-    padding: 14px 18px 12px;
+    padding: 12px 18px 10px;
 }
 
 .feature-title {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 12px;
-    font-size: clamp(1.8rem, 2vw, 2.4rem);
-    line-height: 1.2;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: clamp(1.25rem, 1.8vw, 2rem);
+    line-height: 1.25;
     font-weight: 700;
 }
 
 .feature-title-inline {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .feature-number {
@@ -374,11 +374,12 @@ body.terms-page header {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .premium-feature-item {
     width: min(100%, 760px);
+    margin: 0 auto;
 }
 
 .beta-tag {
@@ -397,14 +398,14 @@ body.terms-page header {
 
 .premium-column ul {
     list-style: disc;
-    padding-left: 1.6em;
+    padding-left: 1.4em;
     margin: 0;
 }
 
 .premium-column li {
-    margin: 0 0 8px;
-    line-height: 1.6;
-    font-size: 1.1rem;
+    margin: 0 0 6px;
+    line-height: 1.5;
+    font-size: 1rem;
 }
 
 .product {
