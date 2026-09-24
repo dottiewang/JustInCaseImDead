@@ -87,17 +87,29 @@ h1 {
     margin: 10px 0;
 }
 
+body.terms-page {
+    text-align: left;
+}
+
+body.terms-page header,
+body.terms-page .site-footer {
+    text-align: center;
+}
+
 .terms-main {
-    max-width: 900px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 0 18px 24px;
+    padding: 0 12px 28px;
 }
 
 .legal-copy {
+    width: min(100%, 900px);
+    margin: 0 auto;
     text-align: left;
     background: #111;
     border: 1px solid rgba(255, 255, 255, 0.35);
-    padding: 28px 22px;
+    border-radius: 10px;
+    padding: 24px 20px;
     line-height: 1.7;
 }
 
