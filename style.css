@@ -362,6 +362,7 @@ body.terms-page header {
     min-width: 0.9em;
     font-weight: 700;
     color: #fff;
+    text-decoration: underline;
 }
 
 .feature-item strong,
