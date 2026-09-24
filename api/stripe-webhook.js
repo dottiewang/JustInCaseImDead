@@ -14,7 +14,7 @@ function verifyStripe(raw, header, secret) {
 
 module.exports = async (req, res) => {
   const raw = await rawBody(req);
-  if (!verifyStripe(raw, req.headers['stripe-signature'], process.env.STRIPE_WEBHOOK_SECRET)) return res.status(400).send('Bad signature');
+  if (!verifyStripe(raw, req.headers['stripe-signature'], process.env.JIC_STRIPE_WEBHOOK_SECRET)) return res.status(400).send('Bad signature');
   const event = JSON.parse(raw);
   const now = Date.now();
 
