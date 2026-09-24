@@ -321,11 +321,13 @@ body.terms-page header {
 .premium-feature-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 18px 22px;
+    align-items: start;
 }
 
 .premium-feature-columns ol {
     margin: 0;
+    padding-left: 20px;
 }
 
 .premium-feature-columns .feature-bottom {
@@ -337,7 +339,27 @@ body.terms-page header {
 
 .premium-feature-columns ol > li {
     break-inside: avoid;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    padding: 8px 10px 0;
+}
+
+.premium-feature-columns ol > li > strong {
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.coming-soon {
+    display: inline-block;
+    margin: 4px 0 6px 8px;
+    padding: 2px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e8d8a3;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    vertical-align: middle;
 }
 
 .premium-column ul {
