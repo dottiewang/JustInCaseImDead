@@ -298,6 +298,8 @@ body.terms-page header {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    width: min(100%, 900px);
+    padding: 16px 18px 8px;
 }
 
 .premium-columns .premium-column:last-child ol,
@@ -320,14 +322,18 @@ body.terms-page header {
 
 .premium-feature-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px 22px;
-    align-items: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 18px;
+    align-items: stretch;
+    text-align: left;
 }
 
 .premium-feature-columns ol {
     margin: 0;
     padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .premium-feature-columns .feature-bottom {
@@ -341,6 +347,9 @@ body.terms-page header {
     break-inside: avoid;
     margin-bottom: 14px;
     padding: 8px 10px 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    min-height: 0;
 }
 
 .premium-feature-columns ol > li > strong {
