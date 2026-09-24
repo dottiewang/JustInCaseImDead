@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email preview - Just In Case</title>
+  <style>
+    :root {
+      --ink: #25231f;
+      --muted: #716b61;
+      --paper: #fbf8f2;
+      --wash: #f1ece2;
+      --line: #ded6c8;
+      --accent: #2f4a3a;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--wash); font-family: Georgia, "Times New Roman", serif; }
+    header { padding: 40px 24px 28px; border-bottom: 1px solid var(--line); background: var(--paper); }
+    .intro, main { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: clamp(30px, 5vw, 52px); font-weight: normal; }
+    .intro p { margin: 0; color: var(--muted); font: 15px/1.6 Arial, Helvetica, sans-serif; }
+    main { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 24px; padding: 24px 0 48px; }
+    aside, .preview { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; }
+    aside { align-self: start; overflow: hidden; }
+    .list-title { padding: 16px 18px; border-bottom: 1px solid var(--line); font: 700 12px/1.2 Arial, Helvetica, sans-serif; letter-spacing: 1.5px; text-transform: uppercase; }
+    #email-list { max-height: 70vh; overflow: auto; }
+    .email-option { display: block; width: 100%; padding: 13px 18px; color: inherit; background: transparent; border: 0; border-bottom: 1px solid var(--line); text-align: left; cursor: pointer; }
+    .email-option:hover, .email-option[aria-current="true"] { background: #e4ebe3; }
+    .email-option strong { display: block; margin-bottom: 4px; font: 700 13px/1.2 Arial, Helvetica, sans-serif; color: var(--accent); }
+    .email-option span { display: block; font: 14px/1.35 Georgia, "Times New Roman", serif; }
+    .preview { overflow: hidden; }
+    .preview-bar { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+    .preview-bar h2 { margin: 0; font-size: 22px; font-weight: normal; }
+    .preview-bar span { color: var(--muted); font: 12px Arial, Helvetica, sans-serif; }
+    iframe { display: block; width: 100%; min-height: 900px; border: 0; background: white; }
+    .error { padding: 24px; color: #8b2f2f; font: 15px/1.5 Arial, Helvetica, sans-serif; }
+    @media (max-width: 760px) {
+      .intro, main { width: min(100% - 28px, 560px); }
+      main { grid-template-columns: 1fr; }
+      #email-list { max-height: 260px; }
+      iframe { min-height: 760px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="intro">
+      <h1>Every email we send</h1>
+      <p>Choose an email to preview it as a subscriber would receive it. Links use safe sample values.</p>
+    </div>
+  </header>
+  <main>
+    <aside>
+      <div class="list-title">Email catalog</div>
+      <div id="email-list" aria-label="Email catalog"></div>
+    </aside>
+    <section class="preview" aria-live="polite">
+      <div class="preview-bar">
+        <h2 id="preview-title">Loading emails...</h2>
+        <span id="preview-key"></span>
+      </div>
+      <iframe id="email-frame" title="Selected email preview" sandbox="allow-popups allow-popups-to-escape-sandbox"></iframe>
+      <div id="error" class="error" hidden></div>
+    </section>
+  </main>
+  <script>
+    const sampleValues = {
+      first_name: 'Alex',
+      next_step_number: '3',
+      next_step_name: 'Legal & Decision Making',
+      steps_done: '2',
+      done_url: '#done',
+      snooze_url: '#snooze',
+      skip_url: '#skip',
+      easy_mode_url: '#easy-mode',
+      full_mode_url: '#full-mode',
+      resume_url: '#resume',
+      restart_url: '#restart',
+      all_done_url: '#all-done',
+      annual_only_url: '#annual',
+      guided_checkpoint_url: '#guided',
+      checkpoint_full_url: '#checkpoint-full',
+      unsubscribe_url: '#unsubscribe',
+      newsletter_optout_url: '#newsletter-optout'
+    };
+
+    const list = document.getElementById('email-list');
+    const title = document.getElementById('preview-title');
+    const keyLabel = document.getElementById('preview-key');
+    const frame = document.getElementById('email-frame');
+    const error = document.getElementById('error');
+    let emails = {};
+
+    function fill(template) {
+      return template.replace(/\{([a-z_]+)\}/g, (match, key) => sampleValues[key] || match);
+    }
+
+    function selectEmail(key) {
+      const email = emails[key];
+      if (!email) return;
+      document.querySelectorAll('.email-option').forEach(button => {
+        button.setAttribute('aria-current', button.dataset.key === key ? 'true' : 'false');
+      });
+      title.textContent = email.subject;
+      keyLabel.textContent = key;
+      error.hidden = true;
+      frame.hidden = false;
+      frame.srcdoc = fill(email.html);
+    }
+
+    function renderList() {
+      const keys = Object.keys(emails);
+      list.replaceChildren(...keys.map(key => {
+        const button = document.createElement('button');
+        button.className = 'email-option';
+        button.dataset.key = key;
+        button.setAttribute('aria-current', 'false');
+        button.innerHTML = `<strong>${key}</strong><span></span>`;
+        button.querySelector('span').textContent = emails[key].subject;
+        button.addEventListener('click', () => selectEmail(key));
+        return button;
+      }));
+      if (keys.length) selectEmail(keys[0]);
+    }
+
+    fetch('/lib/emails.json')
+      .then(response => {
+        if (!response.ok) throw new Error(`Unable to load email catalog (${response.status})`);
+        return response.json();
+      })
+      .then(data => {
+        emails = data;
+        renderList();
+      })
+      .catch(loadError => {
+        frame.hidden = true;
+        error.hidden = false;
+        error.textContent = loadError.message;
+        title.textContent = 'Email catalog unavailable';
+      });
+  </script>
+</body>
+</html>
