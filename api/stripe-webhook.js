@@ -1,127 +1,48 @@
-const Stripe = require('stripe');
-const db = require('../lib/db');
+const crypto = require('crypto');
+const { DAY, getCustomer, saveMeta, send } = require('../lib/core');
 
-function readRawBody(req) {
-  return new Promise((resolve, reject) => {
-    const chunks = [];
+async function rawBody(req) { const chunks = []; for await (const ch of req) chunks.push(ch); return Buffer.concat(chunks).toString('utf8'); }
 
-    req.on('data', (chunk) => {
-      chunks.push(Buffer.from(chunk));
-    });
-
-    req.on('end', () => {
-      resolve(Buffer.concat(chunks));
-    });
-
-    req.on('error', (error) => {
-      reject(error);
-    });
-  });
+function verifyStripe(raw, header, secret) {
+  if (!header) return false;
+  const parts = Object.fromEntries(header.split(',').map(p => p.split('=')));
+  const expected = crypto.createHmac('sha256', secret).update(parts.t + '.' + raw).digest('hex');
+  const sigs = header.split(',').filter(p => p.startsWith('v1=')).map(p => p.slice(3));
+  const fresh = Math.abs(Date.now() / 1000 - Number(parts.t)) < 600;
+  return fresh && sigs.some(s => s.length === expected.length && crypto.timingSafeEqual(Buffer.from(s), Buffer.from(expected)));
 }
 
-async function persistEvent(event) {
-  const object = event.data && event.data.object ? event.data.object : {};
-  const customerDetails = object.customer_details || {};
-  const metadata = object.metadata || {};
+module.exports = async (req, res) => {
+  const raw = await rawBody(req);
+  if (!verifyStripe(raw, req.headers['stripe-signature'], process.env.STRIPE_WEBHOOK_SECRET)) return res.status(400).send('Bad signature');
+  const event = JSON.parse(raw);
+  const now = Date.now();
 
-  const stripeEventId = event.id;
-  const stripeEventType = event.type;
-  const stripeCustomerId = object.customer || null;
-  const stripeSubscriptionId = object.subscription || null;
-  const stripeSessionId = object.id || null;
-  const customerEmail = customerDetails.email || object.customer_email || null;
-  const customerName = customerDetails.name || null;
-  const planKey = metadata.planKey || null;
-  const planName = metadata.plan || null;
-  const status = object.status || object.payment_status || null;
-  const amountTotal = Number.isInteger(object.amount_total) ? object.amount_total : null;
-  const currency = object.currency || null;
-  const eventPayload = JSON.stringify(event);
-
-  await db.query(
-    `
-      INSERT INTO subscription_orders (
-        stripe_event_id,
-        stripe_event_type,
-        stripe_customer_id,
-        stripe_subscription_id,
-        stripe_session_id,
-        customer_email,
-        customer_name,
-        plan_key,
-        plan_name,
-        status,
-        amount_total,
-        currency,
-        event_payload
-      ) VALUES (
-        $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13::jsonb
-      )
-      ON CONFLICT (stripe_event_id) DO NOTHING
-    `,
-    [
-      stripeEventId,
-      stripeEventType,
-      stripeCustomerId,
-      stripeSubscriptionId,
-      stripeSessionId,
-      customerEmail,
-      customerName,
-      planKey,
-      planName,
-      status,
-      amountTotal,
-      currency,
-      eventPayload,
-    ]
-  );
-}
-
-module.exports = async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed.' });
-  }
-
-  const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
-  const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-
-  if (!stripeSecretKey || !stripeWebhookSecret) {
-    return res.status(500).json({
-      error: 'Missing STRIPE_SECRET_KEY or STRIPE_WEBHOOK_SECRET environment variable.',
-    });
-  }
-
-  const stripe = new Stripe(stripeSecretKey, {
-    apiVersion: '2024-06-20',
-  });
-
-  const signature = req.headers['stripe-signature'];
-
-  if (!signature) {
-    return res.status(400).json({ error: 'Missing Stripe signature header.' });
-  }
-
-  try {
-    const rawBody = await readRawBody(req);
-    const event = stripe.webhooks.constructEvent(rawBody, signature, stripeWebhookSecret);
-
-    const supportedEvents = [
-      'checkout.session.completed',
-      'invoice.paid',
-      'customer.subscription.created',
-      'customer.subscription.updated',
-      'customer.subscription.deleted',
-    ];
-
-    if (supportedEvents.includes(event.type)) {
-      await persistEvent(event);
+  if (event.type === 'checkout.session.completed') {
+    const session = event.data.object;
+    if (!session.customer) return res.status(200).send('No customer');
+    const cus = await getCustomer(session.customer);
+    const m = cus.metadata || {};
+    if (!m.jic_track) {
+      const first = ((session.customer_details && session.customer_details.name) || cus.name || '').trim().split(/\s+/)[0] || '';
+      const meta = { jic_track: 'weekly', jic_pos: 1, jic_next: now + 3 * DAY, jic_silent: 0, jic_first: first, jic_cp: 'twice', jic_cpstyle: 'full', jic_news: '1', jic_start: now };
+      if (!cus.email && session.customer_details) cus.email = session.customer_details.email;
+      await send({ ...cus, metadata: { ...m, ...meta } }, 'W1');
+      await saveMeta(cus.id, meta);
+    } else if (m.jic_track !== 'done' && m.jic_paused) {
+      await send(cus, 'R');
+      await saveMeta(cus.id, { jic_paused: '3', jic_unsub: '' });
     }
-
-    return res.status(200).json({ received: true });
-  } catch (error) {
-    return res.status(400).json({
-      error: error instanceof Error ? error.message : 'Webhook verification failed.',
-    });
   }
+
+  if (event.type === 'invoice.paid' && event.data.object.billing_reason === 'subscription_cycle') {
+    const cus = await getCustomer(event.data.object.customer);
+    const m = cus.metadata || {};
+    if (m.jic_track && m.jic_track !== 'done' && m.jic_paused && m.jic_paused !== '3' && m.jic_unsub !== '1') {
+      await send(cus, 'R');
+      await saveMeta(cus.id, { jic_paused: '3' });
+    }
+  }
+
+  res.status(200).json({ received: true });
 };

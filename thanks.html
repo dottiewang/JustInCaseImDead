@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Got it · Just In Case</title>
+<style>
+  body{margin:0;background:#F1ECE2;color:#2B2A26;font-family:Georgia,"Times New Roman",serif}
+  a{color:#2F4A3A} a:hover{color:#A0703F}
+  .wrap{max-width:560px;margin:0 auto;padding:64px 24px;text-align:center}
+  img{width:120px;height:auto;margin-bottom:40px}
+  h1{font-weight:normal;font-size:34px;line-height:1.2;margin:0 0 16px}
+  p{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6;color:#6B665C;margin:0 0 28px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:4px;background:#2F4A3A;color:#FBF8F2;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-weight:700;text-decoration:none}
+  .btn:hover{background:#243A2D;color:#FBF8F2}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="/"><img src="https://www.justincaseimdead.com/logo.jpg" alt="Just In Case"></a>
+  <h1 id="t">Got it.</h1>
+  <p id="m">Thanks — we&rsquo;ve updated your plan.</p>
+  <a class="btn" href="https://drive.google.com/drive/search?q=Just%20In%20Case" target="_blank" rel="noopener">Open my templates</a>
+</div>
+<script>
+  var M = {
+    done: ['Nice work.', 'Your next step will arrive in about 3 days.'],
+    skip: ['No problem.', 'We&rsquo;ll bring that one back at the end. Your next email arrives in a few days.'],
+    snooze: ['No problem.', 'We&rsquo;ll send this again later. Nothing is lost.'],
+    easy: ['You&rsquo;re on easy mode.', 'Check your inbox &mdash; we&rsquo;ve just sent you the details. Your first question arrives in 2 days.'],
+    full: ['Back to weekly steps.', 'Your next step arrives tomorrow.'],
+    resume: ['Welcome back.', 'Your next step arrives within a day.'],
+    restart: ['Starting fresh.', 'Step 1 arrives within a day. Your existing templates stay as they are.'],
+    alldone: ['Brilliant &mdash; all 9 done.', 'We&rsquo;ll send the print step tomorrow.'],
+    annual: ['Once a year it is.', 'You&rsquo;ll get one checkpoint a year. You can switch back any time.'],
+    guided: ['Guided checkpoint on.', 'Your first short question arrives within a day.'],
+    cpfull: ['One-email version it is.', 'Your checkpoint arrives within a day.'],
+    unsub: ['You&rsquo;re unsubscribed.', 'You won&rsquo;t get any more plan emails. Your templates stay in your Google Drive.'],
+    newsoff: ['Newsletter off.', 'You&rsquo;ll still get your checkpoints. Every article is on our website any time.']
+  };
+  var a = new URLSearchParams(location.search).get('a');
+  if (M[a]) { document.getElementById('t').innerHTML = M[a][0]; document.getElementById('m').innerHTML = M[a][1]; }
+</script>
+</body>
+</html>
