@@ -324,7 +324,7 @@ body.terms-page header {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px 18px;
-    align-items: stretch;
+    align-items: start;
     text-align: left;
 }
 
@@ -333,14 +333,6 @@ body.terms-page header {
     padding-left: 20px;
     display: flex;
     flex-direction: column;
-    height: 100%;
-}
-
-.premium-feature-columns .feature-bottom {
-    grid-column: 1 / -1;
-    max-width: 50%;
-    margin: 0 auto;
-    transform: none;
 }
 
 .premium-feature-columns ol > li {
@@ -349,7 +341,6 @@ body.terms-page header {
     padding: 8px 10px 0;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.02);
-    min-height: 0;
 }
 
 .premium-feature-columns ol > li > strong {
@@ -357,9 +348,24 @@ body.terms-page header {
     margin-bottom: 6px;
 }
 
-.premium-feature-columns ol > li > strong {
+.premium-feature-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.premium-feature-item {
+    width: min(100%, 760px);
+    padding: 10px 12px 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.premium-feature-item > strong {
     display: inline-block;
     margin-bottom: 6px;
+    text-decoration: underline;
 }
 
 .beta-tag {
