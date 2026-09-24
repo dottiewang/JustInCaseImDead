@@ -4,56 +4,54 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Your plan, step by step · Just In Case</title>
-<meta name="description" content="One short step a week to organize everything your family will need. Here's the whole plan at a glance.">
+<meta name="description" content="Nine short templates, one a week, then print and store. About 15–25 minutes at a time. Here's the whole plan at a glance.">
 <style>
   :root {
-    --paper:#000; --card:#111; --ink:#fff; --muted:#d0d0d0;
-    --rule:rgba(255,255,255,.3); --gold:gold;
+    --paper:#F1ECE2; --card:#FBF8F2; --ink:#2B2A26; --muted:#6B665C;
+    --rule:#E2DBCD; --green:#2F4A3A; --copper:#A0703F; --sage:#E4EBE3;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper:#1E1D1A; --card:#2A2925; --ink:#EDE8DE; --muted:#B8B1A3; --rule:#45423B; --green:#9FC1A8; --copper:#D2A06E; --sage:#2F3A31; }
   }
   * { box-sizing:border-box; }
-  body { margin:20px; background:var(--paper); color:var(--ink); font-family:Arial, sans-serif; font-size:18px; line-height:1.6; text-align:center; -webkit-font-smoothing:antialiased; }
-  a { color:var(--gold); }
-  a:hover { color:var(--ink); }
-  .wrap { max-width:1100px; margin:0 auto; padding:0 12px 40px; }
-  header { background:var(--paper); color:var(--ink); padding:10px; margin-bottom:28px; }
-  header img { width:68px; height:68px; object-fit:contain; display:block; }
-  .tagline-row { display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; }
-  .tagline-row h1 { font-size:clamp(1.5rem, 4vw, 2rem); margin:0; }
-  header nav { display:flex; justify-content:center; flex-wrap:wrap; gap:16px; font-size:.85rem; }
-  header nav a { color:var(--ink); text-decoration:none; }
-  header nav a:hover { color:var(--gold); text-decoration:underline; }
-  .eyebrow { font-size:.85rem; color:var(--gold); margin:0 0 10px; }
-  h1 { font-weight:normal; font-size:clamp(1rem, 2.5vw, 1.8rem); line-height:1.2; margin:0 auto 20px; max-width:700px; }
-  h2 { font-weight:normal; font-size:1.6rem; line-height:1.2; margin:0 0 20px; }
-  .lede { font-size:1.05rem; color:var(--ink); margin:0 auto 24px; max-width:800px; }
-  .facts { display:flex; justify-content:center; flex-wrap:wrap; gap:8px 24px; font-size:.9rem; color:var(--muted); margin:0 0 36px; padding:0; list-style:none; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--serif); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a { color:var(--green); }
+  a:hover { color:var(--copper); }
+  .wrap { max-width:760px; margin:0 auto; padding:40px 24px 80px; }
+  header { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:56px; }
+  header img { width:120px; height:auto; display:block; }
+  header nav { display:flex; gap:20px; font-family:var(--sans); font-size:15px; }
+  header nav a { color:var(--muted); text-decoration:none; }
+  header nav a:hover { color:var(--ink); }
+  .eyebrow { font-family:var(--sans); font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--copper); margin:0 0 16px; }
+  h1 { font-weight:normal; font-size:clamp(34px, 6vw, 48px); line-height:1.12; margin:0 0 20px; text-wrap:balance; }
+  h2 { font-weight:normal; font-size:28px; line-height:1.2; margin:0 0 24px; }
+  .lede { font-size:20px; color:var(--ink); margin:0 0 28px; max-width:36em; text-wrap:pretty; }
+  .facts { display:flex; flex-wrap:wrap; gap:10px 28px; font-family:var(--sans); font-size:15px; color:var(--muted); margin:0 0 56px; padding:0; list-style:none; }
   .facts strong { color:var(--ink); }
-  .steps { list-style:none; margin:0 auto 40px; padding:0; max-width:900px; border-top:1px solid var(--rule); text-align:left; }
+  .steps { list-style:none; margin:0 0 64px; padding:0; border-top:1px solid var(--rule); }
   .step { display:grid; grid-template-columns:56px minmax(0,1fr) auto; gap:4px 16px; padding:24px 0; border-bottom:1px solid var(--rule); }
-  .num { font-size:30px; line-height:1; color:var(--gold); }
-  .step h3 { margin:0 0 4px; font-size:1rem; line-height:1.4; }
-  .step p { margin:0; font-size:.9rem; line-height:1.55; color:var(--muted); }
-  .when { font-size:.8rem; color:var(--muted); text-align:right; white-space:nowrap; }
-  .time { display:inline-block; margin-top:4px; padding:3px 10px; border:1px solid var(--gold); color:var(--gold); font-weight:600; }
-  .step.finale .num { color:var(--ink); }
+  .num { font-size:30px; line-height:1; color:var(--copper); }
+  .step h3 { margin:0 0 4px; font-family:var(--sans); font-size:17px; line-height:1.4; }
+  .step p { margin:0; font-family:var(--sans); font-size:15px; line-height:1.55; color:var(--muted); text-wrap:pretty; }
+  .when { font-family:var(--sans); font-size:13px; color:var(--muted); text-align:right; white-space:nowrap; }
+  .time { display:inline-block; margin-top:4px; padding:3px 10px; border-radius:99px; background:var(--sage); color:var(--green); font-weight:600; }
+  .step.finale .num { color:var(--green); }
   details { border-bottom:1px solid var(--rule); }
   details:first-of-type { border-top:1px solid var(--rule); }
-  summary { cursor:pointer; list-style:none; padding:18px 32px 18px 0; position:relative; font-size:1rem; font-weight:600; }
+  summary { cursor:pointer; list-style:none; padding:18px 32px 18px 0; position:relative; font-family:var(--sans); font-size:17px; font-weight:600; }
   summary::-webkit-details-marker { display:none; }
-  summary::after { content:"+"; position:absolute; right:4px; top:14px; font-size:22px; font-weight:400; color:var(--gold); }
+  summary::after { content:"+"; position:absolute; right:4px; top:14px; font-size:22px; font-weight:400; color:var(--copper); }
   details[open] summary::after { content:"–"; }
-  details p { margin:0 0 20px; font-size:.95rem; color:var(--muted); max-width:38em; }
-  .questions { text-align:center; }
-  .questions details p { margin-left:auto; margin-right:auto; }
-  footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--rule); display:flex; justify-content:center; flex-wrap:wrap; gap:16px; font-size:.85rem; }
-  footer a { color:var(--ink); }
+  details p { margin:0 0 20px; font-family:var(--sans); font-size:16px; color:var(--muted); max-width:38em; }
+  footer { margin-top:64px; padding-top:24px; border-top:1px solid var(--rule); display:flex; flex-wrap:wrap; gap:20px; font-family:var(--sans); font-size:14px; }
+  footer a { color:var(--muted); }
   @media (max-width:560px) {
-    .tagline-row { flex-wrap:nowrap; gap:8px; }
-    .tagline-row h1 { font-size:1.1rem; white-space:nowrap; }
-    header img { width:48px; height:48px; }
     .step { grid-template-columns:40px minmax(0,1fr); }
     .when { grid-column:2; text-align:left; margin-top:8px; }
-    .step { gap:4px 10px; }
+    header nav { display:none; }
   }
 </style>
 </head>
@@ -61,17 +59,19 @@
 <div class="wrap">
 
   <header>
-    <div class="tagline-row">
-      <a href="/"><img src="logo.jpg" alt="Just In Case logo"></a>
-      <h1>Your plan, step by step</h1>
-    </div>
+    <a href="/"><img src="https://www.justincaseimdead.com/logo.jpg" alt="Just In Case"></a>
+    <nav>
+      <a href="/faq">FAQ</a>
+      <a href="/subscriptions">Subscribe</a>
+    </nav>
   </header>
 
   <main>
-    <h1>One short step a week to organize everything your family will need.</h1>
-    <p class="lede">We'll email you one small step at a time. Nothing is due, nothing expires &mdash; go at your pace, rush ahead, or pause whenever life gets busy.</p>
+    <p class="eyebrow">Your plan, step by step</p>
+    <h1>Nine short templates. One less thing for your family to figure out.</h1>
+    <p class="lede">We'll email you one template at a time. Nothing is due, nothing expires &mdash; go at your pace, rush ahead, or pause whenever life gets busy.</p>
     <ul class="facts">
-      <li><strong>15–25 minutes a week</strong></li>
+      <li><strong>15&ndash;25 minutes</strong> a week</li>
       <li>Spread over <strong>9 weeks</strong></li>
       <li>Lives in <strong>your own Google Drive</strong></li>
     </ul>
@@ -79,62 +79,86 @@
     <ol class="steps">
       <li class="step">
         <span class="num">1</span>
-        <div><h3>Copy your plan to Google Drive</h3><p>One click puts your own copy of the plan in your Google Drive. You own it; we never see it.</p></div>
+        <div><h3>Cover Sheet</h3><p>Your name and today&rsquo;s date, so your family knows how current the plan is.</p></div>
         <div class="when">Day 1<br><span class="time">2 min</span></div>
       </li>
       <li class="step">
         <span class="num">2</span>
-        <div><h3>Read This First</h3><p>Who to call, where things are, what matters most. If your family only reads one page, it's this one.</p></div>
-        <div class="when">Day 3<br><span class="time">10 min</span></div>
+        <div><h3>Read This First</h3><p>What to do first, who to contact, and who looks after the pets. The page your family reaches for first.</p></div>
+        <div class="when">Day 3<br><span class="time">15 min</span></div>
       </li>
       <li class="step">
         <span class="num">3</span>
-        <div><h3>Digital access</h3><p>Your phone, your main email and your password manager &mdash; the three keys that unlock everything else.</p></div>
-        <div class="when">Week 1<br><span class="time">10 min</span></div>
+        <div><h3>Legal &amp; Decision Making</h3><p>Where your will, trust, power of attorney and healthcare directive are kept, and who prepared them.</p></div>
+        <div class="when">Week 1<br><span class="time">15 min</span></div>
       </li>
       <li class="step">
         <span class="num">4</span>
-        <div><h3>Money &amp; insurance</h3><p>Accounts, bills, policies. Start by gathering the paperwork; writing it down is quick after that.</p></div>
-        <div class="when">Week 2<br><span class="time">20 min</span></div>
+        <div><h3>Digital Access Plan</h3><p>Where your passwords are stored, your phone, and the accounts that text you a code.</p></div>
+        <div class="when">Week 2<br><span class="time">15 min</span></div>
       </li>
       <li class="step">
         <span class="num">5</span>
-        <div><h3>Legal wishes &amp; personal notes</h3><p>Who decides what, where your will lives, and anything you'd want the people you love to hear from you.</p></div>
-        <div class="when">Week 3<br><span class="time">20 min</span></div>
+        <div><h3>Financial Snapshot</h3><p>Bank accounts, cards and loans, investments, and the keys to any safe or lockbox.</p></div>
+        <div class="when">Week 3<br><span class="time">25 min</span></div>
       </li>
       <li class="step">
         <span class="num">6</span>
-        <div><h3>Print a paper copy</h3><p>Phones die and passwords change. Print your plan, sign and date it, so it works even when nothing else does.</p></div>
-        <div class="when">Week 4<br><span class="time">15 min</span></div>
+        <div><h3>Home, Car &amp; Everyday Life</h3><p>Mortgage or rent, car loan, cell service, the bills that must keep getting paid, and who to call for help.</p></div>
+        <div class="when">Week 4<br><span class="time">25 min</span></div>
+      </li>
+      <li class="step">
+        <span class="num">7</span>
+        <div><h3>Insurance &amp; Protection</h3><p>Every policy, where to find it, and who to call to make a claim.</p></div>
+        <div class="when">Week 5<br><span class="time">20 min</span></div>
+      </li>
+      <li class="step">
+        <span class="num">8</span>
+        <div><h3>Identification &amp; Records</h3><p>Where the originals are kept: birth certificate, passport, Social Security card and more.</p></div>
+        <div class="when">Week 6<br><span class="time">10 min</span></div>
+      </li>
+      <li class="step">
+        <span class="num">9</span>
+        <div><h3>Personal Notes</h3><p>Letters, notes for the kids, photos, who to tell, and who gets what.</p></div>
+        <div class="when">Week 7<br><span class="time">20 min</span></div>
+      </li>
+      <li class="step">
+        <span class="num">10</span>
+        <div><h3>Print a paper copy</h3><p>Phones die and passwords change. Print all 9 templates and keep them in a binder, so your plan works even when nothing else does.</p></div>
+        <div class="when">Week 8<br><span class="time">15 min</span></div>
       </li>
       <li class="step finale">
-        <span class="num">7</span>
-        <div><h3>Store it safely &amp; tell someone</h3><p>Choose a safe place &mdash; a fire-resistant home safe, a safe deposit box, or your lawyer's office &mdash; and tell one trusted person where it is.</p></div>
-        <div class="when">Week 5<br><span class="time">15 min</span></div>
+        <span class="num">11</span>
+        <div><h3>Store it safely &amp; let your people know</h3><p>Choose a safe place &mdash; a fire-resistant home safe, your lawyer or executor, or a safe deposit box &mdash; and let the people who&rsquo;ll need it know where to find it.</p></div>
+        <div class="when">Week 9<br><span class="time">15 min</span></div>
       </li>
     </ol>
 
-    <section class="questions">
+    <section>
       <h2>Questions</h2>
       <details>
+        <summary>Do I need a Google account?</summary>
+        <p>Yes, a free one. Use a personal account, not a work or school one &mdash; those can be closed when you change jobs, and your employer can see what's in them. No account yet? <a href="https://accounts.google.com/signup" target="_blank" rel="noopener">Create one here</a>. You can sign up with the email address you already use; you don't need Gmail. Then turn on 2-Step Verification.</p>
+      </details>
+      <details>
         <summary>What if I fall behind?</summary>
-        <p>Nothing happens. Every email has a &ldquo;Not this week&rdquo; button that pauses for 7 days, and you can always come back to this page and start from any step.</p>
+        <p>No problem. Every email has a &ldquo;Not this week&rdquo; button that sends the same step again in 7 days. If three weeks go by without a click, we&rsquo;ll pause your emails and check in with you first. And you can always come back to this page and start from any step.</p>
       </details>
       <details>
         <summary>Can I do it all at once?</summary>
-        <p>Yes. Open your plan and work straight through. When you're done, click &ldquo;Done&rdquo; in any email and we'll skip ahead.</p>
+        <p>Yes. All 9 templates are listed at the bottom of your welcome email &mdash; copy them all at once, then work straight through. When you&rsquo;re done, click &ldquo;Skip to the final steps&rdquo; in any email and we&rsquo;ll send you the print step next.</p>
       </details>
       <details>
         <summary>Who can see my plan?</summary>
         <p>Only you, and anyone you choose to share it with from Google Drive. Your copy lives in your account; we have no access to it.</p>
       </details>
       <details>
-        <summary>I don't use Google. Can I still do this?</summary>
-        <p>Yes. Print the worksheets, fill them in by hand, and store them the same way as step 7.</p>
+        <summary>What happens once my plan is set up?</summary>
+        <p>While you&rsquo;re on the premium plan, we&rsquo;ll check in twice a year with a short review, so your plan stays current. Prefer a hand? You can get each checkpoint as a few 2-minute questions instead. Rather just once a year? You can switch any time.</p>
       </details>
       <details>
         <summary>What happens if I cancel?</summary>
-        <p>The emails stop, but your plan stays in your Google Drive. It's yours to keep.</p>
+        <p>The emails and checkpoints stop, but your templates stay in your Google Drive. They&rsquo;re yours to keep &mdash; and if you come back later, you can pick up right where you left off.</p>
       </details>
     </section>
   </main>
