@@ -293,13 +293,13 @@ body.terms-page header {
 }
 
 .premium-columns .premium-column:last-child {
-    border: 1px solid #fff;
-    margin-top: -32px;
+    border: none;
+    margin-top: 0;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: min(100%, 900px);
-    padding: 16px 18px 8px;
+    padding: 0;
 }
 
 .premium-columns .premium-column:last-child ol,
@@ -323,7 +323,7 @@ body.terms-page header {
 .premium-feature-columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px 28px;
+    gap: 10px 18px;
     align-items: start;
     text-align: left;
 }
@@ -331,30 +331,30 @@ body.terms-page header {
 .feature-column {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 10px;
 }
 
 .feature-item,
 .premium-feature-item {
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.02);
-    padding: 14px 18px 12px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
 }
 
 .feature-title {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 10px;
-    font-size: 1.85rem;
-    line-height: 1.1;
+    gap: 6px;
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+    line-height: 1.25;
     font-weight: 700;
 }
 
 .feature-title-inline {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .feature-number {
@@ -374,11 +374,12 @@ body.terms-page header {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
+    width: 100%;
     margin-top: 2px;
 }
 
 .premium-feature-item {
-    width: min(100%, 760px);
+    width: min(100%, 540px);
     margin: 0 auto;
 }
 
@@ -403,9 +404,9 @@ body.terms-page header {
 }
 
 .premium-column li {
-    margin: 0 0 8px;
-    line-height: 1.5;
-    font-size: 1.15rem;
+    margin: 0 0 5px;
+    line-height: 1.35;
+    font-size: 0.98rem;
 }
 
 .product {
