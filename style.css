@@ -323,7 +323,7 @@ body.terms-page header {
 .premium-feature-columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px 30px;
+    gap: 18px 28px;
     align-items: start;
     text-align: left;
 }
@@ -336,25 +336,25 @@ body.terms-page header {
 
 .feature-item,
 .premium-feature-item {
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
     background: rgba(255, 255, 255, 0.02);
-    padding: 12px 18px 10px;
+    padding: 14px 18px 12px;
 }
 
 .feature-title {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-    line-height: 1.3;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 1.85rem;
+    line-height: 1.1;
     font-weight: 700;
 }
 
 .feature-title-inline {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .feature-number {
@@ -403,9 +403,9 @@ body.terms-page header {
 }
 
 .premium-column li {
-    margin: 0 0 6px;
+    margin: 0 0 8px;
     line-height: 1.5;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
 }
 
 .product {
