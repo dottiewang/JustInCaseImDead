@@ -293,13 +293,13 @@ body.terms-page header {
 }
 
 .premium-columns .premium-column:last-child {
-    border: none;
+    border: 1px solid #fff;
     margin-top: 0;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: min(100%, 900px);
-    padding: 0;
+    padding: 12px 16px 10px;
 }
 
 .premium-columns .premium-column:last-child ol,
@@ -369,6 +369,7 @@ body.terms-page header {
 .premium-feature-item strong {
     display: inline;
     font-weight: 700;
+    text-decoration: underline;
 }
 
 .premium-feature-bottom {
@@ -382,6 +383,10 @@ body.terms-page header {
 .premium-feature-item {
     width: min(100%, 540px);
     margin: 0 auto;
+}
+
+.premium-feature-item .feature-title {
+    justify-content: center;
 }
 
 .beta-tag {
