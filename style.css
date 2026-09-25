@@ -344,9 +344,9 @@ body.terms-page header {
 
 .feature-title {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 0;
     margin-bottom: 6px;
     font-size: 1.1rem;
     line-height: 1.25;
