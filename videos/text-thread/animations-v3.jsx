@@ -393,6 +393,26 @@ function Stage({
   const canvasRef = React.useRef(null);
   const rafRef = React.useRef(null);
   const lastTsRef = React.useRef(null);
+  const controlsTimerRef = React.useRef(null);
+
+  const revealControls = () => {
+    setControlsVisible(true);
+    if (controlsTimerRef.current) clearTimeout(controlsTimerRef.current);
+    controlsTimerRef.current = setTimeout(() => {
+      controlsTimerRef.current = null;
+      setControlsVisible(false);
+    }, 1200);
+  };
+
+  const hideControls = () => {
+    if (controlsTimerRef.current) clearTimeout(controlsTimerRef.current);
+    controlsTimerRef.current = null;
+    setControlsVisible(false);
+  };
+
+  React.useEffect(() => () => {
+    if (controlsTimerRef.current) clearTimeout(controlsTimerRef.current);
+  }, []);
 
   // Persist playhead
   React.useEffect(() => {
@@ -603,7 +623,7 @@ function Stage({
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         overflow: 'hidden',
         minHeight: 0,
-      }} onMouseEnter={() => setControlsVisible(true)} onMouseLeave={() => setControlsVisible(false)}>
+      }} onMouseMove={revealControls} onMouseLeave={hideControls}>
         <svg
           ref={canvasRef}
           width={width} height={height}
