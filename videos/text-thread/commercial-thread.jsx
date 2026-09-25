@@ -39,21 +39,21 @@ function Phone() {
   const a = MOTION.enter(T, O + 0.2, 1.1), x = MOTION.exit(T, K - 0.2, 0.6);
   const push = 1 + 0.05 * MOTION.drift(T, O, P);
   const first = [
-    { from: 'me', t: 'Do you know which bank Dad used?', at: H + 0.3 },
-    { from: 'sam', dots: true, at: H + 1.5, end: H + 2.4 },
-    { from: 'sam', t: 'No. Do you?', at: H + 2.4 },
-    { from: 'me', t: 'The funeral home needs his insurance details', at: H + 4.0 },
-    { from: 'me', t: 'I’ve been through every drawer', at: H + 5.6 },
-    { from: 'sam', dots: true, at: H + 6.8, end: H + 7.8 },
-    { from: 'sam', t: 'Did he even have a will?', at: H + 7.8 },
-    { from: 'me', t: 'I think so?? Somewhere', at: H + 9.4 },
-    { from: 'sam', t: 'What’s his phone passcode', at: H + 10.8 },
-    { from: 'me', dots: true, at: H + 11.8, end: P - 0.2 },
+    { from: 'me', t: 'Do you know which bank Dad used?', at: H + 0.28 },
+    { from: 'sam', dots: true, at: H + 1.38, end: H + 2.22 },
+    { from: 'sam', t: 'No. Do you?', at: H + 2.22 },
+    { from: 'me', t: 'The funeral home needs his insurance details', at: H + 3.69 },
+    { from: 'me', t: 'I’ve been through every drawer', at: H + 5.17 },
+    { from: 'sam', dots: true, at: H + 6.28, end: H + 7.20 },
+    { from: 'sam', t: 'Did he even have a will?', at: H + 7.20 },
+    { from: 'me', t: 'I think so?? Somewhere', at: H + 8.68 },
+    { from: 'sam', t: 'What’s his phone passcode', at: H + 9.97 },
+    { from: 'me', dots: true, at: H + 10.89, end: P - 0.2 },
   ];
   const second = [
-    { from: 'me', t: 'Do you know which bank Dad used?', at: P + 0.6 },
-    { from: 'sam', t: 'It’s all in his Just In Case plan. He shared it with us.', at: P + 1.9 },
-    { from: 'me', t: 'Oh thank god', at: P + 3.6 },
+    { from: 'me', t: 'Do you know which bank Dad used?', at: P + 1.8 },
+    { from: 'sam', t: 'It’s all in his Just In Case plan. He shared it with us.', at: P + 3.0 },
+    { from: 'me', t: 'Oh thank god', at: P + 4.8 },
   ];
   return (
     <div style={{ ...abs, left: 260, top: 60, width: 500, height: 960, opacity: a * (1 - x), transform: `translateY(${(1 - a) * 120}px) scale(${push})` }}>
@@ -79,14 +79,14 @@ function Side() {
   const lab = MOTION.enter(T, O + 1.0, 0.8) * (1 - MOTION.exit(T, S - 0.3, 0.5));
   const s1 = MOTION.enter(T, S + 0.3, 1.0) * (1 - MOTION.exit(T, P - 0.4, 0.5));
   const p1 = MOTION.enter(T, P + 0.2, 0.8) * (1 - MOTION.exit(T, K - 0.3, 0.5));
-  const p2 = MOTION.enter(T, P + 2.4, 0.9) * (1 - MOTION.exit(T, K - 0.3, 0.5));
+  const p2 = MOTION.enter(T, P + 5.6, 0.9) * (1 - MOTION.exit(T, K - 0.3, 0.5));
   const col = { ...abs, left: 920, width: 820 };
   return (
     <>
       <div style={{ ...col, top: 480, fontFamily: SANS, fontSize: 26, letterSpacing: 5, textTransform: 'uppercase', color: C.amber, opacity: lab }}>Three days after the funeral</div>
-      <div style={{ ...col, top: 400, fontFamily: SERIF, fontSize: 88, lineHeight: 1.15, color: C.cream, opacity: s1, transform: `translateY(${(1 - s1) * 24}px)` }}>Nobody told them where anything was.</div>
-      <div style={{ ...col, top: 330, fontFamily: SERIF, fontStyle: 'italic', fontSize: 96, color: C.amber, opacity: p1, transform: `translateY(${(1 - p1) * 24}px)` }}>Or, this.</div>
-      <div style={{ ...col, top: 480, fontFamily: SERIF, fontSize: 52, lineHeight: 1.3, color: C.cream, opacity: p2, transform: `translateY(${(1 - p2) * 20}px)` }}>Write it all down, one short step a week, and share it with the people who’ll need it.</div>
+      <div style={{ ...col, top: 400, fontFamily: SERIF, fontSize: 88, lineHeight: 1.15, color: C.cream, opacity: s1, transform: `translateY(${(1 - s1) * 24}px)` }}>No one could tell them where anything was.</div>
+      <div style={{ ...col, top: 280, fontFamily: SERIF, fontStyle: 'italic', fontSize: 72, lineHeight: 1.15, color: C.amber, opacity: p1, transform: `translateY(${(1 - p1) * 24}px)` }}>What if Dad had<br />written it all down?</div>
+      <div style={{ ...col, top: 480, fontFamily: SERIF, fontSize: 52, lineHeight: 1.3, color: C.cream, opacity: p2, transform: `translateY(${(1 - p2) * 20}px)` }}>Show your family where everything is. It only takes a few minutes a week.</div>
     </>
   );
 }
@@ -97,9 +97,9 @@ function Close() {
   const a = MOTION.enter(T, K + 0.3, 0.9), b = MOTION.enter(T, K + 0.9, 0.9), c = MOTION.enter(T, K + 1.8, 0.8);
   const push = 1 + 0.03 * MOTION.drift(T, K, K + 5);
   return (
-    <div style={{ ...abs, inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', transform: `scale(${push})` }}>
-      <div style={{ fontFamily: SERIF, fontSize: 124, lineHeight: 1.1, color: C.cream, opacity: a, transform: `translateY(${(1 - a) * 30}px)` }}>Leave them a plan,</div>
-      <div style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 124, lineHeight: 1.1, color: C.amber, opacity: b, transform: `translateY(${(1 - b) * 30}px)` }}>not a puzzle.</div>
+    <div style={{ ...abs, inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ fontFamily: SERIF, fontSize: 124, lineHeight: 1.1, color: C.cream, opacity: a, transform: a < 1 ? `translateY(${(1 - a) * 30}px)` : 'none' }}>Leave them with a plan,</div>
+      <div style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 84, lineHeight: 1.2, textAlign: 'center', marginTop: 16, color: C.amber, opacity: b, transform: b < 1 ? `translateY(${(1 - b) * 30}px)` : 'none' }}>so you can take care of them,<br />one last time.</div>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 26, marginTop: 70, opacity: c, transform: `translateY(${(1 - c) * 20}px)` }}>
         <div style={{ fontFamily: SERIF, fontSize: 44, color: C.cream }}>Just In Case</div>
         <div style={{ padding: '22px 44px', background: C.amber, borderRadius: 6, fontFamily: SANS, fontSize: 32, fontWeight: 'bold', color: C.ink, boxShadow: '0 10px 30px rgba(217,179,132,0.25)' }}>Start your plan at justincaseimdead.com</div>
@@ -112,9 +112,9 @@ function Piece({ showCaptions }) {
   const { T, CUES } = useComposition();
   const S = CUES.Silence, P = CUES.Plan, K = CUES.Close;
   const lines = [
-    { at: S + 0.3, until: P - 0.2, text: 'Nobody told them where anything was.' },
-    { at: P + 2.3, until: K - 0.2, text: 'Just In Case helps you write it all down — and share it with the people who’ll need it.' },
-    { at: K + 0.3, text: 'Leave them a plan, not a puzzle. Start yours at justincaseimdead.com.' },
+    { at: S + 0.3, until: P - 0.2, text: 'No one could tell them where anything was.' },
+    { at: P + 5.6, until: K - 0.2, text: 'Just In Case helps you show your family where everything is. It only takes a few minutes a week.' },
+    { at: K + 0.3, text: 'Leave them with a plan, so you can take care of them, one last time. Start yours at justincaseimdead.com.' },
   ];
   return (
     <div data-screen-label={`t=${Math.floor(T)}s`} style={{ ...abs, inset: 0, background: C.bg, overflow: 'hidden' }}>
