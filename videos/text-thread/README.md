@@ -1,0 +1,1 @@
+To change the video: edit commercial-thread.jsx (all words, colours and timing are there). Scene lengths are in index.html (window.OM_SCENES, "dur" in seconds). Don't edit animations-v3.jsx, tweaks-panel.jsx or support.js.
