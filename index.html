@@ -31,6 +31,41 @@
             margin: 10px 0 0;
             font-size: 0.95rem;
         }
+
+        .homepage-video {
+            padding: 56px 20px;
+            background: #0b0b0e;
+        }
+
+        .homepage-video-frame {
+            max-width: 960px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+        }
+
+        .homepage-video-frame iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        /* Wider frame on phones so the composition renders at a larger scale and stays readable */
+        @media (max-width: 640px) {
+            .homepage-video {
+                padding: 32px 0;
+            }
+
+            .homepage-video-frame {
+                max-width: none;
+                border-radius: 0;
+            }
+
+            .homepage-video-frame iframe {
+                border-radius: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -41,10 +76,9 @@
         </div>
     </header>
 
-<section style="padding:56px 20px; background:#0b0b0e;">
-    <div style="max-width:960px; margin:0 auto; aspect-ratio:16/9;">
-        <iframe src="/videos/text-thread/index.html" title="Two siblings texting after their dad's funeral, unable to find the will, the bank or his passcode — then finding it all in his Just In Case plan." loading="lazy" scrolling="no"
-            style="display:block; width:100%; height:100%; border:0; border-radius:8px;"></iframe>
+<section class="homepage-video">
+    <div class="homepage-video-frame">
+        <iframe src="/videos/text-thread/index.html" title="Two siblings texting after their dad's funeral, unable to find the will, the bank or his passcode — then finding it all in his Just In Case plan." loading="lazy" scrolling="no"></iframe>
     </div>
 </section>
 
