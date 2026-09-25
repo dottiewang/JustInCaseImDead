@@ -623,7 +623,7 @@ function Stage({
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         overflow: 'hidden',
         minHeight: 0,
-      }} onMouseMove={revealControls} onMouseLeave={hideControls}>
+      }} onClick={() => setPlaying(p => !p)} onMouseMove={revealControls} onMouseLeave={hideControls}>
         <svg
           ref={canvasRef}
           width={width} height={height}
@@ -654,8 +654,6 @@ function Stage({
         </svg>
         <VideoControls
           visible={controlsVisible}
-          playing={playing}
-          onPlayPause={() => setPlaying(p => !p)}
           onReplay={() => { setTime(0); setPlaying(true); }}
         />
       </div>
@@ -663,7 +661,7 @@ function Stage({
   );
 }
 
-function VideoControls({ visible, playing, onPlayPause, onReplay }) {
+function VideoControls({ visible, onReplay }) {
   const buttonStyle = {
     width: 48,
     height: 48,
@@ -686,26 +684,13 @@ function VideoControls({ visible, playing, onPlayPause, onReplay }) {
         top: '50%',
         transform: 'translate(-50%, -50%)',
         display: 'flex',
-        gap: 12,
         opacity: visible ? 1 : 0,
         pointerEvents: visible ? 'auto' : 'none',
         transition: 'opacity 160ms ease',
         zIndex: 1,
       }}
     >
-      <button type="button" onClick={onPlayPause} title={playing ? 'Pause video' : 'Play video'} aria-label={playing ? 'Pause video' : 'Play video'} style={buttonStyle}>
-        {playing ? (
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <rect x="5" y="4" width="3" height="12" fill="currentColor" />
-            <rect x="12" y="4" width="3" height="12" fill="currentColor" />
-          </svg>
-        ) : (
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M6 4l10 6-10 6V4z" fill="currentColor" />
-          </svg>
-        )}
-      </button>
-      <button type="button" onClick={onReplay} title="Replay video" aria-label="Replay video" style={buttonStyle}>
+      <button type="button" onClick={(event) => { event.stopPropagation(); onReplay(); }} title="Replay video" aria-label="Replay video" style={buttonStyle}>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <path d="M15.5 8A6 6 0 106 15.2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
           <path d="M15.5 3.8V8h-4.2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
