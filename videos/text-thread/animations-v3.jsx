@@ -601,7 +601,7 @@ function Stage({
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         overflow: 'hidden',
         minHeight: 0,
-      }} onClick={() => setPlaying(p => !p)}>
+      }}>
         <svg
           ref={canvasRef}
           width={width} height={height}
