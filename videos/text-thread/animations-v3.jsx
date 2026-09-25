@@ -376,6 +376,7 @@ function Stage({
     } catch { return 0; }
   });
   const [playing, setPlaying] = React.useState(autoplay);
+  const [controlsVisible, setControlsVisible] = React.useState(false);
   // The external-playback latch: true while the HOST play bar is driving
   // time forward as genuine continuous playback (its play-loop seeks
   // carry detail.playing === true). The engine's own clock stays paused
@@ -602,7 +603,7 @@ function Stage({
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         overflow: 'hidden',
         minHeight: 0,
-      }}>
+      }} onMouseEnter={() => setControlsVisible(true)} onMouseLeave={() => setControlsVisible(false)}>
         <svg
           ref={canvasRef}
           width={width} height={height}
@@ -632,6 +633,7 @@ function Stage({
           </foreignObject>
         </svg>
         <VideoControls
+          visible={controlsVisible}
           playing={playing}
           onPlayPause={() => setPlaying(p => !p)}
           onReplay={() => { setTime(0); setPlaying(true); }}
@@ -641,8 +643,7 @@ function Stage({
   );
 }
 
-function VideoControls({ playing, onPlayPause, onReplay }) {
-  const [hovering, setHovering] = React.useState(false);
+function VideoControls({ visible, playing, onPlayPause, onReplay }) {
   const buttonStyle = {
     width: 48,
     height: 48,
@@ -659,8 +660,6 @@ function VideoControls({ playing, onPlayPause, onReplay }) {
   return (
     <div
       data-omelette-chrome
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
       style={{
         position: 'absolute',
         left: '50%',
@@ -668,7 +667,8 @@ function VideoControls({ playing, onPlayPause, onReplay }) {
         transform: 'translate(-50%, -50%)',
         display: 'flex',
         gap: 12,
-        opacity: hovering || !playing ? 1 : 0.45,
+        opacity: visible ? 1 : 0,
+        pointerEvents: visible ? 'auto' : 'none',
         transition: 'opacity 160ms ease',
         zIndex: 1,
       }}
