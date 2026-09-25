@@ -376,7 +376,6 @@ function Stage({
     } catch { return 0; }
   });
   const [playing, setPlaying] = React.useState(autoplay);
-  const [controlsVisible, setControlsVisible] = React.useState(false);
   // The external-playback latch: true while the HOST play bar is driving
   // time forward as genuine continuous playback (its play-loop seeks
   // carry detail.playing === true). The engine's own clock stays paused
@@ -393,27 +392,6 @@ function Stage({
   const canvasRef = React.useRef(null);
   const rafRef = React.useRef(null);
   const lastTsRef = React.useRef(null);
-  const controlsTimerRef = React.useRef(null);
-
-  const revealControls = () => {
-    setControlsVisible(true);
-    if (controlsTimerRef.current) clearTimeout(controlsTimerRef.current);
-    controlsTimerRef.current = setTimeout(() => {
-      controlsTimerRef.current = null;
-      setControlsVisible(false);
-    }, 1200);
-  };
-
-  const hideControls = () => {
-    if (controlsTimerRef.current) clearTimeout(controlsTimerRef.current);
-    controlsTimerRef.current = null;
-    setControlsVisible(false);
-  };
-
-  React.useEffect(() => () => {
-    if (controlsTimerRef.current) clearTimeout(controlsTimerRef.current);
-  }, []);
-
   // Persist playhead
   React.useEffect(() => {
     try { localStorage.setItem(persistKey + ':t', String(time)); } catch {}
@@ -623,7 +601,7 @@ function Stage({
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         overflow: 'hidden',
         minHeight: 0,
-      }} onClick={() => setPlaying(p => !p)} onMouseMove={revealControls} onMouseLeave={hideControls}>
+      }} onClick={() => setPlaying(p => !p)}>
         <svg
           ref={canvasRef}
           width={width} height={height}
@@ -653,7 +631,7 @@ function Stage({
           </foreignObject>
         </svg>
         <VideoControls
-          visible={controlsVisible}
+          visible={!playing && time >= duration}
           onReplay={() => { setTime(0); setPlaying(true); }}
         />
       </div>
