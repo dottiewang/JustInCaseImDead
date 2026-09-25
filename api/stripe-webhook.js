@@ -27,10 +27,10 @@ module.exports = async (req, res) => {
       const first = ((session.customer_details && session.customer_details.name) || cus.name || '').trim().split(/\s+/)[0] || '';
       const meta = { jic_track: 'weekly', jic_pos: 1, jic_next: now + 3 * DAY, jic_silent: 0, jic_first: first, jic_cp: 'twice', jic_cpstyle: 'full', jic_news: '1', jic_start: now };
       if (!cus.email && session.customer_details) cus.email = session.customer_details.email;
-      await send({ ...cus, metadata: { ...m, ...meta } }, 'W1');
+      await send({ ...cus, metadata: { ...m, ...meta } }, 'W1', event.id + '-W1');
       await saveMeta(cus.id, meta);
     } else if (m.jic_track !== 'done' && m.jic_paused) {
-      await send(cus, 'R');
+      await send(cus, 'R', event.id + '-R');
       await saveMeta(cus.id, { jic_paused: '3', jic_unsub: '' });
     }
   }
@@ -39,7 +39,7 @@ module.exports = async (req, res) => {
     const cus = await getCustomer(event.data.object.customer);
     const m = cus.metadata || {};
     if (m.jic_track && m.jic_track !== 'done' && m.jic_paused && m.jic_paused !== '3' && m.jic_unsub !== '1') {
-      await send(cus, 'R');
+      await send(cus, 'R', event.id + '-R');
       await saveMeta(cus.id, { jic_paused: '3' });
     }
   }

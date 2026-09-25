@@ -26,6 +26,14 @@ Backend (if used):
 Payments:
 - Stripe (Payment Processing API)
 
+## 🔑 Environment Variables
+
+- `STRIPE_SECRET_KEY` – used by checkout (`create-checkout-session.js`)
+- `JIC_STRIPE_KEY` – Stripe secret key used by the email system (can be the same value as `STRIPE_SECRET_KEY`)
+- `JIC_STRIPE_WEBHOOK_SECRET` – signing secret from Stripe → Developers → Webhooks for `/api/stripe-webhook`
+- `RESEND_API_KEY` – production Resend API key (sender `hello@justincaseimdead.com` must be on a verified domain)
+- `CRON_SECRET` – required; any long random string. Vercel cron sends it automatically.
+
 Stripe + Vercel setup for the subscription page:
 - Create three Stripe recurring Prices for the monthly, quarterly, and yearly plans.
 - Set these environment variables in Vercel: `STRIPE_SECRET_KEY`, `STRIPE_PRICE_ID_MONTHLY`, `STRIPE_PRICE_ID_QUARTERLY`, and `STRIPE_PRICE_ID_YEARLY`.
@@ -41,7 +49,7 @@ Resend email setup:
 
 Tracking incoming orders in Neon:
 - Add `DATABASE_URL` in Vercel (from Neon connection string).
-- Add `STRIPE_WEBHOOK_SECRET` in Vercel (from Stripe webhook endpoint signing secret).
+- Add `JIC_STRIPE_WEBHOOK_SECRET` in Vercel (from Stripe webhook endpoint signing secret).
 - Create this table in Neon SQL editor:
 
 ```sql
@@ -87,7 +95,7 @@ After setup, query a user's history with:
 Stripe webhook setup:
 - In Stripe dashboard, create webhook endpoint: `https://your-domain.com/api/stripe-webhook`.
 - Subscribe to events: `checkout.session.completed`, `invoice.paid`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`.
-- Copy the signing secret and set it as `STRIPE_WEBHOOK_SECRET` in Vercel.
+- Copy the signing secret and set it as `JIC_STRIPE_WEBHOOK_SECRET` in Vercel.
 - Redeploy Vercel after adding env vars.
 - New Stripe events will be stored in Neon table `subscription_orders`.
 

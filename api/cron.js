@@ -50,7 +50,7 @@ async function tick(cus, now) {
 }
 
 module.exports = async (req, res) => {
-  if (process.env.CRON_SECRET && req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`) return res.status(401).send('Unauthorized');
+  if (!process.env.CRON_SECRET || req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`) return res.status(401).send('Unauthorized');
   const now = Date.now();
   let after = null, sent = 0, errors = 0;
   do {
