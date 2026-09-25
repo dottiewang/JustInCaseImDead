@@ -598,6 +598,7 @@ function Stage({
       <div style={{
         flex: 1,
         width: '100%',
+        position: 'relative',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         overflow: 'hidden',
         minHeight: 0,
@@ -630,19 +631,66 @@ function Stage({
             </div>
           </foreignObject>
         </svg>
+        <VideoControls
+          playing={playing}
+          onPlayPause={() => setPlaying(p => !p)}
+          onReplay={() => { setTime(0); setPlaying(true); }}
+        />
       </div>
+    </div>
+  );
+}
 
-      {/* Playback bar — stacked below canvas, never overlapping */}
-      <PlaybackBar
-        time={displayTime}
-        actualTime={time}
-        duration={duration}
-        playing={playing}
-        onPlayPause={() => setPlaying(p => !p)}
-        onReset={() => { setTime(0); }}
-        onSeek={(t) => setTime(t)}
-        onHover={(t) => setHoverTime(t)}
-      />
+function VideoControls({ playing, onPlayPause, onReplay }) {
+  const [hovering, setHovering] = React.useState(false);
+  const buttonStyle = {
+    width: 48,
+    height: 48,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: 'rgba(11,11,14,0.78)',
+    border: '1px solid rgba(255,255,255,0.72)',
+    borderRadius: '50%',
+    color: '#fff',
+    cursor: 'pointer',
+    padding: 0,
+  };
+  return (
+    <div
+      data-omelette-chrome
+      onMouseEnter={() => setHovering(true)}
+      onMouseLeave={() => setHovering(false)}
+      style={{
+        position: 'absolute',
+        left: '50%',
+        top: '50%',
+        transform: 'translate(-50%, -50%)',
+        display: 'flex',
+        gap: 12,
+        opacity: hovering || !playing ? 1 : 0.45,
+        transition: 'opacity 160ms ease',
+        zIndex: 1,
+      }}
+    >
+      <button type="button" onClick={onPlayPause} title={playing ? 'Pause video' : 'Play video'} aria-label={playing ? 'Pause video' : 'Play video'} style={buttonStyle}>
+        {playing ? (
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <rect x="5" y="4" width="3" height="12" fill="currentColor" />
+            <rect x="12" y="4" width="3" height="12" fill="currentColor" />
+          </svg>
+        ) : (
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M6 4l10 6-10 6V4z" fill="currentColor" />
+          </svg>
+        )}
+      </button>
+      <button type="button" onClick={onReplay} title="Replay video" aria-label="Replay video" style={buttonStyle}>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M15.5 8A6 6 0 106 15.2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M15.5 3.8V8h-4.2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
     </div>
   );
 }
