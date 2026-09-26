@@ -27,8 +27,8 @@ function Bubble({ T, m, until }) {
     <div style={{ maxHeight: 200 * a * (1 - gone), opacity: a * (1 - gone), overflow: 'hidden', display: 'flex', justifyContent: me ? 'flex-end' : 'flex-start', flex: 'none' }}>
       {m.dots
         ? (T < m.end ? <Dots T={T} /> : null)
-        : <div style={{ maxWidth: 330, padding: '16px 22px', borderRadius: 24, background: me ? C.green : C.rule, color: me ? C.cream : C.ink,
-            fontFamily: SANS, fontSize: 26, lineHeight: 1.3, transform: `scale(${0.9 + 0.1 * a})`, transformOrigin: me ? '100% 100%' : '0% 100%' }}>{m.t}</div>}
+        : <div style={{ maxWidth: 410, padding: '18px 26px', borderRadius: 24, background: me ? C.green : C.rule, color: me ? C.cream : C.ink,
+            fontFamily: SANS, fontSize: 32, fontWeight: 'bold', lineHeight: 1.35, transform: `scale(${0.9 + 0.1 * a})`, transformOrigin: me ? '100% 100%' : '0% 100%' }}>{m.t}</div>}
     </div>
   );
 }
