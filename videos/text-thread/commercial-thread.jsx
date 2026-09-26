@@ -75,6 +75,7 @@ function Phone() {
 
 function Side() {
   const { T, CUES } = useComposition();
+  const isMobile = window.matchMedia('(max-width: 640px)').matches;
   const O = CUES.Opening, H = CUES.Thread, S = CUES.Silence, P = CUES.Plan, K = CUES.Close;
   const lab = MOTION.enter(T, O + 1.0, 0.8) * (1 - MOTION.exit(T, S - 0.3, 0.5));
   const s1 = MOTION.enter(T, S + 0.3, 1.0) * (1 - MOTION.exit(T, P - 0.4, 0.5));
@@ -83,7 +84,7 @@ function Side() {
   const col = { ...abs, left: 920, width: 820 };
   return (
     <>
-      <div style={{ ...col, top: 480, fontFamily: SANS, fontSize: 26, letterSpacing: 5, textTransform: 'uppercase', color: C.amber, opacity: lab }}>Three days after the funeral</div>
+      <div style={{ ...col, top: isMobile ? 340 : 420, fontFamily: SANS, fontSize: isMobile ? 132 : 84, lineHeight: 1.1, letterSpacing: 3, textTransform: 'uppercase', color: C.amber, opacity: lab }}>{isMobile ? <>Three days<br />after the<br />funeral</> : <>Three days after<br />the funeral</>}</div>
       <div style={{ ...col, top: 400, fontFamily: SERIF, fontSize: 88, lineHeight: 1.15, color: C.cream, opacity: s1, transform: `translateY(${(1 - s1) * 24}px)` }}>No one could tell them where anything was.</div>
       <div style={{ ...col, top: 280, fontFamily: SERIF, fontStyle: 'italic', fontSize: 72, lineHeight: 1.15, color: C.amber, opacity: p1, transform: `translateY(${(1 - p1) * 24}px)` }}>What if Dad had<br />written it all down?</div>
       <div style={{ ...col, top: 480, fontFamily: SERIF, fontSize: 52, lineHeight: 1.3, color: C.cream, opacity: p2, transform: `translateY(${(1 - p2) * 20}px)` }}>Show your family where everything is. It only takes a few minutes a week.</div>
