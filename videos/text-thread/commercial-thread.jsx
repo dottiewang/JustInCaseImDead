@@ -27,8 +27,8 @@ function Bubble({ T, m, until }) {
     <div style={{ maxHeight: 200 * a * (1 - gone), opacity: a * (1 - gone), overflow: 'hidden', display: 'flex', justifyContent: me ? 'flex-end' : 'flex-start', flex: 'none' }}>
       {m.dots
         ? (T < m.end ? <Dots T={T} /> : null)
-        : <div style={{ maxWidth: 410, padding: '18px 26px', borderRadius: 24, background: me ? C.green : C.rule, color: me ? C.cream : C.ink,
-            fontFamily: SANS, fontSize: 32, fontWeight: 'bold', lineHeight: 1.35, transform: `scale(${0.9 + 0.1 * a})`, transformOrigin: me ? '100% 100%' : '0% 100%' }}>{m.t}</div>}
+        : <div style={{ maxWidth: 430, padding: '19px 27px', borderRadius: 24, background: me ? C.green : C.rule, color: me ? C.cream : C.ink,
+            fontFamily: SANS, fontSize: 35, fontWeight: 'bold', lineHeight: 1.35, transform: `scale(${0.9 + 0.1 * a})`, transformOrigin: me ? '100% 100%' : '0% 100%' }}>{m.t}</div>}
     </div>
   );
 }
@@ -56,7 +56,7 @@ function Phone() {
     { from: 'me', t: 'Oh thank god', at: P + 4.8 },
   ];
   return (
-    <div style={{ ...abs, left: 260, top: 60, width: 500, height: 960, opacity: a * (1 - x), transform: `translateY(${(1 - a) * 120}px) scale(${push})` }}>
+    <div style={{ ...abs, left: 260, top: 60, width: 520, height: 960, opacity: a * (1 - x), transform: `translateY(${(1 - a) * 120}px) scale(${push})` }}>
       <div style={{ ...abs, inset: 0, borderRadius: 64, background: '#111', padding: 16, boxShadow: '0 40px 90px rgba(0,0,0,0.5)' }}>
         <div style={{ position: 'relative', width: '100%', height: '100%', borderRadius: 50, background: C.cream, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
           <div style={{ flex: 'none', paddingTop: 58, paddingBottom: 18, textAlign: 'center', borderBottom: `1px solid ${C.rule}`, background: C.paper }}>
