@@ -1858,8 +1858,7 @@
     "tip": "Requirements change, and they can vary by state and account type. Asking Chase for a written list of what they need before sending anything saves a second trip."
    }
   ],
-  "nlBatch": 3,
-  "draft": true
+  "nlBatch": 3
  },
  {
   "s": "Closing accounts",
@@ -1888,7 +1887,7 @@
     "list": [
      "Bank of America: an online form for reporting a death, plus a phone line and branches",
      "Wells Fargo: an online form or a call to its estate services team, and branches can help",
-     "Citi: a phone line and online information for survivors, with branch help in some areas"
+     "Citi: searching \"Citi deceased customer\" finds its current steps and phone number"
     ]
    },
    {
@@ -1908,8 +1907,7 @@
     "tip": "Keeping a list of each bank, the date of each call, who was spoken to and any reference number makes follow-up calls much faster."
    }
   ],
-  "nlBatch": 3,
-  "draft": true
+  "nlBatch": 3
  },
  {
   "s": "Closing accounts",
@@ -1970,8 +1968,7 @@
     "tip": "Under federal rules, card companies can't tell family members they have to pay a debt they don't legally owe. Families can report problems to the Consumer Financial Protection Bureau."
    }
   ],
-  "nlBatch": 3,
-  "draft": true
+  "nlBatch": 3
  },
  {
   "s": "Closing accounts",
@@ -2009,7 +2006,7 @@
    }
   ],
   "nlBatch": 3,
-  "draft": true
+  "asOf": true
  },
  {
   "s": "Closing accounts",
@@ -2064,8 +2061,7 @@
     "tip": "Brokerage investments usually get a new cost basis when the owner dies, often their value on the date of death. That can lower taxes when they're eventually sold."
    }
   ],
-  "nlBatch": 3,
-  "draft": true
+  "nlBatch": 3
  },
  {
   "s": "Closing accounts",
@@ -2129,8 +2125,7 @@
     "tip": "Executors usually avoid paying estate bills from their own accounts. If they do, keeping receipts helps them get repaid from the estate later."
    }
   ],
-  "nlBatch": 3,
-  "draft": true
+  "nlBatch": 3
  },
  {
   "s": "Closing accounts",
@@ -2178,8 +2173,7 @@
     "tip": "Recent utility bills are often the quickest way to find each company and account number."
    }
   ],
-  "nlBatch": 3,
-  "draft": true
+  "nlBatch": 3
  },
  {
   "s": "Closing accounts",
@@ -2201,7 +2195,7 @@
    {
     "list": [
      "Gmail (Google): Google has a request form for a deceased user's account. Family members can ask to close the account, and in some cases request some of its data. If the person set up Inactive Account Manager, their chosen contacts may already have access.",
-     "Outlook (Microsoft): Microsoft accounts usually close automatically after a period of inactivity. Microsoft also has a process for next of kin, which may require a court order for access to content.",
+     "Outlook (Microsoft): Microsoft accounts usually close automatically after a period of inactivity. Microsoft generally doesn't give family access to an account's contents without a subpoena or court order.",
      "Yahoo: Yahoo has a process to close a deceased user's account. Under its terms, it generally doesn't give access to the account's contents."
     ]
    },
@@ -2222,8 +2216,7 @@
     "tip": "Because access is often limited after a death, settings like Google Inactive Account Manager, set up in advance, are the most reliable way to pass on email and files."
    }
   ],
-  "nlBatch": 3,
-  "draft": true
+  "nlBatch": 3
  },
  {
   "s": "Closing accounts",
@@ -2238,7 +2231,7 @@
    },
    {
     "list": [
-     "PayPal: the executor or a family member can contact PayPal through its help center. Once the death is verified, the account is usually closed and any balance is paid to the estate, often by check.",
+     "PayPal: the executor or estate administrator, not other family members, can ask PayPal to close the account through its help center. Once the death is verified, the account is usually closed and any balance is paid to the estate, often by check.",
      "Venmo: owned by PayPal, Venmo has a similar process through its support team. Any balance usually goes to the estate.",
      "Cash App: Cash App's support handles deceased accounts. Families usually contact support through the app or website."
     ]
@@ -2268,11 +2261,10 @@
     ]
    },
    {
-    "tip": "Payment app balances aren't always protected like bank deposits. Getting the balance moved to the estate account sooner rather than later is common."
+    "tip": "Payment app balances usually aren't FDIC-insured the way bank deposits are. According to the CFPB, some may be covered by pass-through insurance when the app holds the money at a partner bank, for example with an app debit card or direct deposit. Crypto held in an app isn't covered. Moving the balance to the estate account sooner rather than later is common."
    }
   ],
-  "nlBatch": 3,
-  "draft": true
+  "nlBatch": 3
  },
  {
   "s": "Closing accounts",
@@ -2350,7 +2342,6 @@
     "tip": "Writing the date and the name of the person spoken to on every call is the single most useful habit. Many companies can look up a call by those two details."
    }
   ],
-  "nlBatch": 3,
-  "draft": true
+  "nlBatch": 3
  }
 ]
