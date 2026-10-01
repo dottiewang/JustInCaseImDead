@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guides · Just In Case</title>
+<meta name="description" content="Plain-English guides for getting your affairs in order.">
+<link rel="canonical" href="https://www.justincaseimdead.com/guides/">
+<style>
+body{margin:0;background:#F1ECE2;color:#2B2A26;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:#2F4A3A} a:hover{color:#A0703F}
+.top{max-width:720px;margin:0 auto;padding:24px 24px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:14px}
+.top img{width:72px;height:auto;display:block}
+article{max-width:720px;margin:24px auto 64px;background:#FBF8F2;border:1px solid #E2DBCD;border-radius:8px;padding:40px 44px;box-sizing:border-box}
+@media (max-width:600px){article{margin:16px 12px 48px;padding:28px 22px}}
+.kicker{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#A0703F}
+h1{margin:0 0 8px;font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:32px;line-height:40px;text-wrap:pretty}
+.pre{margin:0 0 28px;font-size:17px;line-height:26px;color:#6B665C}
+.asof{margin:-16px 0 28px;font-size:13px;line-height:20px;font-style:italic;color:#6B665C}
+h2{margin:28px 0 10px;font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:21px;line-height:28px}
+p{margin:0 0 16px;font-size:16px;line-height:25px;text-wrap:pretty}
+ul,ol{margin:0 0 16px;padding-left:22px;font-size:16px;line-height:24px}
+li{margin:0 0 6px}
+.tbl{overflow-x:auto;margin:0 0 16px}
+table{width:100%;border-collapse:collapse;font-size:14px;line-height:20px}
+th,td{padding:9px 10px;border-bottom:1px solid #E2DBCD;vertical-align:top;text-align:left}
+th{background:#F1ECE2;font-weight:700}
+.timeline{display:grid;grid-template-columns:minmax(90px,max-content) 1fr;gap:8px 16px;margin:0 0 16px;font-size:15px;line-height:22px}
+.timeline dt{font-weight:700;color:#2F4A3A}.timeline dd{margin:0}
+.tip{margin:20px 0 16px;padding:16px 18px;background:#F1ECE2;border-radius:6px}
+.tip strong{display:block;margin:0 0 4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#A0703F}
+.tip p{margin:0;font-size:15px;line-height:23px}
+.current{margin:28px 0 0;padding:18px 20px;border:1px solid #E2DBCD;border-radius:6px;background:#fff;font-size:14px;line-height:21px}
+.current ul{margin:8px 0 0;padding-left:20px;font-size:14px;line-height:21px}
+.muted{color:#6B665C}
+.legal{margin:28px 0 0;padding-top:16px;border-top:1px solid #E2DBCD;color:#6B665C}
+.legal p{font-size:13px;line-height:20px;margin:0 0 8px}
+.legal strong{color:#2B2A26}
+.list{list-style:none;padding:0;margin:0}
+.list li{padding:12px 0;border-bottom:1px solid #E2DBCD;margin:0}
+.list small{display:block;color:#6B665C;margin-top:2px}
+.ask{margin:0 0 32px}
+.ask h1{margin-bottom:16px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.row input{flex:1 1 260px;min-width:0;font:inherit;font-size:17px;padding:14px 16px;border:1px solid #CFC6B4;border-radius:6px;background:#fff;color:#2B2A26}
+.row input:focus{outline:none;border-color:#2F4A3A;box-shadow:0 0 0 3px rgba(47,74,58,.15)}
+.row button{font:inherit;font-size:15px;font-weight:700;padding:14px 20px;border:0;border-radius:6px;background:#2F4A3A;color:#FBF8F2;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 0;font-size:13px}
+.chips button{font:inherit;font-size:13px;padding:6px 12px;border:1px solid #E2DBCD;border-radius:999px;background:#fff;color:#2B2A26;cursor:pointer}
+.chips button:hover{border-color:#2F4A3A;color:#2F4A3A}
+#res{margin-top:14px}
+.hit{display:flex;flex-direction:column;gap:4px;padding:14px 4px;border-bottom:1px solid #E2DBCD;text-decoration:none;color:#2B2A26}
+.hit:first-child{border-top:1px solid #E2DBCD}
+.hit:hover{background:#F6F1E7}
+.hit .kicker{margin:0;font-size:11px}
+.hit strong{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:19px;line-height:26px;color:#2F4A3A}
+.hit .muted{font-size:14px;line-height:21px}
+.small{font-size:13px;margin:14px 0 0}</style>
+</head>
+<body>
+<div class="top"><a href="/"><img src="https://www.justincaseimdead.com/logo.jpg" alt="Just In Case"></a><a href="/guides/">All guides</a></div>
+<article><section id="ask" class="ask">
+<p class="kicker">Just Ask</p>
+<h1>What do you need to find?</h1>
+<div class="row"><input id="q" type="search" placeholder="Try “death certificates” or “close a bank account”" aria-label="Just Ask" autocomplete="off"><button id="clr" type="button">Clear</button></div>
+<div id="chips" class="chips"><span class="muted">People often ask:</span><button type="button" data-q="death certificates">death certificates</button><button type="button" data-q="close a bank account">close a bank account</button><button type="button" data-q="phone passcode">phone passcode</button><button type="button" data-q="do I need a will">do I need a will</button></div>
+<div id="res"></div>
+<p class="muted small">Searches the guides on this site. Nothing you type is saved.</p>
+</section><p class="kicker">All guides</p><h2>Browse everything</h2><ul class="list"><li><a href="/guides/set-up-your-phones-emergency-info">Set up your phone's emergency info</a><small>First responders can see it, even when your phone is locked.</small></li>
+<li><a href="/guides/belongings-theres-no-need-to-rush">Belongings: there's no need to rush</a><small>The clothes, the dishes, the car in the garage. They can wait.</small></li>
+<li><a href="/guides/cancelling-subscriptions-netflix-gym-and-the-rest">Cancelling subscriptions (Netflix, gym and the rest)</a><small>The small charges add up, and some are hard to find.</small></li>
+<li><a href="/guides/choosing-a-funeral-home-and-what-to-know-before-you-call">Choosing a funeral home, and what to know before you call</a><small>Ten minutes of preparation can change the whole conversation.</small></li>
+<li><a href="/guides/claiming-life-insurance-step-by-step">Claiming life insurance, step by step</a><small>Usually one form, one death certificate, and a few weeks.</small></li>
+<li><a href="/guides/cremation-what-it-costs-and-what-the-options-are">Cremation: what it costs and what the options are</a><small>Simpler and usually cheaper than burial, with more choices than people expect.</small></li>
+<li><a href="/guides/death-certificates-how-many-to-order-and-who-needs-one">Death certificates: how many to order and who needs one</a><small>Most families end up needing more than they expect.</small></li>
+<li><a href="/guides/do-you-need-a-funeral-home-other-options-families-use">Do you need a funeral home? Other options families use</a><small>In most states, a funeral home is a choice, not a requirement.</small></li>
+<li><a href="/guides/filing-a-final-tax-return-for-someone-who-died">Filing a final tax return for someone who died</a><small>One more year of taxes, usually filed by the executor or spouse.</small></li>
+<li><a href="/guides/freezing-vs-closing-bank-accounts">Freezing vs. closing bank accounts</a><small>Some accounts stop, some keep going, and some pass straight to someone else.</small></li>
+<li><a href="/guides/looking-after-yourself-while-you-handle-it-all">Looking after yourself while you handle it all</a><small>The paperwork matters. So do you.</small></li>
+<li><a href="/guides/notifying-an-employer-and-claiming-workplace-benefits">Notifying an employer and claiming workplace benefits</a><small>A job can leave behind more than a final paycheck.</small></li>
+<li><a href="/guides/notifying-social-security">Notifying Social Security</a><small>Often the funeral home does it. A few things are still up to the family.</small></li>
+<li><a href="/guides/notifying-the-credit-bureaus-to-prevent-identity-theft">Notifying the credit bureaus to prevent identity theft</a><small>A name and Social Security number can still be misused after death.</small></li>
+<li><a href="/guides/pausing-and-forwarding-mail">Pausing and forwarding mail</a><small>Mail is a map of every account. It also attracts identity thieves.</small></li>
+<li><a href="/guides/probate-basics-what-it-is-and-when-its-needed">Probate basics: what it is and when it's needed</a><small>The court process for settling an estate, and when families can skip it.</small></li>
+<li><a href="/guides/retitling-a-house-or-car">Retitling a house or car</a><small>Ownership has to move into someone's name. How depends on how it was held.</small></li>
+<li><a href="/guides/securing-the-home-and-car">Securing the home and car</a><small>A quiet house and an unused car are both easy targets.</small></li>
+<li><a href="/guides/the-after-loss-checklist-what-to-do-in-order">The after-loss checklist: what to do, in order</a><small>Most of it can wait. Here's what can't.</small></li>
+<li><a href="/guides/the-first-24-72-hours">The first 24–72 hours</a><small>A short list for the hardest days.</small></li>
+<li><a href="/guides/the-first-month-what-can-wait">The first month: what can wait</a><small>A shorter list than it feels like.</small></li>
+<li><a href="/guides/the-phone-plan-dont-close-it-too-soon">The phone plan: don't close it too soon</a><small>One phone number can unlock dozens of accounts.</small></li>
+<li><a href="/guides/transportation-and-mileage-charges-what-to-ask-before-you-sign">Transportation and mileage charges: what to ask before you sign</a><small>Getting from one place to another can add up quietly.</small></li>
+<li><a href="/guides/what-a-funeral-really-costs-and-where-the-money-goes">What a funeral really costs (and where the money goes)</a><small>The median is several thousand dollars, and the price list is where the details live.</small></li>
+<li><a href="/guides/what-an-executor-actually-does">What an executor actually does</a><small>A to-do list that can stretch over months, not days.</small></li>
+<li><a href="/guides/what-happens-to-debt-when-someone-dies">What happens to debt when someone dies</a><small>Debt usually stays with the estate, not the family.</small></li>
+<li><a href="/guides/when-someone-dies-abroad">When someone dies abroad</a><small>The US embassy can help, but it can't pay for anything.</small></li>
+<li><a href="/guides/your-rights-with-a-funeral-home-the-ftc-funeral-rule">Your rights with a funeral home: the FTC Funeral Rule</a><small>A federal rule that lets families pick and choose.</small></li>
+<li><a href="/guides/closing-accounts-after-a-death-the-order-that-saves-time">Closing accounts after a death: the order that saves time</a><small>Do these in this order and you'll make fewer calls.</small></li>
+<li><a href="/guides/apple-legacy-contact-step-by-step">Apple Legacy Contact, step by step</a><small>Five minutes so your family can reach your photos.</small></li>
+<li><a href="/guides/cloud-photos-making-sure-they-arent-lost">Cloud photos: making sure they aren't lost</a><small>Your photos may be in one account no one else can open.</small></li>
+<li><a href="/guides/google-inactive-account-manager-step-by-step">Google Inactive Account Manager, step by step</a><small>Decide what happens to your Gmail, Photos and Drive.</small></li>
+<li><a href="/guides/how-to-find-which-accounts-use-two-factor-codes">How to find which accounts use two-factor codes</a><small>A few places to look, about 15 minutes.</small></li>
+<li><a href="/guides/two-factor-codes-in-plain-english">Two-factor codes, in plain English</a><small>The second lock on an account, and why it trips families up.</small></li>
+<li><a href="/guides/your-phone-passcode-the-six-digits-that-hold-everything">Your phone passcode: the six digits that hold everything</a><small>Phone makers can't unlock it for your family.</small></li>
+<li><a href="/guides/how-to-bring-it-up-without-making-it-weird">How to bring it up without making it weird</a><small>One sentence is enough to start.</small></li>
+<li><a href="/guides/tell-one-person-where-the-binder-is">Tell one person where the binder is</a><small>A plan only helps if someone can find it.</small></li>
+<li><a href="/guides/list-your-auto-paid-bills">List your auto-paid bills</a><small>The bills nobody sees are the ones that keep charging.</small></li>
+<li><a href="/guides/no-accountant-lawyer-or-advisor-what-to-write-instead">No accountant, lawyer or advisor? What to write instead</a><small>Most people don't have one. That's useful to know too.</small></li>
+<li><a href="/guides/pets-who-takes-them">Pets: who takes them?</a><small>A name and a backup name. That's most of it.</small></li>
+<li><a href="/guides/what-happens-to-a-car-loan-when-someone-dies">What happens to a car loan when someone dies</a><small>The car and the loan go together.</small></li>
+<li><a href="/guides/what-happens-to-a-mortgage-when-someone-dies">What happens to a mortgage when someone dies?</a><small>The loan doesn't disappear, and the house usually isn't taken right away.</small></li>
+<li><a href="/guides/do-you-have-life-insurance-through-work">Do you have life insurance through work?</a><small>Many people do and don't know it.</small></li>
+<li><a href="/guides/term-vs-whole-life-in-plain-english">Term vs. whole life, in plain English</a><small>One is for a set number of years. The other is for life.</small></li>
+<li><a href="/guides/where-to-find-your-policy-number-and-coverage-amount">Where to find your policy number and coverage amount</a><small>Usually on the first page of the policy.</small></li>
+<li><a href="/guides/affordable-ways-to-make-a-will">Affordable ways to make a will</a><small>A basic will doesn't have to cost much.</small></li>
+<li><a href="/guides/do-i-need-a-will-what-happens-if-you-dont-have-one">Do I need a will? What happens if you don't have one</a><small>Without one, your state decides.</small></li>
+<li><a href="/guides/no-will-trust-or-directive-yet-where-to-start">No will, trust or directive yet? Where to start</a><small>You're in good company. Here's the easy order.</small></li>
+<li><a href="/guides/power-of-attorney-in-plain-english">Power of attorney, in plain English</a><small>Who handles things if you can't?</small></li>
+<li><a href="/guides/whats-a-healthcare-directive-and-how-do-i-make-one">What's a healthcare directive, and how do I make one?</a><small>Free, about 20 minutes, and a huge gift to your family.</small></li>
+<li><a href="/guides/will-vs-trust-whats-the-difference">Will vs. trust: what's the difference?</a><small>Both pass things on. They take different routes.</small></li>
+<li><a href="/guides/new-baby-guardians-and-beneficiaries">New baby: guardians and beneficiaries</a><small>The few updates that matter most.</small></li>
+<li><a href="/guides/co-signers-what-happens-to-a-loan-when-someone-dies">Co-signers: what happens to a loan when someone dies</a><small>The co-signer usually still owes it.</small></li>
+<li><a href="/guides/how-to-find-all-your-accounts">How to find all your accounts</a><small>The forgotten ones are the ones families lose.</small></li>
+<li><a href="/guides/is-it-safe-to-write-account-numbers-down">Is it safe to write account numbers down?</a><small>Mostly yes, with a few sensible limits.</small></li>
+<li><a href="/guides/where-to-find-your-routing-and-account-numbers">Where to find your routing and account numbers</a><small>They're on the bottom of a paper check and in your bank's app.</small></li>
+<li><a href="/guides/bitwardens-free-plan-set-up-in-15-minutes">Bitwarden's free plan, set up in 15 minutes</a><small>A free password manager with no time limit.</small></li>
+<li><a href="/guides/password-book-vs-password-manager-honest-pros-and-cons">Password book vs. password manager: honest pros and cons</a><small>Both work. Here's how to choose.</small></li>
+<li><a href="/guides/print-backup-codes-for-your-email">Print backup codes for your email</a><small>A short list of codes that opens the door when the phone can't.</small></li>
+<li><a href="/guides/where-do-people-actually-store-their-passwords">Where do people actually store their passwords?</a><small>The honest answer, with pros and cons.</small></li>
+<li><a href="/guides/where-to-keep-your-binder">Where to keep your binder</a><small>Safe, but not so safe nobody can get to it.</small></li>
+<li><a href="/guides/how-to-write-a-letter-to-your-family">How to write a letter to your family</a><small>There's no wrong way. Short is fine.</small></li>
+<li><a href="/guides/is-a-who-gets-what-list-legally-binding">Is a "who gets what" list legally binding?</a><small>Usually not on its own. But it can still help.</small></li>
+<li><a href="/guides/how-many-years-of-tax-returns-to-keep">How many years of tax returns to keep</a><small>Three years covers most people. Some keep seven.</small></li>
+<li><a href="/guides/how-to-replace-a-birth-certificate-or-social-security-card">How to replace a birth certificate or Social Security card</a><small>Both can be replaced. One is usually faster than you'd think.</small></li>
+<li><a href="/guides/keeping-your-binder-secure-where-to-store-it-and-who-gets-access">Keeping your binder secure: where to store it and who gets access</a><small>Safe enough to protect it. Easy enough for family to find.</small></li>
+<li><a href="/guides/should-copies-of-your-id-go-in-the-binder">Should copies of your ID go in the binder?</a><small>Copies can help. The originals usually stay put.</small></li>
+<li><a href="/guides/how-to-add-a-pod-beneficiary-to-a-bank-account">How to add a POD beneficiary to a bank account</a><small>Ten minutes, usually free.</small></li>
+<li><a href="/guides/how-to-put-a-beneficiary-on-file">How to put a beneficiary on file</a><small>A short form that can matter more than your will.</small></li>
+<li><a href="/guides/life-insurance-beneficiaries-and-why-your-will-doesnt-override-them">Life insurance beneficiaries, and why your will doesn't override them</a><small>The form wins, not the will.</small></li>
+<li><a href="/guides/payable-on-death-pod-what-it-means">Payable-on-death (POD): what it means</a><small>One free form that can skip months of court.</small></li>
+<li><a href="/guides/ways-to-pass-on-assets-without-probate-one-page-chart">Ways to pass on assets without probate: one-page chart</a><small>One form per account can skip the court.</small></li>
+<li><a href="/guides/the-subscriptions-that-kept-charging">The subscriptions that kept charging</a><small>Where the forgotten ones hide.</small></li></ul></article><script>
+(function(){
+  var docs=[],box=document.getElementById('q'),out=document.getElementById('res'),chips=document.getElementById('chips');
+  function norm(s){return ' '+s.toLowerCase().replace(/[\u2019']/g,'').replace(/[^a-z0-9$%]+/g,' ')+' ';}
+  function stem(w){return w.length>4?w.replace(/(ing|ies|es|s|ed)$/,'').replace(/e$/,''):w;}
+  var SYN={pwd:'password',pass:'password','2fa':'two factor',poa:'power of attorney',pod:'payable on death',ssn:'social security',taxes:'tax',died:'death loss',dies:'death',dead:'death loss',passed:'death loss',lost:'loss',cancel:'close',shut:'close',iphone:'phone apple',gmail:'google email',dog:'pets',cat:'pets',house:'home mortgage'};
+  var STOP={};'a an the to of do i my is how what for in on and or if me can who where when with it your you be are does should about get'.split(' ').forEach(function(w){STOP[w]=1;});
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function rx(w){return new RegExp(' '+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g');}
+  function search(q){
+    var words=[];norm(q).trim().split(' ').forEach(function(w){if(!w||STOP[w])return;(SYN[w]?SYN[w].split(' '):[w]).forEach(function(x){words.push(stem(x));});});
+    if(!words.length)return[];
+    return docs.map(function(d){var score=0,hits=0,inT=0;words.forEach(function(w){var re=rx(w);var t=(d.tl.match(re)||[]).length,p=(d.pl.match(re)||[]).length,b=(d.bl.match(re)||[]).length;if(t+p+b)hits++;if(t)inT++;score+=t*10+p*4+Math.min(b,6);});score+=(inT/words.length)*30+(inT===words.length?20:0);return{d:d,score:score*hits/words.length,w:words};})
+      .filter(function(r){return r.score>1;}).sort(function(a,b){return b.score-a.score;}).slice(0,5);
+  }
+  function render(){
+    var q=box.value.trim();chips.style.display=q.length>1?'none':'';
+    if(q.length<2){out.innerHTML='';return;}
+    var r=search(q);
+    if(!r.length){out.innerHTML='<div class="tip"><strong>Nothing yet</strong><p>We don\u2019t have a guide for that yet. Email <a href="mailto:hello@justincaseimdead.com">hello@justincaseimdead.com</a> and we\u2019ll point you in the right direction, and maybe write one.</p></div>';return;}
+    out.innerHTML=r.map(function(x){var d=x.d,sn=d.body.split(/(?<=[.!?])\s+/).find(function(s){return x.w.some(function(w){return norm(s).indexOf(' '+w)>-1;});})||d.pre;if(sn.length>160)sn=sn.slice(0,157).replace(/\s\S*$/,'')+'\u2026';
+      return '<a class="hit" href="/guides/'+d.slug+'"><span class="kicker">'+esc(d.s)+'</span><strong>'+esc(d.t)+'</strong><span class="muted">'+esc(sn)+'</span></a>';}).join('');
+  }
+  fetch('/guides/search.json').then(function(r){return r.json();}).then(function(j){docs=j.map(function(d){d.tl=norm(d.t);d.pl=norm(d.pre);d.bl=norm(d.body);return d;});render();});
+  box.addEventListener('input',render);
+  document.getElementById('clr').addEventListener('click',function(){box.value='';render();box.focus();});
+  chips.addEventListener('click',function(e){if(e.target.dataset.q){box.value=e.target.dataset.q;render();}});
+  var p=new URLSearchParams(location.search).get('q');if(p){box.value=p;}
+})();</script>
+</body>
+</html>

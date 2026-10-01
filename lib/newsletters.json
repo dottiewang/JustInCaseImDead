@@ -1,0 +1,2356 @@
+[
+ {
+  "s": "After a loss",
+  "t": "The after-loss checklist: what to do, in order",
+  "pre": "Most of it can wait. Here's what can't.",
+  "b": [
+   {
+    "p": "In the days after a loss, the to-do list can feel endless. It helps to know that most of it can wait weeks, and only a handful of things need doing right away."
+   },
+   {
+    "timeline": [
+     [
+      "First 24–72 hours",
+      "If they died at home under hospice, call the hospice nurse. If it was unexpected, call 911. Tell close family, choose a funeral home, and secure the home, car and any pets."
+     ],
+     [
+      "First week",
+      "Order death certificates (the funeral home usually does this). Find the will. Tell their employer. Hold off on any big decisions."
+     ],
+     [
+      "First month",
+      "Notify Social Security, banks, insurers and the credit bureaus. Claim any life insurance. Cancel subscriptions."
+     ],
+     [
+      "Months 2–12",
+      "Start probate if needed, close or transfer accounts, retitle the house and car, and file a final tax return by the next April 15."
+     ]
+    ]
+   },
+   {
+    "tip": "You don't have to do this alone, or all at once. Pick one person to keep a simple list of who's been told."
+   }
+  ],
+  "n": 1,
+  "starter": true
+ },
+ {
+  "s": "Passwords & storage",
+  "t": "Where do people actually store their passwords?",
+  "pre": "The honest answer, with pros and cons.",
+  "b": [
+   {
+    "p": "There's no single right answer. What matters is that one trusted person could get in if they had to."
+   },
+   {
+    "table": [
+     [
+      "Option",
+      "Good for",
+      "Watch out for"
+     ],
+     [
+      "Password manager (Bitwarden, 1Password, Apple Passwords)",
+      "Lots of accounts, strong passwords, emergency access features",
+      "Someone still needs the one master password"
+     ],
+     [
+      "Written password book",
+      "People who prefer paper; easy for family to use",
+      "Keep it locked away, and update it when passwords change"
+     ],
+     [
+      "Saved in the browser",
+      "Convenience",
+      "Tied to one device and one login"
+     ],
+     [
+      "Notes app or a document",
+      "Nothing, really",
+      "Easy to find, easy to lose, rarely encrypted"
+     ]
+    ]
+   },
+   {
+    "p": "Many people use a mix: a password manager for everyday logins, plus a sealed note in the binder with the master password and phone passcode."
+   }
+  ],
+  "n": 2,
+  "starter": true
+ },
+ {
+  "s": "Skip probate",
+  "t": "Payable-on-death (POD): what it means",
+  "pre": "One free form that can skip months of court.",
+  "b": [
+   {
+    "p": "A payable-on-death (POD) designation lets you name who gets the money in a bank account when you die. It's usually free, takes a few minutes, and the money passes to them directly, without going through probate."
+   },
+   {
+    "steps": [
+     "You add a POD beneficiary to your checking, savings or CD account.",
+     "Nothing changes while you're alive. It's still your money, and the beneficiary can't touch it.",
+     "After you die, they bring a death certificate and ID to the bank.",
+     "The bank pays them directly. No court, no waiting for the estate."
+    ]
+   },
+   {
+    "tip": "A POD beneficiary overrides your will for that account. If your will says one thing and the POD form says another, the form usually wins."
+   }
+  ],
+  "n": 3,
+  "starter": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "Closing accounts after a death: the order that saves time",
+  "pre": "Do these in this order and you'll make fewer calls.",
+  "b": [
+   {
+    "p": "Closing someone's accounts is slow, but a sensible order saves a lot of repeated calls."
+   },
+   {
+    "steps": [
+     "<strong>Gather paperwork first.</strong> Several certified death certificates (official copies with a raised or printed seal, usually ordered through the funeral home), plus letters testamentary (the court document that proves you're the executor), if there's probate.",
+     "<strong>Stop anything that costs money or could be misused.</strong> Credit cards, subscriptions, and auto-payments.",
+     "<strong>Contact the banks.</strong> Joint and POD accounts pass directly. Others may be frozen until the executor is confirmed.",
+     "<strong>Utilities and home services.</strong> Transfer or cancel, depending on what happens to the house.",
+     "<strong>Phone and email last.</strong> Security codes often go to that phone number and inbox, so keep them until everything else is done."
+    ]
+   },
+   {
+    "tip": "Keep a log with the company, date, who you spoke to, and a reference number. It stops you having to repeat the same call three times."
+   }
+  ],
+  "n": 4
+ },
+ {
+  "s": "Digital life",
+  "t": "Your phone passcode: the six digits that hold everything",
+  "pre": "Phone makers can't unlock it for your family.",
+  "b": [
+   {
+    "p": "A phone holds contacts, photos, banking apps, and the security codes that unlock nearly every other account. Without the passcode, much of that can be out of reach."
+   },
+   {
+    "p": "Apple and Google generally won't unlock a device for family, even with a death certificate. At most, they can help reset it, which wipes what's on it."
+   },
+   {
+    "h": "Three things to write down"
+   },
+   {
+    "list": [
+     "Your phone passcode",
+     "Your phone carrier account PIN (needed to move the number and receive security codes)",
+     "Where your backup codes or password manager details are kept"
+    ]
+   },
+   {
+    "tip": "Keep these on paper in a sealed envelope in your binder, not in a notes app on the same phone."
+   }
+  ],
+  "n": 5,
+  "starter": true
+ },
+ {
+  "s": "Family",
+  "t": "How to bring it up without making it weird",
+  "pre": "One sentence is enough to start.",
+  "b": [
+   {
+    "p": "Most people put off telling family about their plan because they don't want it to feel heavy. It doesn't have to be a big conversation."
+   },
+   {
+    "h": "Three easy openers"
+   },
+   {
+    "list": [
+     "“I've put together a folder of where everything is, just in case. It's in the study. Nothing's wrong, I just didn't want you to have to guess.”",
+     "“I did my will and a few other things. Can I show you where it all is? Five minutes.”",
+     "“A friend's family had a hard time after their dad died, so I got organized. Here's what I did.”"
+    ]
+   },
+   {
+    "p": "People are usually relieved, not upset. Questions can come later."
+   }
+  ],
+  "n": 6
+ },
+ {
+  "s": "Life changes",
+  "t": "New baby: guardians and beneficiaries",
+  "pre": "The few updates that matter most.",
+  "b": [
+   {
+    "p": "A new baby changes what your plan needs to cover. These are the updates that matter most."
+   },
+   {
+    "list": [
+     "<strong>Name a guardian.</strong> This is normally done in a will. Ask the person first.",
+     "<strong>Consider life insurance.</strong> Term life is often the simplest, most affordable option for young families.",
+     "<strong>Check beneficiaries.</strong> Naming a young child directly can mean a court has to appoint someone to manage the money. A trust or a custodian (UTMA) avoids that.",
+     "<strong>Add their documents.</strong> Birth certificate and Social Security card locations go in your records."
+    ]
+   },
+   {
+    "tip": "Laws vary by state. An estate attorney can set up a guardian and trust together, often in a single meeting."
+   }
+  ],
+  "n": 7
+ },
+ {
+  "s": "What goes wrong",
+  "t": "The subscriptions that kept charging",
+  "pre": "Where the forgotten ones hide.",
+  "b": [
+   {
+    "p": "It's common. Months after a death, small charges are still going out: a gym, a cloud storage plan, a streaming service, an app nobody knew about. Each needs its own call to stop."
+   },
+   {
+    "h": "Where to look"
+   },
+   {
+    "list": [
+     "The last 12 months of bank and credit card statements (to catch yearly renewals)",
+     "App Store or Google Play subscriptions on their phone",
+     "PayPal automatic payments",
+     "Their email inbox: search for “receipt”, “renewal” and “subscription”"
+    ]
+   },
+   {
+    "tip": "Cancelling the card isn't always enough. Some card networks automatically pass new card details to merchants, so cancel subscriptions directly too."
+   }
+  ],
+  "n": 8
+ },
+ {
+  "s": "5-minute tasks",
+  "t": "Set up your phone's emergency info",
+  "pre": "First responders can see it, even when your phone is locked.",
+  "b": [
+   {
+    "p": "Your phone can show your medical details and emergency contacts on the lock screen, with no passcode needed. In an emergency, that's how responders learn your allergies, your medications, and who to call."
+   },
+   {
+    "h": "iPhone"
+   },
+   {
+    "steps": [
+     "Open the Health app and tap your photo.",
+     "Tap Medical ID, then Edit.",
+     "Turn on Show When Locked and add emergency contacts."
+    ]
+   },
+   {
+    "h": "Android"
+   },
+   {
+    "steps": [
+     "Open Settings, then Safety & emergency.",
+     "Add medical information and emergency contacts.",
+     "Turn on lock screen access (the exact wording varies by phone)."
+    ]
+   }
+  ],
+  "n": 9
+ },
+ {
+  "s": "After a loss",
+  "t": "The first 24–72 hours",
+  "pre": "A short list for the hardest days.",
+  "b": [
+   {
+    "p": "In the first days, only a few things truly need doing. Everything else can wait."
+   },
+   {
+    "list": [
+     "<strong>Get a legal pronouncement of death.</strong> Hospitals and hospice handle this. For an unexpected death at home, call 911.",
+     "<strong>Tell close family and friends.</strong> Ask one person to help spread the word.",
+     "<strong>Choose a funeral home.</strong> They'll transport the body and help order death certificates. Check first for a prepaid plan or written wishes.",
+     "<strong>Secure the home and car.</strong> Lock up, take valuables, and ask a neighbor to keep an eye out.",
+     "<strong>Care for pets and dependents.</strong>"
+    ]
+   },
+   {
+    "tip": "You don't need to call banks or cancel anything yet. That can happen next week."
+   }
+  ],
+  "n": 10
+ },
+ {
+  "n": 12,
+  "s": "Passwords & storage",
+  "t": "Password book vs. password manager: honest pros and cons",
+  "pre": "Both work. Here's how to choose.",
+  "b": [
+   {
+    "p": "Both work. The right one is the one you'll actually keep up to date."
+   },
+   {
+    "table": [
+     [
+      "",
+      "Password book",
+      "Password manager"
+     ],
+     [
+      "Cost",
+      "About $10–20, once",
+      "Free (Bitwarden, Apple Passwords, Google Password Manager) or about $20–40 a year"
+     ],
+     [
+      "Easy for family",
+      "Very. They just open it.",
+      "They need the master password, or an emergency access feature"
+     ],
+     [
+      "Safe from hackers",
+      "Yes, it's offline",
+      "Yes, it's encrypted"
+     ],
+     [
+      "Safe from fire or loss",
+      "Only if it's stored well",
+      "Yes, it's synced across devices"
+     ],
+     [
+      "Stays up to date",
+      "Only if you write down every change",
+      "Updates when you change a password"
+     ]
+    ]
+   },
+   {
+    "p": "A good middle ground: use a password manager day to day, and keep its master password in a sealed envelope in your binder."
+   },
+   {
+    "tip": "Never put passwords in your will. After probate, a will usually becomes a public record."
+   }
+  ],
+  "starter": true
+ },
+ {
+  "n": 13,
+  "s": "Digital life",
+  "t": "Apple Legacy Contact, step by step",
+  "pre": "Five minutes so your family can reach your photos.",
+  "b": [
+   {
+    "p": "Apple Legacy Contact lets you choose who can access your iCloud data, like photos, messages, notes and files, after you die. Without it, your family may not be able to get to them at all."
+   },
+   {
+    "steps": [
+     "On your iPhone, open Settings and tap your name.",
+     "Tap Sign-In & Security, then Legacy Contact.",
+     "Tap Add Legacy Contact and choose someone.",
+     "Share the access key. You can send it in Messages, or print a copy for your binder."
+    ]
+   },
+   {
+    "p": "When the time comes, your legacy contact will need the access key and a copy of your death certificate."
+   },
+   {
+    "tip": "Legacy Contact doesn't include passwords saved in your Keychain, or movies, music and books you've bought. Your phone passcode still needs to be written down."
+   }
+  ],
+  "starter": true
+ },
+ {
+  "n": 15,
+  "s": "Skip probate",
+  "t": "How to add a POD beneficiary to a bank account",
+  "pre": "Ten minutes, usually free.",
+  "b": [
+   {
+    "p": "Adding a payable-on-death (POD) beneficiary usually takes about ten minutes and costs nothing."
+   },
+   {
+    "steps": [
+     "Log in to your bank's website or app and look for “beneficiaries”, often under account settings or your profile.",
+     "Can't find it? Call or visit a branch and ask for a POD beneficiary form.",
+     "Add each person's full legal name. Some banks also ask for a date of birth, address or Social Security number.",
+     "Naming more than one person? Choose how to split it, for example 50/50.",
+     "Save or sign, and ask for a confirmation."
+    ]
+   },
+   {
+    "p": "POD usually works on checking, savings, CDs and money market accounts. Investment accounts have a similar option called transfer-on-death (TOD)."
+   },
+   {
+    "tip": "Write down which accounts have a POD beneficiary, and who it is, so your family knows to ask."
+   }
+  ],
+  "starter": true
+ },
+ {
+  "n": 21,
+  "s": "Passwords & storage",
+  "t": "Bitwarden's free plan, set up in 15 minutes",
+  "pre": "A free password manager with no time limit.",
+  "b": [
+   {
+    "p": "Bitwarden is a password manager with a free plan that never expires. It stores unlimited passwords and syncs them across all your devices."
+   },
+   {
+    "steps": [
+     "Go to bitwarden.com and create a free account.",
+     "Choose a master password. It's the one password you'll need to remember, so make it long. Four or five random words work well.",
+     "Install the app on your phone and the browser extension on your computer.",
+     "Start with the accounts that matter most: email, bank and phone carrier. Add the rest as you log in to them.",
+     "Write your master password on paper and seal it in your binder."
+    ]
+   },
+   {
+    "tip": "Emergency access, which lets a trusted person request your vault after a waiting period, is only on the paid Premium plan ($19.80 a year as of 2026). On the free plan, the sealed master password in your binder does the same job."
+   }
+  ],
+  "starter": true
+ },
+ {
+  "n": 22,
+  "s": "Digital life",
+  "t": "Google Inactive Account Manager, step by step",
+  "pre": "Decide what happens to your Gmail, Photos and Drive.",
+  "b": [
+   {
+    "p": "Google's Inactive Account Manager decides what happens to your Google account, including Gmail, Photos and Drive, if you stop using it."
+   },
+   {
+    "steps": [
+     "Open any Google app, tap your profile picture, then Manage your Google Account.",
+     "Go to Data & privacy, then Make a plan for your digital legacy.",
+     "Choose how long Google waits before acting. The default is 3 months, and you can set it up to 18.",
+     "Add up to 10 people and choose what each one can download.",
+     "Choose whether your account is deleted afterward."
+    ]
+   },
+   {
+    "tip": "Google will email and text you before it acts. Keep your recovery phone number and email up to date so a reminder doesn't go unseen."
+   }
+  ],
+  "starter": true
+ },
+ {
+  "n": 45,
+  "s": "Family",
+  "t": "Tell one person where the binder is",
+  "pre": "A plan only helps if someone can find it.",
+  "b": [
+   {
+    "p": "A plan only helps if someone can find it. You don't need a family meeting. One trusted person is enough."
+   },
+   {
+    "h": "What they need to know"
+   },
+   {
+    "list": [
+     "Where the binder is, and where the key is if it's locked",
+     "Roughly what's inside",
+     "Where any sealed envelope with passwords is",
+     "Who else knows"
+    ]
+   },
+   {
+    "h": "What to say"
+   },
+   {
+    "p": "“If anything ever happens to me, everything you need is in the blue binder in the hall closet. The key's in my desk drawer.” That's the whole conversation."
+   },
+   {
+    "tip": "If you ever move the binder, tell them again."
+   }
+  ],
+  "starter": true
+ },
+ {
+  "n": 81,
+  "s": "Passwords & storage",
+  "t": "Where to keep your binder",
+  "pre": "Safe, but not so safe nobody can get to it.",
+  "b": [
+   {
+    "p": "Your binder needs to be safe, but not so safe that nobody can get to it."
+   },
+   {
+    "table": [
+     [
+      "Place",
+      "Good for",
+      "Watch out for"
+     ],
+     [
+      "Fire-resistant safe at home",
+      "Easy for family to reach",
+      "Check the rating. Many protect paper for 30–60 minutes."
+     ],
+     [
+      "Locked drawer or filing cabinet",
+      "Simple and cheap",
+      "No protection from fire or water"
+     ],
+     [
+      "Safe deposit box",
+      "Very secure",
+      "Can be hard to open after a death unless someone else is on the box"
+     ],
+     [
+      "With your attorney",
+      "Secure and official",
+      "Family must know which attorney"
+     ],
+     [
+      "With a trusted family member",
+      "Easy access",
+      "They need to keep it private"
+     ]
+    ]
+   },
+   {
+    "p": "Most people keep it at home in a fire-resistant safe or box, and tell one person where the key is."
+   },
+   {
+    "tip": "Don't keep your only copy of your will in a safe deposit box. Some banks won't open the box without it."
+   }
+  ],
+  "starter": true
+ },
+ {
+  "n": 85,
+  "s": "Skip probate",
+  "t": "Life insurance beneficiaries, and why your will doesn't override them",
+  "pre": "The form wins, not the will.",
+  "b": [
+   {
+    "p": "Life insurance pays whoever is named on the policy's beneficiary form, not whoever is named in your will. The insurer pays them directly, usually without probate."
+   },
+   {
+    "p": "That's why an old form matters. An ex-spouse, a parent who has died, or no one at all may still be listed."
+   },
+   {
+    "h": "What to check"
+   },
+   {
+    "list": [
+     "<strong>Primary beneficiary:</strong> who gets it first",
+     "<strong>Contingent beneficiary:</strong> who gets it if the primary has died",
+     "<strong>Percentages,</strong> if you've named more than one person",
+     "<strong>Workplace policies,</strong> often set up on your first day and forgotten"
+    ]
+   },
+   {
+    "tip": "If no beneficiary is alive or named, the money usually goes to your estate and through probate. Naming a young child directly can mean a court has to appoint someone to manage it."
+   }
+  ],
+  "starter": true
+ },
+ {
+  "n": 95,
+  "s": "Skip probate",
+  "t": "Ways to pass on assets without probate: one-page chart",
+  "pre": "One form per account can skip the court.",
+  "b": [
+   {
+    "p": "Probate is the court process for settling an estate. It can take months and cost money. Many things you own can skip it with the right form."
+   },
+   {
+    "table": [
+     [
+      "What you own",
+      "How to skip probate",
+      "Where to set it up"
+     ],
+     [
+      "Bank accounts",
+      "Payable-on-death (POD) beneficiary",
+      "Your bank, online or at a branch"
+     ],
+     [
+      "Investment accounts",
+      "Transfer-on-death (TOD) beneficiary",
+      "Your brokerage"
+     ],
+     [
+      "Retirement accounts (IRA, 401k)",
+      "Beneficiary designation",
+      "Plan administrator or HR"
+     ],
+     [
+      "Life insurance",
+      "Beneficiary designation",
+      "Your insurer"
+     ],
+     [
+      "Home",
+      "Transfer-on-death deed (many states) or joint ownership with right of survivorship",
+      "County recorder's office"
+     ],
+     [
+      "Car",
+      "Transfer-on-death title (some states) or joint ownership",
+      "Your state DMV"
+     ]
+    ]
+   },
+   {
+    "tip": "Rules vary by state, especially for homes and cars. A living trust is another way to keep many assets out of probate."
+   }
+  ],
+  "starter": true
+ },
+ {
+  "s": "After a loss",
+  "t": "What a funeral really costs (and where the money goes)",
+  "pre": "The median is several thousand dollars, and the price list is where the details live.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "Funeral costs surprise many families, mostly because they arrive all at once and in the hardest week. Knowing what the pieces are makes the bill easier to read."
+   },
+   {
+    "p": "According to the National Funeral Directors Association, the national median cost of a funeral with a viewing and burial was $8,300 in 2023, and $6,280 for a funeral with cremation. Those figures don't include cemetery costs, such as the plot, opening the grave or a headstone, which are billed separately and can add thousands more."
+   },
+   {
+    "h": "Where the money usually goes"
+   },
+   {
+    "table": [
+     [
+      "Part of the bill",
+      "What it covers"
+     ],
+     [
+      "Basic services fee",
+      "The funeral home's staff, planning, permits and overhead. Every funeral home charges it, and it can't be declined."
+     ],
+     [
+      "Transfer of remains",
+      "Bringing the person from the place of death to the funeral home"
+     ],
+     [
+      "Embalming and preparation",
+      "Optional in most cases, but often required by the funeral home for a public viewing"
+     ],
+     [
+      "Viewing and ceremony",
+      "Use of the facility and staff for a visitation or service"
+     ],
+     [
+      "Casket or urn",
+      "Often the single largest item"
+     ],
+     [
+      "Hearse and cars",
+      "Transport to the service and cemetery"
+     ],
+     [
+      "Cemetery costs",
+      "The plot, opening and closing the grave, a burial vault or liner, and a headstone, usually from the cemetery, not the funeral home"
+     ]
+    ]
+   },
+   {
+    "h": "What families often look at to manage cost"
+   },
+   {
+    "list": [
+     "Direct cremation or direct burial, which skip the viewing and are usually the lowest-cost options",
+     "Holding a memorial service later, at home or a place of worship",
+     "Buying a casket or urn from a third-party seller",
+     "Comparing price lists from two or three funeral homes"
+    ]
+   },
+   {
+    "tip": "Funeral homes must give you an itemized price list, under a federal rule. Asking for it before agreeing to anything lets families see the cost of each item and drop what they don't want."
+   },
+   {
+    "current": [
+     {
+      "label": "Median funeral with burial (2023, excl. cemetery)",
+      "fig": "$8,300"
+     },
+     {
+      "label": "Median funeral with cremation (2023, excl. cemetery)",
+      "fig": "$6,280"
+     }
+    ],
+    "verified": "October 2026 against nfda.org"
+   }
+  ],
+  "nlBatch": 1
+ },
+ {
+  "s": "After a loss",
+  "t": "Your rights with a funeral home: the FTC Funeral Rule",
+  "pre": "A federal rule that lets families pick and choose.",
+  "b": [
+   {
+    "p": "The Funeral Rule is a federal regulation enforced by the Federal Trade Commission. It applies to funeral homes across the US and is meant to let families compare prices and pay only for what they want."
+   },
+   {
+    "h": "What the rule usually guarantees"
+   },
+   {
+    "list": [
+     "Prices by phone. A funeral home has to give price information over the phone if asked.",
+     "A written price list. Anyone who asks in person must get an itemized General Price List to keep.",
+     "Pick only what you want. Families can usually choose individual goods and services instead of a package, apart from the basic services fee.",
+     "Your own casket or urn. A funeral home can't refuse one bought elsewhere, or charge a fee for using it.",
+     "No false claims. A funeral home can't say embalming is required by law when it isn't. It's rarely required by law, though some funeral homes require it for a public viewing.",
+     "Cremation containers. Funeral homes offering direct cremation have to make an inexpensive alternative container available, rather than requiring a casket."
+    ]
+   },
+   {
+    "h": "What it doesn't cover"
+   },
+   {
+    "p": "The rule applies to funeral homes. Cemeteries, crematories that don't sell funeral services, and third-party sellers generally aren't covered, though some states have their own rules for them."
+   },
+   {
+    "h": "If something seems wrong"
+   },
+   {
+    "p": "Complaints can be filed with the FTC at ReportFraud.ftc.gov, and with the state board that licenses funeral directors."
+   },
+   {
+    "tip": "Bringing a friend who isn't grieving to the funeral home is common. They can ask about prices while the family focuses on the decisions."
+   }
+  ],
+  "nlBatch": 1
+ },
+ {
+  "s": "After a loss",
+  "t": "Transportation and mileage charges: what to ask before you sign",
+  "pre": "Getting from one place to another can add up quietly.",
+  "b": [
+   {
+    "p": "Several lines on a funeral bill are about moving the person or the family: from the place of death, to a service, to the cemetery or crematory. These charges are easy to miss until the final bill."
+   },
+   {
+    "h": "Charges that often appear"
+   },
+   {
+    "list": [
+     "Transfer of remains: bringing the person from a home, hospital or care facility to the funeral home",
+     "Hearse: transport to the service and to the cemetery",
+     "Service car or van: carrying flowers, paperwork or equipment",
+     "Family limousine: optional cars for the family",
+     "Mileage: an extra charge per mile beyond a set distance",
+     "Out-of-state transport: shipping or driving the person to another state for burial"
+    ]
+   },
+   {
+    "h": "Questions families often ask"
+   },
+   {
+    "list": [
+     "Is transfer of remains included in a package, or listed separately?",
+     "How many miles are included before mileage charges start, and what's the rate?",
+     "Is there an after-hours or weekend fee for the first transfer?",
+     "If the person died out of state, can a local funeral home there handle the transfer, and is that cheaper?",
+     "Are any of these optional?"
+    ]
+   },
+   {
+    "p": "Under the federal Funeral Rule, transfer of remains and the hearse each have to be listed with a price on the funeral home's General Price List, so the numbers can be compared before anything is signed."
+   },
+   {
+    "tip": "When someone dies far from home, families sometimes use two funeral homes: one near the place of death to handle the transfer, and one at home for the service. Asking both for prices can show which arrangement costs less."
+   }
+  ],
+  "nlBatch": 1
+ },
+ {
+  "s": "After a loss",
+  "t": "Securing the home and car",
+  "pre": "A quiet house and an unused car are both easy targets.",
+  "b": [
+   {
+    "p": "When someone lived alone, their home and car may sit empty for weeks after a death. Obituaries and funeral notices are public, and unfortunately some people watch them. A few simple steps can protect the house and what's in it."
+   },
+   {
+    "h": "The home"
+   },
+   {
+    "list": [
+     "Locking doors and windows, and collecting spare keys from neighbors, cleaners or caregivers",
+     "Changing locks if many people had keys",
+     "Throwing out perishable food and checking that the stove, heaters and water are off",
+     "Moving valuables, important papers and medications somewhere safe",
+     "Keeping lights on a timer and lawn or snow taken care of so the house looks lived in",
+     "Asking a neighbor to keep an eye on it during the funeral"
+    ]
+   },
+   {
+    "h": "Insurance"
+   },
+   {
+    "p": "Many homeowners policies limit coverage once a house has been empty for a while, often after 30 or 60 days. Calling the insurer to explain the situation is common, and they can say what the policy requires."
+   },
+   {
+    "h": "The car"
+   },
+   {
+    "list": [
+     "Keeping it in a garage or driveway, locked, with the keys somewhere safe",
+     "Keeping the insurance active until the car is sold or transferred",
+     "Not letting anyone drive it until the insurer confirms they're covered"
+    ]
+   },
+   {
+    "tip": "Executors usually aren't supposed to give away or sell belongings until they have legal authority. Securing things is fine; distributing them can wait."
+   }
+  ],
+  "nlBatch": 1,
+  "asOf": true
+ },
+ {
+  "s": "After a loss",
+  "t": "Pausing and forwarding mail",
+  "pre": "Mail is a map of every account. It also attracts identity thieves.",
+  "b": [
+   {
+    "p": "After a death, mail keeps arriving: bills, statements, renewals and junk. That mail is useful, because it shows which accounts exist. Left in an unattended mailbox, it can also be stolen and used for identity theft."
+   },
+   {
+    "h": "Forwarding mail"
+   },
+   {
+    "p": "The US Postal Service lets the executor or estate administrator forward a deceased person's mail. This is usually done in person at the local post office, with proof of authority such as letters testamentary from the probate court. Rules and documents can vary, so checking with the local post office first is common."
+   },
+   {
+    "h": "Holding mail for a short time"
+   },
+   {
+    "p": "For a short gap, such as the week of the funeral, a family member at the same address can request a USPS Hold Mail service online or at the post office."
+   },
+   {
+    "h": "Reducing junk mail"
+   },
+   {
+    "p": "The Association of National Advertisers runs a Deceased Do Not Contact list through DMAchoice.org. Registering a name there can reduce marketing mail over time, though it doesn't stop bills or statements."
+   },
+   {
+    "h": "What families often do with the mail"
+   },
+   {
+    "list": [
+     "Keeping every bill and statement in one folder",
+     "Making a list of each company that writes, for closing accounts later",
+     "Opening anything from a bank, insurer or government agency promptly"
+    ]
+   },
+   {
+    "tip": "A few months of mail is often the most complete list of accounts a family will ever get. Many executors wait at least a full year before stopping forwarding, so annual bills and tax forms arrive too."
+   }
+  ],
+  "nlBatch": 1
+ },
+ {
+  "s": "After a loss",
+  "t": "Notifying Social Security",
+  "pre": "Often the funeral home does it. A few things are still up to the family.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "The Social Security Administration needs to know about a death to stop payments and check for survivor benefits. In most cases, the funeral home reports the death to Social Security, using the information the family gives them."
+   },
+   {
+    "h": "Reporting it yourself"
+   },
+   {
+    "p": "If no funeral home is involved, or the family wants to make sure the death was reported, they can call Social Security at 1-800-772-1213, or visit a local office. The SSA doesn't accept death reports online. Having the person's Social Security number ready helps."
+   },
+   {
+    "h": "Payments after a death"
+   },
+   {
+    "p": "Social Security pays benefits a month behind. A person isn't due a payment for the month they die, so a payment that arrives the following month usually has to be returned. If it was a direct deposit, the bank is usually asked to return it."
+   },
+   {
+    "h": "Benefits the family may get"
+   },
+   {
+    "list": [
+     "A one-time death payment of $255, paid to a surviving spouse or child who meets certain requirements. It has to be applied for within 2 years.",
+     "Monthly survivor benefits, for a widow or widower, children, or sometimes dependent parents, depending on the person's work record"
+    ]
+   },
+   {
+    "p": "Survivor benefits aren't automatic in every case. Families usually need to apply by phone or at an office."
+   },
+   {
+    "tip": "Social Security shares death information with some other federal agencies, but not everyone. Medicare is usually updated automatically; banks, pensions and private insurers aren't."
+   },
+   {
+    "current": [
+     {
+      "label": "Lump-sum death payment",
+      "fig": "$255"
+     },
+     {
+      "label": "Deadline to apply for it",
+      "fig": "2 years"
+     },
+     {
+      "label": "Social Security phone line",
+      "fig": "1-800-772-1213"
+     }
+    ],
+    "verified": "October 2026 against ssa.gov"
+   }
+  ],
+  "nlBatch": 1
+ },
+ {
+  "s": "After a loss",
+  "t": "Notifying an employer and claiming workplace benefits",
+  "pre": "A job can leave behind more than a final paycheck.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "If the person was working when they died, their employer usually has money and benefits to pay out. Some of these have deadlines, so families often contact HR within the first few weeks."
+   },
+   {
+    "h": "What an employer may owe"
+   },
+   {
+    "list": [
+     "The final paycheck, and in some states, unused vacation pay. State laws vary.",
+     "Group life insurance, often one or two times salary, sometimes with extra coverage the person bought",
+     "Retirement accounts like a 401(k) or 403(b), which go to the named beneficiary",
+     "A pension, if there is one, which may pay a survivor benefit",
+     "Stock options, bonuses or commissions that were owed"
+    ]
+   },
+   {
+    "h": "Health insurance for the family"
+   },
+   {
+    "p": "If the family was covered through the person's job, coverage usually ends soon after the death. When a covered employee dies, the federal COBRA law usually lets their spouse and dependents keep the same coverage for up to 36 months, though they pay the full cost. COBRA generally applies to employers with 20 or more employees, and many states have similar rules for smaller ones."
+   },
+   {
+    "p": "Losing job-based coverage also allows the family to sign up for a marketplace plan at HealthCare.gov outside the usual enrollment period, usually within 60 days."
+   },
+   {
+    "h": "What HR usually asks for"
+   },
+   {
+    "list": [
+     "A certified copy of the death certificate",
+     "The beneficiary's details for each benefit",
+     "Sometimes proof of the executor's authority"
+    ]
+   },
+   {
+    "tip": "Former employers can matter too. An old pension or a 401(k) left at a past job still pays out. The US Department of Labor's free Retirement Savings Lost and Found database can help find plans from former employers."
+   },
+   {
+    "current": [
+     {
+      "label": "COBRA for family after an employee's death",
+      "fig": "up to 36 months"
+     },
+     {
+      "label": "Employer size COBRA usually applies to",
+      "fig": "20 or more employees"
+     },
+     {
+      "label": "Marketplace sign-up window after losing coverage",
+      "fig": "usually 60 days"
+     }
+    ],
+    "verified": "October 2026 against dol.gov and healthcare.gov"
+   }
+  ],
+  "nlBatch": 1
+ },
+ {
+  "s": "After a loss",
+  "t": "Notifying the credit bureaus to prevent identity theft",
+  "pre": "A name and Social Security number can still be misused after death.",
+  "b": [
+   {
+    "p": "Identity thieves sometimes use the details of people who have died, because no one is watching the accounts. Telling the three credit bureaus about a death helps stop new credit being opened in the person's name."
+   },
+   {
+    "h": "How it usually works"
+   },
+   {
+    "p": "Equifax, Experian and TransUnion each accept death notices, usually by mail. The family member or executor typically sends a letter with a copy of the death certificate, proof of their role (such as letters testamentary), and the person's full name, date of birth, Social Security number and last address. The bureau then marks the file as deceased."
+   },
+   {
+    "p": "Social Security may eventually report the death, but it can take time and doesn't always reach every bureau. Many families contact all three directly."
+   },
+   {
+    "h": "Checking the credit report"
+   },
+   {
+    "p": "The executor or a surviving spouse can usually request the person's credit report. It lists open credit cards and loans, which helps with closing accounts and spotting anything suspicious."
+   },
+   {
+    "h": "Other steps families often take"
+   },
+   {
+    "list": [
+     "Leaving the person's age and date of birth out of a published obituary",
+     "Shredding mail with account numbers",
+     "Closing credit cards rather than leaving them open",
+     "Reporting any suspicious activity at IdentityTheft.gov"
+    ]
+   },
+   {
+    "tip": "Each bureau's mailing address and requirements change from time to time. Searching \"[bureau name] report a deceased person\" usually finds the current process."
+   }
+  ],
+  "nlBatch": 1
+ },
+ {
+  "s": "After a loss",
+  "t": "Freezing vs. closing bank accounts",
+  "pre": "Some accounts stop, some keep going, and some pass straight to someone else.",
+  "b": [
+   {
+    "p": "When a bank learns about a death, what happens next depends on how the account is set up. Many families are surprised to find a bank account frozen just when bills need paying."
+   },
+   {
+    "table": [
+     [
+      "How the account is set up",
+      "What usually happens"
+     ],
+     [
+      "In one person's name only, no beneficiary",
+      "Frozen. Only the executor can access it, usually after probate or with a small-estate affidavit."
+     ],
+     [
+      "Joint account with right of survivorship",
+      "Passes to the other owner, who can usually keep using it"
+     ],
+     [
+      "Payable-on-death (POD) beneficiary",
+      "Paid to the beneficiary once they show a death certificate and ID"
+     ],
+     [
+      "Held in a living trust",
+      "Managed by the successor trustee"
+     ]
+    ]
+   },
+   {
+    "h": "What \"frozen\" usually means"
+   },
+   {
+    "p": "A frozen account can't be used for new withdrawals, checks or card payments. Automatic payments from it may stop. Deposits may still come in, but some, like Social Security payments for the month after the death, are usually pulled back."
+   },
+   {
+    "h": "Moving the money"
+   },
+   {
+    "p": "Executors often open an estate bank account in the estate's name. Money from frozen accounts goes there, and the estate's bills are paid from it. Most banks require letters testamentary and a tax ID number for the estate."
+   },
+   {
+    "h": "Small estates"
+   },
+   {
+    "p": "Many states have a simpler process for smaller estates, often called a small-estate affidavit. The limits vary widely by state."
+   },
+   {
+    "tip": "Using a debit card or writing checks from someone's account after they die, even to pay their bills, can cause legal trouble for whoever does it. Many families wait until the executor has authority."
+   }
+  ],
+  "nlBatch": 1
+ },
+ {
+  "s": "After a loss",
+  "t": "Cremation: what it costs and what the options are",
+  "pre": "Simpler and usually cheaper than burial, with more choices than people expect.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "Cremation is now chosen by more US families than burial, and cost is one of the most common reasons. It also leaves more room for choices about when and how to hold a service."
+   },
+   {
+    "h": "The main options"
+   },
+   {
+    "table": [
+     [
+      "Option",
+      "What it usually includes",
+      "Relative cost"
+     ],
+     [
+      "Direct cremation",
+      "Transfer, the cremation itself, a basic container and the return of ashes. No viewing or service beforehand.",
+      "Lowest"
+     ],
+     [
+      "Cremation with a memorial service",
+      "Direct cremation, plus a service later with or without the ashes present",
+      "Low to moderate"
+     ],
+     [
+      "Cremation with a viewing or funeral first",
+      "Embalming, a rental or purchased casket, a viewing or service, then cremation",
+      "Closer to a traditional funeral"
+     ]
+    ]
+   },
+   {
+    "p": "According to the National Funeral Directors Association, the national median cost of a funeral with viewing and cremation was $6,280 in 2023. Direct cremation is usually far less, and prices vary a lot by region and provider."
+   },
+   {
+    "h": "What families often ask about"
+   },
+   {
+    "list": [
+     "Whether the quoted price includes the death certificate, the cremation permit and the medical examiner's fee, which some areas charge",
+     "Whether a casket is needed. It isn't. Under the federal Funeral Rule, a funeral home offering direct cremation has to make a simple alternative container available.",
+     "How long it takes. Many states require a waiting period, often 24 to 48 hours, before cremation can happen.",
+     "Whether the urn has to come from the provider. It doesn't. Any container can be used."
+    ]
+   },
+   {
+    "h": "What people do with the ashes"
+   },
+   {
+    "list": [
+     "Keeping them at home",
+     "Burying them in a cemetery plot or a niche in a columbarium",
+     "Scattering them somewhere meaningful. Rules for public land, parks and water vary, and scattering at sea is covered by federal rules.",
+     "Dividing them among family members"
+    ]
+   },
+   {
+    "tip": "There's no deadline for deciding what to do with the ashes. Many families wait months, or until a meaningful date."
+   },
+   {
+    "current": [
+     {
+      "label": "Median funeral with cremation (2023, excl. cemetery)",
+      "fig": "$6,280"
+     },
+     {
+      "label": "Cremation waiting period, many states",
+      "fig": "often 24–48 hours (varies; some states have none)"
+     }
+    ],
+    "verified": "October 2026 against nfda.org and state law"
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "Do you need a funeral home? Other options families use",
+  "pre": "In most states, a funeral home is a choice, not a requirement.",
+  "b": [
+   {
+    "p": "Many people assume a funeral home is legally required after a death. In most states it isn't. Families can usually handle the arrangements themselves, or use a provider that offers only the parts they need. A few states do require a licensed funeral director for certain steps, such as filing the death certificate or moving the body."
+   },
+   {
+    "h": "Options families use"
+   },
+   {
+    "list": [
+     "Direct cremation providers. Many work mostly online or by phone and handle only the transfer, paperwork and cremation, often for much less than a full-service funeral home.",
+     "Body donation. Medical schools and some programs accept donated bodies for education and research. Many cover transport and cremation, and return the ashes later. Most require registration in advance, and they can decline a donation.",
+     "Home funerals. The family cares for the person at home for a day or two and handles the paperwork themselves, sometimes with help from a home funeral guide. State rules on permits and timing apply.",
+     "Green or natural burial. No embalming, a simple shroud or biodegradable casket, in a natural burial ground or a section of a conventional cemetery.",
+     "Memorial service only. A simple cremation or burial first, then a gathering later, wherever and whenever the family likes."
+    ]
+   },
+   {
+    "h": "Things to know"
+   },
+   {
+    "list": [
+     "A death certificate still has to be filed, and a permit is usually needed to move or cremate a body. Families handling it themselves deal with these directly.",
+     "If the death is unexpected, a medical examiner or coroner may need to be involved first.",
+     "Cemeteries can set their own rules, such as requiring a burial vault, even if state law doesn't."
+    ]
+   },
+   {
+    "tip": "Funeral consumer groups, such as the nonprofit Funeral Consumers Alliance, publish state-by-state guides on what families can do themselves."
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "Choosing a funeral home, and what to know before you call",
+  "pre": "Ten minutes of preparation can change the whole conversation.",
+  "b": [
+   {
+    "p": "The first call to a funeral home often happens within hours of a death, when families are exhausted and in shock. Knowing a few things beforehand makes it easier to compare options and decide calmly."
+   },
+   {
+    "h": "What families often decide or gather first"
+   },
+   {
+    "list": [
+     "Burial or cremation, if the person said what they wanted",
+     "A rough budget, even a range",
+     "Whether there's a prepaid funeral plan, and with which funeral home",
+     "Whether the person was a veteran, since burial benefits may apply",
+     "Any religious or cultural needs, such as timing or washing",
+     "Whether there's life insurance that might help with costs"
+    ]
+   },
+   {
+    "h": "Comparing funeral homes"
+   },
+   {
+    "p": "Under the federal Funeral Rule, funeral homes have to give prices over the phone and provide an itemized price list in person. Many families call two or three. Prices for the same service can differ by thousands of dollars in the same town."
+   },
+   {
+    "h": "Questions families often ask"
+   },
+   {
+    "list": [
+     "What is the basic services fee, and what does it cover?",
+     "What does direct cremation or direct burial cost, all in?",
+     "Can we bring our own casket or urn?",
+     "Is embalming required for what we're planning, and why?",
+     "What's included in this package, and can we remove items?"
+    ]
+   },
+   {
+    "h": "Common sales pressure"
+   },
+   {
+    "p": "Most funeral directors are honest and caring. Still, the FTC created the Funeral Rule because families were often overcharged at a vulnerable time. Situations families commonly report include:"
+   },
+   {
+    "list": [
+     "Being told a more expensive option is what the person \"deserves\"",
+     "Packages that include services the family didn't ask for",
+     "\"Protective\" or sealed caskets presented as preserving the body. No casket does that indefinitely.",
+     "Being told embalming is required by law when it usually isn't",
+     "Pressure to decide quickly"
+    ]
+   },
+   {
+    "tip": "It's okay to say \"We need to think about it\" and call back. Many families bring a friend who isn't grieving to help ask questions."
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "When someone dies abroad",
+  "pre": "The US embassy can help, but it can't pay for anything.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "When a US citizen dies in another country, the nearest US embassy or consulate is usually involved. Local laws, languages and costs can make the next steps complicated, so knowing who does what helps."
+   },
+   {
+    "h": "What the US government usually does"
+   },
+   {
+    "list": [
+     "Tells the next of kin, if local authorities haven't already",
+     "Explains the options and local requirements for burial, cremation or bringing the person home",
+     "Provides a list of local funeral homes and English-speaking lawyers",
+     "Issues a Consular Report of Death of a US Citizen Abroad, which is used in US legal matters like probate and insurance",
+     "Helps the family send money for costs"
+    ]
+   },
+   {
+    "p": "The embassy can't pay for funeral costs or bringing the person home. Those are the family's responsibility."
+   },
+   {
+    "h": "The main options"
+   },
+   {
+    "list": [
+     "Bringing the person home. This can be expensive, and it involves international transport, embalming and paperwork from both countries.",
+     "Cremation abroad, then bringing the ashes home. Usually far cheaper and simpler, where local law and religion allow it.",
+     "Burial in the country where they died. Some families choose this, especially if the person lived there."
+    ]
+   },
+   {
+    "h": "Insurance that can help"
+   },
+   {
+    "p": "Some travel insurance policies cover repatriation, meaning bringing someone home after a death. Credit cards used to book the trip sometimes include travel coverage too. Most US health insurance and Medicare don't cover it."
+   },
+   {
+    "h": "Who to call"
+   },
+   {
+    "p": "Families in the US can call the State Department's Office of Overseas Citizens Services at 1-888-407-4747. From overseas, the number is +1-202-501-4444."
+   },
+   {
+    "tip": "A death abroad may need a certified, translated copy of the local death certificate, as well as the Consular Report of Death. Asking the embassy for several copies of the report is common."
+   },
+   {
+    "current": [
+     {
+      "label": "State Dept., calling from the US",
+      "fig": "1-888-407-4747"
+     },
+     {
+      "label": "State Dept., calling from overseas",
+      "fig": "+1-202-501-4444"
+     }
+    ],
+    "verified": "October 2026 against travel.state.gov"
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "Claiming life insurance, step by step",
+  "pre": "Usually one form, one death certificate, and a few weeks.",
+  "b": [
+   {
+    "p": "Life insurance is often the fastest money to reach a family after a death, because it usually goes straight to the named beneficiary without probate. The beneficiary, not the executor, usually starts the claim."
+   },
+   {
+    "h": "How a claim usually works"
+   },
+   {
+    "steps": [
+     "Finding the policy. The insurer's name and policy number are the main things needed. Both are usually on the first page of the policy, on annual statements, or in the insurer's app.",
+     "Contacting the insurer. Most have a claims phone line or online form. Employers handle claims for work policies through HR.",
+     "Filling in the claim form. It asks for the beneficiary's details and how they'd like to be paid.",
+     "Sending a certified copy of the death certificate. Some insurers accept a photocopy; others want a certified one.",
+     "Waiting for review. Many claims are paid within a few weeks once the paperwork is complete."
+    ]
+   },
+   {
+    "h": "Ways the money is usually paid"
+   },
+   {
+    "list": [
+     "A lump sum, by check or direct deposit",
+     "Installments over time",
+     "A retained asset account, where the insurer holds the money and gives the beneficiary a checkbook. It's worth reading the terms, since it may pay less interest than a regular bank."
+    ]
+   },
+   {
+    "h": "When claims take longer"
+   },
+   {
+    "list": [
+     "The death happened within the first two years of the policy. State insurance laws generally allow insurers to review the application more closely during this period, often called the contestability period. Nearly every state has a version of this rule.",
+     "The cause of death is still being determined",
+     "The beneficiary has died, is a minor or isn't clear"
+    ]
+   },
+   {
+    "tip": "Life insurance payouts to a beneficiary generally aren't counted as taxable income under federal rules, though interest earned on the payout can be."
+   }
+  ],
+  "nlBatch": 2,
+  "asOf": true
+ },
+ {
+  "s": "After a loss",
+  "t": "Cancelling subscriptions (Netflix, gym and the rest)",
+  "pre": "The small charges add up, and some are hard to find.",
+  "b": [
+   {
+    "p": "Subscriptions often keep charging long after someone dies. Many are small, so they're easy to miss, and they can go on for months on a card nobody is watching."
+   },
+   {
+    "h": "Where to find them"
+   },
+   {
+    "list": [
+     "Credit card and bank statements: recurring charges each month or year",
+     "The person's email: receipts, renewal notices and \"your plan has been renewed\" messages",
+     "Apple or Google subscriptions on their phone",
+     "PayPal or Amazon account settings",
+     "Paper mail: magazines, memberships and charities"
+    ]
+   },
+   {
+    "h": "How cancelling usually works"
+   },
+   {
+    "p": "Many services can be cancelled by logging into the account. Without the login, most companies will cancel with a phone call or online form, a copy of the death certificate and proof of the caller's role. Some ask for less."
+   },
+   {
+    "p": "Gyms and some memberships have contracts. Many will end them early after a death, but it's worth asking."
+   },
+   {
+    "h": "Ones that may be worth keeping for a bit"
+   },
+   {
+    "list": [
+     "Cloud storage holding photos or documents, until they're downloaded",
+     "Email, until accounts and bills are sorted",
+     "Home security, if the house is empty"
+    ]
+   },
+   {
+    "tip": "Closing the credit card the subscriptions charge to will stop most of them, but not all, and some keep trying for months. Cancelling each one directly avoids surprises."
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "Probate basics: what it is and when it's needed",
+  "pre": "The court process for settling an estate, and when families can skip it.",
+  "b": [
+   {
+    "p": "Probate is the court-supervised process of settling someone's estate after they die. It confirms who's in charge, pays debts and taxes, and transfers what's left to the people who should get it."
+   },
+   {
+    "h": "What usually happens in probate"
+   },
+   {
+    "steps": [
+     "Someone files the will, if there is one, with the local probate court.",
+     "The court appoints an executor (named in the will) or an administrator (if there's no will).",
+     "The executor finds and values the person's assets.",
+     "Creditors are notified and given a set time to make claims.",
+     "Debts, final bills and taxes are paid.",
+     "What's left is distributed, and the court closes the estate."
+    ]
+   },
+   {
+    "p": "Simple probate cases often take several months to a year. Contested or complicated estates can take longer."
+   },
+   {
+    "h": "What usually skips probate"
+   },
+   {
+    "list": [
+     "Accounts with a named beneficiary, like life insurance, retirement accounts, and POD or TOD accounts",
+     "Jointly owned property with right of survivorship",
+     "Assets held in a living trust"
+    ]
+   },
+   {
+    "h": "Small estates"
+   },
+   {
+    "p": "Most states have a simpler process for smaller estates, such as a small-estate affidavit or summary probate. The dollar limits and rules vary widely by state."
+   },
+   {
+    "tip": "Searching \"[your state] small estate affidavit\" shows whether a simpler process is available and what the limit is."
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "What an executor actually does",
+  "pre": "A to-do list that can stretch over months, not days.",
+  "b": [
+   {
+    "p": "An executor is the person named in a will to settle the estate. If there's no will, a court appoints someone, usually called an administrator, to do the same job. It's a big responsibility, but most of it is paperwork and patience."
+   },
+   {
+    "h": "The usual stages"
+   },
+   {
+    "timeline": [
+     [
+      "First weeks",
+      "Finding the will, getting certified death certificates, securing the home and belongings, and notifying close contacts"
+     ],
+     [
+      "First months",
+      "Filing for probate if needed, getting letters testamentary, opening an estate bank account, getting a tax ID for the estate, and notifying banks, creditors and agencies"
+     ],
+     [
+      "Middle months",
+      "Listing and valuing assets, paying valid debts and bills, managing property, and keeping careful records"
+     ],
+     [
+      "Final stage",
+      "Filing final tax returns, distributing what's left to beneficiaries, and closing the estate"
+     ]
+    ]
+   },
+   {
+    "h": "Duties executors usually have"
+   },
+   {
+    "list": [
+     "Acting in the best interest of the estate and beneficiaries, not themselves",
+     "Keeping estate money separate from their own",
+     "Keeping records of everything they receive and pay",
+     "Not distributing anything until debts and taxes are handled"
+    ]
+   },
+   {
+    "h": "Getting help"
+   },
+   {
+    "p": "Executors can usually pay for a lawyer or accountant from the estate's money. Many states also allow executors to be paid a fee, though many family members decline it."
+   },
+   {
+    "tip": "Being named executor doesn't mean someone has to do it. They can decline, and the court will appoint someone else."
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "Retitling a house or car",
+  "pre": "Ownership has to move into someone's name. How depends on how it was held.",
+  "b": [
+   {
+    "p": "After a death, houses and cars still list the person as owner. Until the title is changed, they usually can't be sold, refinanced or properly insured by someone else. The process depends on how the property was owned."
+   },
+   {
+    "h": "The house"
+   },
+   {
+    "table": [
+     [
+      "How it was owned",
+      "What usually happens"
+     ],
+     [
+      "Joint tenancy with right of survivorship",
+      "The surviving owner records a death certificate and sometimes an affidavit with the county recorder."
+     ],
+     [
+      "Transfer-on-death deed (available in some states)",
+      "The beneficiary records the death certificate and a form with the county recorder."
+     ],
+     [
+      "Held in a living trust",
+      "The successor trustee transfers or sells it under the trust's terms."
+     ],
+     [
+      "In the person's name only",
+      "Usually goes through probate. The executor transfers it with a new deed once the court allows."
+     ]
+    ]
+   },
+   {
+    "h": "The car"
+   },
+   {
+    "p": "Most state DMVs have a process for transferring a vehicle after the owner dies. It usually needs the title, a death certificate, and proof of who inherits it, such as letters testamentary, a small-estate affidavit or a transfer-on-death title. Some states allow a simple affidavit for cars below a certain value."
+   },
+   {
+    "h": "Loans"
+   },
+   {
+    "p": "If there's a mortgage or car loan, it stays with the property. Payments are still due, and whoever inherits usually keeps up the payments, refinances, pays off the loan or sells. Federal law generally lets a relative who inherits a home keep the existing mortgage rather than having to pay it off right away."
+   },
+   {
+    "tip": "Recording fees and forms vary by county and state. The county recorder's website and the state DMV site usually list exactly what they need."
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "Filing a final tax return for someone who died",
+  "pre": "One more year of taxes, usually filed by the executor or spouse.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "When someone dies, a final federal income tax return is usually due for the year of their death, covering income from January 1 to the date they died. A surviving spouse or the executor typically files it."
+   },
+   {
+    "h": "The final return"
+   },
+   {
+    "list": [
+     "It's filed on the regular Form 1040, usually by the normal April deadline of the following year.",
+     "A surviving spouse can usually still file a joint return for the year of death.",
+     "\"Deceased\" and the date of death are written at the top of the form.",
+     "If there's a refund and no surviving spouse filing jointly, the IRS may need Form 1310."
+    ]
+   },
+   {
+    "h": "An estate return may also be needed"
+   },
+   {
+    "p": "After the death, the estate itself can earn income, such as interest, dividends or rent. If the estate has $600 or more in gross income in a year, the executor usually files Form 1041, a separate income tax return for the estate."
+   },
+   {
+    "h": "The federal estate tax"
+   },
+   {
+    "p": "Very few estates owe federal estate tax, because it only applies to estates above a high threshold that changes each year. Some states have their own estate or inheritance taxes with lower thresholds."
+   },
+   {
+    "h": "Letting the IRS know who's in charge"
+   },
+   {
+    "p": "Executors often file Form 56 to tell the IRS they're handling the person's tax matters, so the IRS sends notices to them."
+   },
+   {
+    "tip": "Free help is available. The IRS Volunteer Income Tax Assistance (VITA) program helps people who qualify, and many tax preparers handle final returns."
+   },
+   {
+    "current": [
+     {
+      "label": "Final individual return",
+      "fig": "Form 1040"
+     },
+     {
+      "label": "Refund claim form, if needed",
+      "fig": "Form 1310"
+     },
+     {
+      "label": "Estate income return threshold",
+      "fig": "$600 gross income (Form 1041)"
+     },
+     {
+      "label": "Notice of fiduciary relationship",
+      "fig": "Form 56"
+     }
+    ],
+    "verified": "October 2026 against irs.gov"
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "What happens to debt when someone dies",
+  "pre": "Debt usually stays with the estate, not the family.",
+  "b": [
+   {
+    "p": "One of the most common worries after a death is whether the family has to pay the person's debts. In most cases they don't personally owe them. Debts are paid from the estate, the money and property the person left."
+   },
+   {
+    "h": "How it usually works"
+   },
+   {
+    "list": [
+     "The executor uses estate money to pay valid debts before anything goes to heirs.",
+     "If the estate runs out of money, most remaining debts usually go unpaid.",
+     "State law sets the order debts are paid in. Funeral costs, estate expenses and taxes usually come first."
+    ]
+   },
+   {
+    "h": "When someone else may owe it"
+   },
+   {
+    "list": [
+     "They co-signed the loan or were a joint account holder",
+     "They live in a community-property state, where a spouse may be responsible for some debts",
+     "State law makes a spouse responsible for certain debts, such as some medical bills"
+    ]
+   },
+   {
+    "h": "What usually doesn't go to creditors"
+   },
+   {
+    "p": "Life insurance and retirement accounts paid to a named beneficiary usually aren't part of the estate, so creditors generally can't claim them."
+   },
+   {
+    "h": "Debt collectors"
+   },
+   {
+    "p": "Collectors can contact the executor. Under federal rules, they can't say or suggest that family members are personally responsible when they aren't. Families can report problems to the Consumer Financial Protection Bureau."
+   },
+   {
+    "tip": "Federal student loans are discharged when the borrower dies. Private loans and other debts follow the rules above."
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "Belongings: there's no need to rush",
+  "pre": "The clothes, the dishes, the car in the garage. They can wait.",
+  "b": [
+   {
+    "p": "Many families feel pressure to sort through belongings quickly, often from well-meaning relatives, a lease ending or the sheer weight of it. Unless there's a deadline, there's usually no reason to rush."
+   },
+   {
+    "h": "Why waiting often helps"
+   },
+   {
+    "list": [
+     "Grief makes decisions harder. Things given away in the first weeks are sometimes regretted later.",
+     "The executor usually needs to list valuable items before anything is distributed.",
+     "Papers mixed in with belongings, like statements, policies and old tax returns, can matter for settling the estate."
+    ]
+   },
+   {
+    "h": "When there is a deadline"
+   },
+   {
+    "list": [
+     "A rental lease ending. Many landlords will work with families on timing.",
+     "A care facility needing the room",
+     "Selling the house"
+    ]
+   },
+   {
+    "h": "Ways families make it easier"
+   },
+   {
+    "list": [
+     "Starting with one small area, like a drawer or a closet",
+     "Setting aside anything with paperwork to go through later",
+     "Taking photos of things before letting them go",
+     "Asking each family member for one or two items that matter most",
+     "Using a \"maybe\" box for things nobody can decide on yet"
+    ]
+   },
+   {
+    "tip": "If there's a written \"who gets what\" list, it's worth finding before sorting begins. In some states it can be legally binding if the will refers to it, and even where it isn't, families often follow it."
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "The first month: what can wait",
+  "pre": "A shorter list than it feels like.",
+  "b": [
+   {
+    "p": "In the first month after a death, it can feel like everything is urgent. A few things are. Most things can wait weeks or months without causing problems."
+   },
+   {
+    "h": "What usually can't wait"
+   },
+   {
+    "list": [
+     "Funeral or cremation arrangements",
+     "Securing the home, car and any pets",
+     "Ordering death certificates",
+     "Finding the will",
+     "Keeping up mortgage, rent, insurance and utility payments",
+     "Telling Social Security, if the funeral home hasn't"
+    ]
+   },
+   {
+    "h": "What can usually wait a few weeks"
+   },
+   {
+    "list": [
+     "Filing for probate",
+     "Closing bank accounts",
+     "Claiming life insurance, though it's often worth starting early",
+     "Cancelling subscriptions",
+     "Notifying the credit bureaus"
+    ]
+   },
+   {
+    "h": "What can usually wait months"
+   },
+   {
+    "list": [
+     "Sorting and giving away belongings",
+     "Selling the house or car",
+     "Closing email and social media accounts",
+     "Filing the final tax return, usually due in April of the following year",
+     "Deciding what to do with the ashes"
+    ]
+   },
+   {
+    "tip": "The phone line is worth keeping active for a while. It's often what unlocks the person's other accounts. Banks and email often text a code to that number before they let anyone in, so many families keep it running for 3 to 6 months."
+   }
+  ],
+  "nlBatch": 2
+ },
+ {
+  "s": "After a loss",
+  "t": "Looking after yourself while you handle it all",
+  "pre": "The paperwork matters. So do you.",
+  "b": [
+   {
+    "p": "Handling someone's affairs after they die often falls on one person, at the same time they're grieving. Many people who've done it say they wish someone had told them to slow down and ask for help."
+   },
+   {
+    "h": "Things people often find helpful"
+   },
+   {
+    "list": [
+     "Keeping a single notebook or document for every call, account and reference number",
+     "Doing one or two tasks a day rather than trying to finish everything at once",
+     "Saying yes when people offer help, and giving them a specific task, like returning calls, picking up mail or making meals",
+     "Taking breaks from paperwork entirely, especially on hard days like birthdays and holidays"
+    ]
+   },
+   {
+    "h": "Grief is not a schedule"
+   },
+   {
+    "p": "There's no right way or right timeline to grieve. Some people feel numb for weeks, some are fine and then aren't. Many find it helps to talk with others who've been through it."
+   },
+   {
+    "h": "Where people find support"
+   },
+   {
+    "list": [
+     "Hospice organizations, many of which offer free bereavement support to families, even if the person wasn't in hospice care",
+     "Grief support groups through hospitals, places of worship or community centers",
+     "Employee assistance programs (EAPs) through work, which often include free counseling sessions",
+     "A doctor or therapist, especially if grief is affecting sleep, eating or daily life"
+    ]
+   },
+   {
+    "p": "If you're struggling or having thoughts of harming yourself, you can call or text 988, the Suicide and Crisis Lifeline, any time."
+   },
+   {
+    "tip": "Many employers offer bereavement leave. It's worth asking HR, even if you think you don't qualify."
+   }
+  ],
+  "nlBatch": 2,
+  "asOf": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "How to close a Chase account for someone who died",
+  "pre": "Chase has a dedicated process, and much of it can start online.",
+  "b": [
+   {
+    "p": "Chase, like most large banks, has a team that handles accounts after a customer dies. The steps depend on how the account was set up and who is contacting the bank."
+   },
+   {
+    "h": "How it usually starts"
+   },
+   {
+    "p": "Chase's website has a section for reporting a customer's death, where a family member or executor can start the process online or find the right phone number. Families can also visit a branch. Searching \"Chase bereavement\" or \"Chase report a death\" usually finds the current page."
+   },
+   {
+    "h": "What Chase typically asks for"
+   },
+   {
+    "list": [
+     "The customer's full name and Social Security number",
+     "A death certificate",
+     "The caller's own ID",
+     "Proof of authority if they're the executor, such as letters testamentary or a small-estate affidavit, depending on the state"
+    ]
+   },
+   {
+    "h": "What usually happens next"
+   },
+   {
+    "table": [
+     [
+      "How the account was held",
+      "What usually happens"
+     ],
+     [
+      "Joint account",
+      "The surviving owner usually keeps the account and can remove the deceased person's name"
+     ],
+     [
+      "Payable-on-death beneficiary",
+      "The beneficiary receives the funds after showing the death certificate and ID"
+     ],
+     [
+      "Individual account, no beneficiary",
+      "The account is frozen and the funds go to the executor, usually into an estate account"
+     ]
+    ]
+   },
+   {
+    "h": "Credit cards and loans"
+   },
+   {
+    "p": "Chase credit cards, car loans and mortgages are handled separately from bank accounts. The same bereavement team can usually point families to each one."
+   },
+   {
+    "tip": "Requirements change, and they can vary by state and account type. Asking Chase for a written list of what they need before sending anything saves a second trip."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "Bank of America, Wells Fargo, Citi: what each one asks for",
+  "pre": "The big banks ask for similar things, with small differences.",
+  "b": [
+   {
+    "p": "Most large US banks follow a similar process after a customer dies. Each has a bereavement or estate services team, a page on its website, and a list of documents it needs."
+   },
+   {
+    "h": "What most of them ask for"
+   },
+   {
+    "list": [
+     "The customer's full legal name and Social Security number",
+     "A death certificate, often a certified copy",
+     "The ID of the person contacting them",
+     "Proof of authority for an executor or administrator, such as letters testamentary, letters of administration or a small-estate affidavit",
+     "For a payable-on-death beneficiary, their ID and the death certificate"
+    ]
+   },
+   {
+    "h": "How each one usually starts"
+   },
+   {
+    "list": [
+     "Bank of America: an online form for reporting a death, plus a phone line and branches",
+     "Wells Fargo: an online form or a call to its estate services team, and branches can help",
+     "Citi: a phone line and online information for survivors, with branch help in some areas"
+    ]
+   },
+   {
+    "p": "Searching \"[bank name] report a death\" or \"[bank name] estate services\" usually finds the current page and phone number."
+   },
+   {
+    "h": "Differences families sometimes notice"
+   },
+   {
+    "list": [
+     "Whether a certified death certificate is required, or a photocopy is enough",
+     "Whether documents can be uploaded online or must be mailed or brought in",
+     "How long the process takes, often a few weeks"
+    ]
+   },
+   {
+    "tip": "Keeping a list of each bank, the date of each call, who was spoken to and any reference number makes follow-up calls much faster."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "How to cancel a credit card for someone who died",
+  "pre": "The card closes. The balance goes to the estate.",
+  "b": [
+   {
+    "p": "Credit cards don't pass on to family members. After a death, card companies close the account and the balance becomes a debt of the estate, paid from the person's money and property before anything goes to heirs."
+   },
+   {
+    "h": "How it usually works"
+   },
+   {
+    "steps": [
+     "Contacting each card company. Most have a phone line or online form for reporting a death.",
+     "Providing the death certificate and the executor's details.",
+     "Asking the company to close the account and send a final statement to the executor.",
+     "Stopping any automatic payments that charged to the card."
+    ]
+   },
+   {
+    "h": "Who owes the balance"
+   },
+   {
+    "table": [
+     [
+      "Role on the card",
+      "Usually responsible for the balance?"
+     ],
+     [
+      "Account holder",
+      "Yes, through their estate"
+     ],
+     [
+      "Joint account holder",
+      "Yes, personally"
+     ],
+     [
+      "Authorized user",
+      "No. They usually just stop using the card."
+     ]
+    ]
+   },
+   {
+    "p": "In community-property states, a surviving spouse may be responsible for some debts even if they weren't on the card. Rules vary."
+   },
+   {
+    "h": "Things families commonly do"
+   },
+   {
+    "list": [
+     "Not using the card after the death, even to pay the person's bills",
+     "Destroying the cards once the accounts are closed",
+     "Checking the credit report for cards nobody knew about"
+    ]
+   },
+   {
+    "tip": "Under federal rules, card companies can't tell family members they have to pay a debt they don't legally owe. Families can report problems to the Consumer Financial Protection Bureau."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "Store cards and buy-now-pay-later accounts",
+  "pre": "The small accounts that are easy to forget.",
+  "b": [
+   {
+    "p": "Store credit cards and buy-now-pay-later plans, like Affirm, Klarna and Afterpay, are often missed after a death. They may not show up in the same places as a regular credit card, and some only send emails."
+   },
+   {
+    "h": "Where they usually show up"
+   },
+   {
+    "list": [
+     "The credit report. Store cards almost always appear. Buy-now-pay-later plans increasingly do, but not always.",
+     "Email receipts and payment reminders",
+     "Bank and credit card statements, as automatic payments",
+     "Apps on the person's phone"
+    ]
+   },
+   {
+    "h": "How closing them usually works"
+   },
+   {
+    "p": "Store cards work like other credit cards: the company is told about the death, the account is closed, and the balance becomes a debt of the estate. Buy-now-pay-later companies usually have a support form or email for reporting a death, and follow a similar process."
+   },
+   {
+    "h": "Who owes the balance"
+   },
+   {
+    "p": "As with other debts, the estate usually pays. Family members generally don't owe it unless they co-signed or shared the account."
+   },
+   {
+    "tip": "Automatic payments for these plans often come from a debit card. If the bank account is frozen, payments may fail, so telling the company early can prevent late fees from piling up on the estate."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "Different ways to cash out an account",
+  "pre": "Checks, transfers, and accounts that pass straight to someone.",
+  "b": [
+   {
+    "p": "Once a bank or brokerage agrees who should receive an account's money, there are usually a few ways to get it there. The options depend on who's receiving it and what kind of account it is."
+   },
+   {
+    "table": [
+     [
+      "Method",
+      "How it works",
+      "Often used for"
+     ],
+     [
+      "Check",
+      "The bank mails a check, usually to the executor or beneficiary",
+      "Smaller balances, or when someone doesn't bank with the same institution"
+     ],
+     [
+      "Transfer to an estate account",
+      "Money moves into a bank account opened in the estate's name",
+      "Accounts with no beneficiary, settled through probate"
+     ],
+     [
+      "Transfer to the beneficiary's account",
+      "Money moves straight to the beneficiary's own account",
+      "Payable-on-death and transfer-on-death accounts"
+     ],
+     [
+      "Transfer in kind",
+      "Investments move as they are, without being sold",
+      "Brokerage accounts, to avoid selling and possible taxes"
+     ]
+    ]
+   },
+   {
+    "h": "Retirement accounts are different"
+   },
+   {
+    "p": "Inherited IRAs and 401(k)s have their own rules. Beneficiaries often have the choice of moving the money into an inherited IRA rather than cashing it out, which can spread out the taxes. The rules depend on who the beneficiary is and when the person died."
+   },
+   {
+    "h": "Taxes"
+   },
+   {
+    "p": "Cash in a bank account usually isn't taxable income to the person who inherits it. Interest earned after the death can be. Withdrawals from traditional retirement accounts usually are taxable."
+   },
+   {
+    "tip": "Brokerage investments usually get a new cost basis when the owner dies, often their value on the date of death. That can lower taxes when they're eventually sold."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "Opening an estate bank account",
+  "pre": "One account for everything the estate pays and receives.",
+  "b": [
+   {
+    "p": "An estate bank account is opened in the name of the person's estate, and managed by the executor. It keeps the estate's money separate from everyone else's, which makes paying bills and keeping records much easier."
+   },
+   {
+    "h": "What banks usually ask for"
+   },
+   {
+    "list": [
+     "Letters testamentary or letters of administration from the probate court",
+     "A tax ID number for the estate, called an EIN",
+     "A death certificate",
+     "The executor's own ID"
+    ]
+   },
+   {
+    "h": "Getting an EIN"
+   },
+   {
+    "p": "The IRS issues EINs for free, and many executors get one online in a few minutes at irs.gov. The estate uses it instead of the person's Social Security number."
+   },
+   {
+    "h": "What usually goes in and out"
+   },
+   {
+    "table": [
+     [
+      "In",
+      "Out"
+     ],
+     [
+      "Money from closed bank accounts",
+      "Funeral costs, if not already paid"
+     ],
+     [
+      "Final paychecks and refunds",
+      "Mortgage, utilities and insurance on the home"
+     ],
+     [
+      "Proceeds from selling property",
+      "Valid debts and final bills"
+     ],
+     [
+      "Interest and dividends",
+      "Taxes, legal fees, and final distributions to heirs"
+     ]
+    ]
+   },
+   {
+    "h": "Keeping records"
+   },
+   {
+    "p": "Courts and beneficiaries can ask the executor to show what came in and what went out. Paying everything from one account makes that much simpler."
+   },
+   {
+    "tip": "Executors usually avoid paying estate bills from their own accounts. If they do, keeping receipts helps them get repaid from the estate later."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "Utilities: transfer or cancel",
+  "pre": "Some need to keep running for months.",
+  "b": [
+   {
+    "p": "Utilities are among the few bills that usually need to keep being paid after a death, at least while the home is still being cared for or sold. Turning off power or water too early can lead to frozen pipes, mold or an insurance problem."
+   },
+   {
+    "h": "Utilities families usually keep running"
+   },
+   {
+    "list": [
+     "Electricity and gas, especially for heating and cooling",
+     "Water and sewer",
+     "Trash collection",
+     "Home security or alarm monitoring, if the house is empty"
+    ]
+   },
+   {
+    "h": "Ones that can often be cancelled sooner"
+   },
+   {
+    "list": [
+     "Cable or satellite TV",
+     "Streaming services",
+     "A landline, if the cell phone is being kept",
+     "Internet, unless a smart thermostat or camera needs it"
+    ]
+   },
+   {
+    "h": "Transferring to someone else"
+   },
+   {
+    "p": "If a family member is moving in or taking over the home, most utility companies will transfer the account into their name with a phone call, the account number and sometimes a death certificate."
+   },
+   {
+    "h": "Deposits and refunds"
+   },
+   {
+    "p": "Some utility companies hold a deposit. When the account is closed, any deposit or credit balance usually goes to the estate."
+   },
+   {
+    "tip": "Recent utility bills are often the quickest way to find each company and account number."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "Closing an email account (Gmail, Outlook, Yahoo)",
+  "pre": "Email is often the last account to close, for good reason.",
+  "b": [
+   {
+    "p": "Email accounts often hold the most useful information after a death: bills, statements, receipts and messages from companies. Many families keep an account open until other accounts are settled, if they can get into it."
+   },
+   {
+    "h": "If the family has the password"
+   },
+   {
+    "p": "Signing in with the person's password may be possible, but the major providers' terms of service usually prohibit using someone else's account, and two-factor codes may still go to the person's phone. Some families keep the account open just long enough to download what they need."
+   },
+   {
+    "h": "How the major providers usually handle it"
+   },
+   {
+    "list": [
+     "Gmail (Google): Google has a request form for a deceased user's account. Family members can ask to close the account, and in some cases request some of its data. If the person set up Inactive Account Manager, their chosen contacts may already have access.",
+     "Outlook (Microsoft): Microsoft accounts usually close automatically after a period of inactivity. Microsoft also has a process for next of kin, which may require a court order for access to content.",
+     "Yahoo: Yahoo has a process to close a deceased user's account. Under its terms, it generally doesn't give access to the account's contents."
+    ]
+   },
+   {
+    "p": "Searching \"[provider] deceased user\" usually finds the current form."
+   },
+   {
+    "h": "What providers usually ask for"
+   },
+   {
+    "list": [
+     "A death certificate",
+     "The requester's ID",
+     "Sometimes proof of the requester's role, or a court order for access to content"
+    ]
+   },
+   {
+    "tip": "Because access is often limited after a death, settings like Google Inactive Account Manager, set up in advance, are the most reliable way to pass on email and files."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "PayPal, Venmo and Cash App after a death",
+  "pre": "Money can sit in these accounts, and they don't close themselves.",
+  "b": [
+   {
+    "p": "Payment apps can hold a balance, and they're easy to forget because they don't send paper statements. Each has its own process after an account holder dies."
+   },
+   {
+    "h": "How each one usually handles it"
+   },
+   {
+    "list": [
+     "PayPal: the executor or a family member can contact PayPal through its help center. Once the death is verified, the account is usually closed and any balance is paid to the estate, often by check.",
+     "Venmo: owned by PayPal, Venmo has a similar process through its support team. Any balance usually goes to the estate.",
+     "Cash App: Cash App's support handles deceased accounts. Families usually contact support through the app or website."
+    ]
+   },
+   {
+    "p": "Searching \"[app name] deceased account\" usually finds the current process."
+   },
+   {
+    "h": "What they usually ask for"
+   },
+   {
+    "list": [
+     "A death certificate",
+     "The executor's ID",
+     "Proof of authority, such as letters testamentary"
+    ]
+   },
+   {
+    "h": "Things families commonly check"
+   },
+   {
+    "list": [
+     "Any balance sitting in the account",
+     "Linked bank accounts and cards, which may need updating",
+     "Automatic payments or subscriptions paid through the app",
+     "Bitcoin or stocks held in Cash App, which may be handled separately from the cash balance"
+    ]
+   },
+   {
+    "tip": "Payment app balances aren't always protected like bank deposits. Getting the balance moved to the estate account sooner rather than later is common."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ },
+ {
+  "s": "Closing accounts",
+  "t": "Keeping a closing log",
+  "pre": "One page that saves dozens of repeat phone calls.",
+  "b": [
+   {
+    "p": "Closing accounts after a death means a lot of calls, forms and follow-ups, often spread over months. A simple log of every contact helps keep track of what's done, what's waiting, and what was promised."
+   },
+   {
+    "h": "What a log usually includes"
+   },
+   {
+    "table": [
+     [
+      "Column",
+      "Example"
+     ],
+     [
+      "Company",
+      "Chase checking"
+     ],
+     [
+      "Account (last 4)",
+      "…4821"
+     ],
+     [
+      "Date contacted",
+      "Oct 14"
+     ],
+     [
+      "How",
+      "Phone, branch, online form"
+     ],
+     [
+      "Who you spoke to",
+      "Maria, bereavement team"
+     ],
+     [
+      "Reference number",
+      "CB-20391"
+     ],
+     [
+      "What they need",
+      "Certified death certificate, letters testamentary"
+     ],
+     [
+      "Status",
+      "Waiting on check to estate account"
+     ]
+    ]
+   },
+   {
+    "h": "Ways families keep it"
+   },
+   {
+    "list": [
+     "A notebook kept by the phone",
+     "A spreadsheet that others in the family can see",
+     "A page in the binder, next to the account list"
+    ]
+   },
+   {
+    "h": "Why it helps"
+   },
+   {
+    "list": [
+     "It avoids sending the same documents twice",
+     "It's easy to hand off if someone else takes over",
+     "It shows the executor's work if beneficiaries or a court ask",
+     "It makes it clear when something has stalled and needs a follow-up"
+    ]
+   },
+   {
+    "tip": "Writing the date and the name of the person spoken to on every call is the single most useful habit. Many companies can look up a call by those two details."
+   }
+  ],
+  "nlBatch": 3,
+  "draft": true
+ }
+]
