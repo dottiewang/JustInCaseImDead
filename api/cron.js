@@ -1,3 +1,4 @@
+const monthly = require('../lib/monthly');
 const { DAY, WEEKLY, GUIDED_LEN, stripe, saveMeta, send, finishUpdates, nextCheckpointUpdates } = require('../lib/core');
 
 // Decide and send whatever is due for one customer
@@ -52,7 +53,7 @@ async function tick(cus, now) {
 module.exports = async (req, res) => {
   if (!process.env.CRON_SECRET || req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`) return res.status(401).send('Unauthorized');
   const now = Date.now();
-  let after = null, sent = 0, errors = 0;
+  let after = null, sent = 0, news = 0, errors = 0;
   do {
     const q = 'subscriptions?status=active&limit=100&expand[]=data.customer' + (after ? '&starting_after=' + after : '');
     const page = await stripe(q);
@@ -60,9 +61,10 @@ module.exports = async (req, res) => {
       try {
         const u = await tick(sub.customer, now);
         if (u) { await saveMeta(sub.customer.id, u); sent++; }
+        else { const n = await monthly.maybeSend(sub.customer, now); if (n) { await saveMeta(sub.customer.id, n); news++; } }
       } catch (e) { errors++; console.error(sub.customer && sub.customer.id, e.message); }
     }
     after = page.has_more ? page.data[page.data.length - 1].id : null;
   } while (after);
-  res.status(200).json({ ok: true, updated: sent, errors });
+  res.status(200).json({ ok: true, updated: sent, newsletters: news, errors });
 };
