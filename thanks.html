@@ -37,10 +37,13 @@
     guided: ['Guided checkpoint on.', 'Your first short question arrives within a day.'],
     cpfull: ['One-email version it is.', 'Your checkpoint arrives within a day.'],
     unsub: ['You&rsquo;re unsubscribed.', 'You won&rsquo;t get any more plan emails. Your templates stay in your Google Drive.'],
-    newsoff: ['Newsletter off.', 'You&rsquo;ll still get your checkpoints. Every article is on our website any time.']
+    newsoff: ['Newsletter off.', 'You&rsquo;ll still get your checkpoints. Every article is on our website any time.'],
+    newson: ['Monthly guides are back on.', 'You&rsquo;ll get the next one when it comes out.']
   };
   var a = new URLSearchParams(location.search).get('a');
   if (M[a]) { document.getElementById('t').innerHTML = M[a][0]; document.getElementById('m').innerHTML = M[a][1]; }
+  var q = new URLSearchParams(location.search);
+  if (a === 'newsoff' && q.get('c') && q.get('s')) document.getElementById('m').insertAdjacentHTML('afterend', '<p>Changed your mind? <a href="/api/action?a=newson&c=' + encodeURIComponent(q.get('c')) + '&s=' + encodeURIComponent(q.get('s')) + '">Turn monthly guides back on</a></p>');
 </script>
 </body>
 </html>

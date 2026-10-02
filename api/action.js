@@ -1,4 +1,4 @@
-const { DAY, Q_TEMPLATE, getCustomer, saveMeta, send, verify, firstQForTemplate, finishUpdates, nextCheckpointUpdates } = require('../lib/core');
+const { sign, DAY, Q_TEMPLATE, getCustomer, saveMeta, send, verify, firstQForTemplate, finishUpdates, nextCheckpointUpdates } = require('../lib/core');
 
 module.exports = async (req, res) => {
   const { c, a, s } = req.query || {};
@@ -47,9 +47,11 @@ module.exports = async (req, res) => {
     case 'cpfull': Object.assign(u, { jic_cpstyle: 'full', jic_cpg: '', jic_cpnext: now, jic_cpact: '', jic_cprem: '' }); break;
     case 'unsub': u.jic_unsub = '1'; break;
     case 'newsoff': u.jic_news = '0'; break;
+    case 'newson': u.jic_news = ''; break;
     default: return res.status(400).send('Unknown action.');
   }
   await saveMeta(c, u);
-  res.writeHead(302, { Location: '/thanks?a=' + encodeURIComponent(a) });
+  const undo = a === 'newsoff' ? '&c=' + encodeURIComponent(c) + '&s=' + sign(c, 'newson') : '';
+  res.writeHead(302, { Location: '/thanks?a=' + encodeURIComponent(a) + undo });
   res.end();
 };
