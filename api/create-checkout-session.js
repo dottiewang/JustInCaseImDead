@@ -54,7 +54,7 @@ module.exports = async function handler(req, res) {
           quantity: 1,
         },
       ],
-      success_url: `${baseUrl}/checkout?success=1&planKey=${encodeURIComponent(planKey)}`,
+      success_url: `${baseUrl}/checkout?success=1&planKey=${encodeURIComponent(planKey)}&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/checkout?canceled=1&planKey=${encodeURIComponent(planKey)}`,
       allow_promotion_codes: true,
       subscription_data: {
