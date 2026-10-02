@@ -27,7 +27,7 @@ async function tick(cus, now) {
   const silent = +m.jic_silent || 0;
   const pos = +m.jic_pos || 0;
   const pastTemplates = m.jic_track === 'weekly' && pos >= 10;
-  if (silent >= 3 && !pastTemplates) { await send(cus, 'C'); return { jic_paused: '1', jic_pausedat: now }; }
+  if (silent >= 3 && !pastTemplates && m.jic_track !== 'easy') { await send(cus, 'C'); return { jic_paused: '1', jic_pausedat: now }; }
 
   if (m.jic_track === 'weekly') {
     if (pos >= 11) {
