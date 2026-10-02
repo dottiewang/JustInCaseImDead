@@ -17,7 +17,6 @@
     <main>
         <section id="checkout-summary" class="premium-column">
             <h2>Order Summary</h2>
-            <p id="jic-email">Your first email is on its way. Not there in 5 minutes? Check your spam folder, or email <a href="mailto:hello@justincaseimdead.com">hello@justincaseimdead.com</a>.</p>
             <p><strong>Plan:</strong> <span id="checkout-plan"></span></p>
             <p><strong>Price:</strong> <span id="checkout-price"></span></p>
             <p><strong>Billing:</strong> <span id="checkout-billing"></span></p>
@@ -29,18 +28,5 @@
     </main>
 
     <script src="script.js"></script>
-    <script>
-    (function () {
-      var id = new URLSearchParams(location.search).get('session_id');
-      if (!id) return;
-      fetch('/api/session-email?session_id=' + encodeURIComponent(id)).then(function (r) { return r.json(); }).then(function (d) {
-        if (!d.email) return;
-        var b = document.createElement('strong'); b.textContent = d.email;
-        var p = document.getElementById('jic-email'), a = p.querySelector('a');
-        p.textContent = '';
-        p.append('Your first email is on its way to ', b, '. Not there in 5 minutes? Check your spam folder, or email ', a, '.');
-      }).catch(function () {});
-    })();
-    </script>
 </body>
 </html>
