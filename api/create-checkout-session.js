@@ -56,7 +56,6 @@ module.exports = async function handler(req, res) {
       ],
       success_url: `https://www.justincaseimdead.com/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/checkout?canceled=1&planKey=${encodeURIComponent(planKey)}`,
-      allow_promotion_codes: true,
       subscription_data: {
         metadata: {
           planKey,
