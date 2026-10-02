@@ -24,7 +24,8 @@ module.exports = async (req, res) => {
     const cus = await getCustomer(session.customer);
     const m = cus.metadata || {};
     if (!m.jic_track) {
-      const first = ((session.customer_details && session.customer_details.name) || cus.name || '').trim().split(/\s+/)[0] || '';
+      const typed = ((session.custom_fields || []).find(f => f.key === 'first_name') || {}).text;
+      const first = ((typed && typed.value) || (session.customer_details && session.customer_details.name) || cus.name || '').trim().split(/\s+/)[0] || '';
       const meta = { jic_track: 'weekly', jic_pos: 1, jic_next: now + 3 * DAY, jic_silent: 0, jic_first: first, jic_cp: 'twice', jic_cpstyle: 'full', jic_news: '1', jic_start: now };
       if (!cus.email && session.customer_details) cus.email = session.customer_details.email;
       await send({ ...cus, metadata: { ...m, ...meta } }, 'W1', event.id + '-W1');
