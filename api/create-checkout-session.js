@@ -56,7 +56,6 @@ module.exports = async function handler(req, res) {
       ],
       success_url: `https://www.justincaseimdead.com/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/checkout?canceled=1&planKey=${encodeURIComponent(planKey)}`,
-      custom_fields: [{ key: 'first_name', label: { type: 'custom', custom: 'First name' }, type: 'text', text: { maximum_length: 40 } }],
       subscription_data: {
         metadata: {
           planKey,
