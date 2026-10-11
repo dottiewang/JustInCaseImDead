@@ -2343,5 +2343,993 @@
    }
   ],
   "nlBatch": 3
+ },
+ {
+  "s": "After a loss",
+  "t": "Someone died at home: who to call first",
+  "pre": "Sudden or unexpected: the call is 911. Expected, under hospice: the hospice nurse.",
+  "b": [
+   {
+    "p": "When someone dies at home, the first call depends on whether the death was expected. If it was sudden or unexpected, or there's any chance the person is still alive, the call is 911."
+   },
+   {
+    "h": "If the death was unexpected"
+   },
+   {
+    "p": "Families call 911. Police and paramedics may come, and a medical examiner or coroner may be called in. That's the official, usually a doctor or an elected county officer, who looks into deaths that weren't expected. That's routine after a sudden death at home and doesn't mean anyone is suspected of anything."
+   },
+   {
+    "p": "In this situation, the person is usually left where they are until the authorities say otherwise."
+   },
+   {
+    "h": "If the death was expected"
+   },
+   {
+    "p": "If the person was in hospice care (end-of-life care, often given at home), families usually call the hospice nurse, not 911. The nurse comes to the home, confirms the death and helps with the next calls. Hospices generally have a 24-hour number for this."
+   },
+   {
+    "p": "If the person wasn't in hospice but was under a doctor's care for a terminal illness, families often call that doctor's office. In some areas, the non-emergency police line is the usual next step. Local practice varies."
+   },
+   {
+    "p": "With an expected death, once the right person has been called, there's usually no need to hurry."
+   },
+   {
+    "h": "After that"
+   },
+   {
+    "list": [
+     "The funeral home is called once the death has been confirmed. The family chooses which one. Calling one doesn't lock the family in.",
+     "Many families take time to sit with the person, call close relatives or say a prayer before the funeral home arrives. That's allowed and common.",
+     "Pets are often put in another room before anyone arrives.",
+     "Hospice nurses often help dispose of leftover medications."
+    ]
+   },
+   {
+    "tip": "If the person had a DNR (do not resuscitate) order or a POLST form (a doctor-signed sheet of end-of-life medical wishes), families often keep it where paramedics would see it, such as on the fridge. It tells emergency crews not to attempt resuscitation."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "When someone dies in a hospital or hospice facility",
+  "pre": "Staff handle the first steps. The family's main job is choosing a funeral home.",
+  "b": [
+   {
+    "p": "When a death happens in a hospital, nursing home or hospice facility, staff take care of confirming the death and the first paperwork. The family usually has a few decisions to make in the hours that follow."
+   },
+   {
+    "h": "What usually happens"
+   },
+   {
+    "steps": [
+     "A doctor or nurse confirms the death. Family members can usually stay with the person for a while.",
+     "Staff may ask about organ or tissue donation. Hospitals are required to notify the local organ procurement organization, the nonprofit that coordinates donations in that area, which decides whether donation is possible.",
+     "Staff may ask whether the family wants an autopsy, a medical examination after death to find out more about the cause. In some cases a medical examiner decides instead.",
+     "Staff ask which funeral home to call. The person usually stays in the hospital's morgue until the funeral home collects them.",
+     "The family collects the person's belongings, or arranges to pick them up later."
+    ]
+   },
+   {
+    "h": "Timing"
+   },
+   {
+    "p": "Hospitals generally can't hold a body for long, so they usually ask the family to name a funeral home within a day or two. The exact time varies by hospital. Families who aren't ready can usually ask for a little more time."
+   },
+   {
+    "p": "The death certificate is usually handled between the doctor and the funeral home. The family doesn't normally file it themselves."
+   },
+   {
+    "tip": "Belongings like rings, glasses and phones are easy to lose in the confusion. Many families ask staff for a list of what was collected."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Who has the legal right to make funeral decisions",
+  "pre": "It's set by state law, and it isn't always who the family expects.",
+  "b": [
+   {
+    "p": "Every state has rules about who gets to decide what happens to a person's body: burial or cremation, which funeral home, and where they rest. This is often called the right of disposition."
+   },
+   {
+    "h": "If the person named someone"
+   },
+   {
+    "p": "Many states let a person name an agent ahead of time, sometimes on a dedicated form and sometimes in a healthcare power of attorney, the document that names someone to make medical decisions if a person can't. If they did, that person usually has the final say."
+   },
+   {
+    "h": "If they didn't"
+   },
+   {
+    "p": "State law sets an order. A common version looks like this, though details vary by state:"
+   },
+   {
+    "list": [
+     "Spouse or registered domestic partner",
+     "Adult children (some states require a majority to agree)",
+     "Parents",
+     "Adult siblings",
+     "Other relatives, then others who step forward"
+    ]
+   },
+   {
+    "p": "In many states, the executor named in a will (the person chosen to handle the estate) doesn't automatically control funeral decisions. Wills are also often read after the funeral, so wishes written only in a will can be missed."
+   },
+   {
+    "h": "When family members disagree"
+   },
+   {
+    "p": "If people with equal rights disagree, such as several adult children, funeral homes may wait until there's agreement or a court decides. That can delay things."
+   },
+   {
+    "tip": "Funeral wishes written somewhere separate from the will, and shared with family, tend to be found in time."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "What you don't have to decide today",
+  "pre": "A few things need doing in the first days. Most things don't.",
+  "b": [
+   {
+    "p": "In the first hours after a death, it can feel like everything needs an answer at once. Very little actually does."
+   },
+   {
+    "h": "Usually needed in the first few days"
+   },
+   {
+    "list": [
+     "Choosing a funeral home or cremation provider",
+     "Deciding between burial and cremation, or at least giving the funeral home direction",
+     "Telling close family",
+     "Making sure the home, car and any pets are looked after"
+    ]
+   },
+   {
+    "h": "Usually fine to leave for later"
+   },
+   {
+    "table": [
+     [
+      "Decision",
+      "Why it can wait"
+     ],
+     [
+      "What to do with ashes",
+      "There's no legal deadline. Many families wait months."
+     ],
+     [
+      "A headstone",
+      "Cemeteries often wait for the ground to settle before one is set."
+     ],
+     [
+      "Belongings and clothes",
+      "Nothing needs to be cleared in the first weeks unless a lease is ending."
+     ],
+     [
+      "Selling the house or car",
+      "These usually go through the estate, which takes time anyway."
+     ],
+     [
+      "Closing bank accounts",
+      "Banks expect the executor, the person handling the estate, to deal with this over weeks or months."
+     ],
+     [
+      "Probate",
+      "The court process for settling an estate. It usually starts weeks after the death, not days."
+     ],
+     [
+      "An obituary",
+      "Online and newspaper notices can be posted after the funeral."
+     ]
+    ]
+   },
+   {
+    "p": "Funeral homes sometimes present many choices in one meeting. It's common to ask for a price list, go home and decide the next day."
+   },
+   {
+    "tip": "A notebook kept in one place, with what's been done and what's still waiting, helps when several people are helping."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "When debt collectors call after a death",
+  "pre": "What they can ask for, and what family members usually don't owe.",
+  "b": [
+   {
+    "p": "Collectors often contact family soon after a death. Some calls are legitimate. Some are pressure tactics, and some are scams."
+   },
+   {
+    "h": "Who usually owes the debt"
+   },
+   {
+    "p": "Debts are generally paid from the person's estate, meaning what they left behind. Family members usually aren't personally responsible unless they co-signed, held the account jointly or, in some cases, live in a community property state, where most things a married couple gets during the marriage belong to both. State rules vary."
+   },
+   {
+    "h": "What collectors are allowed to do"
+   },
+   {
+    "p": "The Consumer Financial Protection Bureau says collectors may contact the executor or administrator of the estate about the debt. That's the person handling the estate, named in the will or appointed by a court. They may contact other relatives only to find out who that is."
+   },
+   {
+    "list": [
+     "They can't say or suggest a family member has to pay from their own money if that isn't true.",
+     "They have to stop contacting someone who asks them in writing to stop, though the debt itself doesn't go away.",
+     "They have to send written information about the debt if asked."
+    ]
+   },
+   {
+    "h": "What families often do"
+   },
+   {
+    "list": [
+     "Ask for the request in writing, and pass it to the executor",
+     "Avoid paying from personal funds or agreeing on the phone to pay",
+     "Check whether the account was joint or co-signed before assuming anything",
+     "Report calls that seem fake to the FTC at ReportFraud.ftc.gov"
+    ]
+   },
+   {
+    "tip": "A common phrase people use: \"I'm not the executor. Please send anything about this account in writing.\""
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Scams that target grieving families",
+  "pre": "Obituaries give scammers names, dates and a family that's distracted.",
+  "b": [
+   {
+    "p": "Scammers often watch obituaries and funeral listings. A family in the first weeks after a death is busy, tired and more likely to pay a bill without checking it."
+   },
+   {
+    "h": "Common ones"
+   },
+   {
+    "table": [
+     [
+      "Scam",
+      "How it usually works"
+     ],
+     [
+      "Fake debts",
+      "A caller says the person owed money and the family has to pay now."
+     ],
+     [
+      "Funeral home impersonation",
+      "A call or email asks for payment to a new account \"to avoid delaying the service.\""
+     ],
+     [
+      "Funeral livestream links",
+      "Fake social media posts offer a stream of the service, then ask for card details."
+     ],
+     [
+      "Benefit offers",
+      "Promises of large payments, like a $25,000 veterans burial benefit, which doesn't exist."
+     ],
+     [
+      "Identity theft",
+      "Someone opens accounts in the dead person's name."
+     ],
+     [
+      "Quick house offers",
+      "Buyers push for a fast sale below value."
+     ]
+    ]
+   },
+   {
+    "h": "What families often do"
+   },
+   {
+    "list": [
+     "Call the funeral home back on a number they already have before paying anything new",
+     "Share a livestream link only privately with family",
+     "Leave the home address and full birth date out of the obituary",
+     "Ask the credit bureaus to mark the person's credit file as deceased, so new credit can't be opened in their name",
+     "Report scams to the FTC at ReportFraud.ftc.gov"
+    ]
+   },
+   {
+    "tip": "Real organizations rarely demand payment the same day. Urgency is a common sign of a scam."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Autopsies and the medical examiner",
+  "pre": "When one is required, what it costs, and how long it can take.",
+  "b": [
+   {
+    "p": "An autopsy is a medical examination of the body after death to find out the cause. Most deaths don't involve one. When one does happen, it's usually for one of two reasons: the law requires it, or the family asks for one."
+   },
+   {
+    "h": "When the medical examiner gets involved"
+   },
+   {
+    "p": "Each state decides which deaths go to a medical examiner or coroner. A medical examiner is usually a doctor appointed to the job. A coroner is often an elected county official, and may not be a doctor. Common examples include sudden or unexpected deaths, accidents, deaths that might involve violence and deaths with no doctor in attendance."
+   },
+   {
+    "p": "When the medical examiner decides an autopsy is needed, the family usually can't stop it, although some states allow objections on religious grounds. There's normally no charge to the family for these."
+   },
+   {
+    "h": "When a family asks for one"
+   },
+   {
+    "p": "Families sometimes request an autopsy to understand an illness or for peace of mind. Hospitals may do one for a patient who died there, sometimes at no cost. Private autopsies are usually paid for by the family, and prices vary widely."
+   },
+   {
+    "h": "What it can delay"
+   },
+   {
+    "list": [
+     "The body is usually released to the funeral home within a few days, and an open-casket viewing is usually still possible.",
+     "The death certificate may first list the cause as \"pending.\" A pending certificate can often be used for some tasks, but some life insurers wait for the final one.",
+     "Full reports can take weeks or months. Families can usually request a copy."
+    ]
+   },
+   {
+    "tip": "If a funeral date depends on the release, funeral homes are usually in touch with the medical examiner's office and can give updates."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "What to say when you call: short scripts",
+  "pre": "A few lines for the calls nobody knows how to start.",
+  "b": [
+   {
+    "p": "Many of the calls after a death follow a pattern. Having the first line ready makes them easier. These are examples that people commonly use."
+   },
+   {
+    "h": "The funeral home"
+   },
+   {
+    "p": "\"My father, [name], died this morning at home. Hospice has been here. I'd like to ask about your services and get a copy of your price list.\""
+   },
+   {
+    "h": "The bank"
+   },
+   {
+    "p": "\"I'm calling to report the death of a customer, [name]. Can you tell me what you need from me and whether there's a bereavement team?\""
+   },
+   {
+    "h": "Their employer"
+   },
+   {
+    "p": "\"I'm calling about [name], who works in [department]. They died on [date]. Could you tell me who handles final pay and benefits?\""
+   },
+   {
+    "h": "Social Security"
+   },
+   {
+    "p": "Funeral homes usually report the death to Social Security. Families typically call 1-800-772-1213 to ask about survivor benefits or a payment that arrived after the death."
+   },
+   {
+    "h": "Utilities and subscriptions"
+   },
+   {
+    "p": "\"I'm calling about an account for [name], who has died. I'd like to transfer the account to my name\" or \"to close it.\""
+   },
+   {
+    "h": "Worth having nearby"
+   },
+   {
+    "list": [
+     "Their full name, date of birth and last four digits of their Social Security number",
+     "The date of death",
+     "A death certificate, or a note that one has been ordered",
+     "A notebook to write down who you spoke to, and when"
+    ]
+   },
+   {
+    "tip": "\"Could you send that to me in writing?\" works for almost any call."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Burial costs: plot, grave and headstone",
+  "pre": "Cemetery charges come on top of the funeral home's bill.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "A burial usually involves two bills: one from the funeral home and one from the cemetery. Families are often surprised by the second."
+   },
+   {
+    "p": "According to the National Funeral Directors Association, the national median cost of a funeral with viewing and burial was $8,300 in 2023, or $9,995 with a burial vault. Those figures don't include cemetery charges."
+   },
+   {
+    "h": "What cemeteries commonly charge for"
+   },
+   {
+    "table": [
+     [
+      "Item",
+      "What it is"
+     ],
+     [
+      "Plot",
+      "The space itself. Prices vary enormously by city and cemetery."
+     ],
+     [
+      "Opening and closing",
+      "Digging and filling the grave. Often a separate fee, and sometimes higher on weekends."
+     ],
+     [
+      "Vault or liner",
+      "A concrete or metal box the casket goes in, so the ground doesn't sink. Usually a cemetery rule, not state law."
+     ],
+     [
+      "Headstone or marker",
+      "Bought from the cemetery or an outside monument company."
+     ],
+     [
+      "Setting fee",
+      "A charge to install the headstone."
+     ],
+     [
+      "Long-term care",
+      "A fee for upkeep, sometimes called endowment or perpetual care."
+     ]
+    ]
+   },
+   {
+    "h": "Things families often ask"
+   },
+   {
+    "list": [
+     "Whether the headstone can come from somewhere else. Many cemeteries allow it, though some have size or material rules.",
+     "Whether a plot was already bought. Old deeds can turn up in papers or with the cemetery office.",
+     "Whether the federal Funeral Rule, the FTC rule that protects consumers buying funeral services, applies. It covers funeral homes, but usually not cemeteries unless they also sell funeral services."
+    ]
+   },
+   {
+    "tip": "Cemetery price lists aren't always posted. Many families ask for a written itemized quote before signing."
+   },
+   {
+    "current": [
+     {
+      "label": "Median funeral with viewing and burial (2023, excl. cemetery)",
+      "fig": "$8,300"
+     },
+     {
+      "label": "Same, with a burial vault (2023)",
+      "fig": "$9,995"
+     }
+    ],
+    "verified": "October 2026 against nfda.org"
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Is embalming required?",
+  "pre": "What it is, when it's usually not needed, and what the alternatives are.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "Embalming is a treatment that slows the natural changes to a body after death. A funeral home replaces the blood with chemical fluids, usually so the person looks more natural at an open-casket viewing. It doesn't preserve a body permanently."
+   },
+   {
+    "p": "Many people assume embalming is required by law. In most cases it isn't."
+   },
+   {
+    "h": "What the law usually says"
+   },
+   {
+    "p": "Under the FTC's Funeral Rule, a federal rule that protects people buying funeral services, a funeral home can't say embalming is legally required when it isn't, and it needs permission before embalming and charging for it. No state requires embalming for every death."
+   },
+   {
+    "p": "Some states do require embalming or refrigeration if a burial is delayed past a certain time, or for some types of transport, such as shipping a body by airline. The rules vary by state."
+   },
+   {
+    "h": "When funeral homes often ask for it"
+   },
+   {
+    "list": [
+     "A public viewing with an open casket. Many funeral homes require embalming for this as their own policy.",
+     "A long gap before the funeral"
+    ]
+   },
+   {
+    "h": "When it usually isn't needed"
+   },
+   {
+    "list": [
+     "Direct cremation",
+     "Immediate burial",
+     "A short private family viewing, which some funeral homes allow without embalming",
+     "Green burial, where embalming is usually not allowed"
+    ]
+   },
+   {
+    "p": "Refrigeration, keeping the body cool until the service, is the common alternative. The National Funeral Directors Association put the median cost of embalming at $845 in 2023."
+   },
+   {
+    "tip": "A funeral home's price list has to say that embalming isn't required by law except in certain cases."
+   },
+   {
+    "current": [
+     {
+      "label": "Median embalming cost (2023)",
+      "fig": "$845"
+     }
+    ],
+    "verified": "October 2026 against nfda.org and the FTC Funeral Rule"
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Veterans burial benefits",
+  "pre": "Free burial in a national cemetery, a headstone, and some money toward costs.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "Many veterans, and often their spouses and dependent children, qualify for burial benefits from the Department of Veterans Affairs. Families sometimes don't claim them because they don't know they exist."
+   },
+   {
+    "h": "What's commonly available"
+   },
+   {
+    "list": [
+     "Burial in a VA national cemetery at no cost, including the grave, digging and filling it (called opening and closing), a liner, a headstone and ongoing care",
+     "A government headstone, marker or medallion, even for burial in a private cemetery",
+     "A burial flag",
+     "A Presidential Memorial Certificate",
+     "Military funeral honors, usually requested through the funeral home"
+    ]
+   },
+   {
+    "h": "Money toward costs"
+   },
+   {
+    "p": "The VA may pay an allowance toward burial and funeral costs. For deaths connected to military service, it's up to $2,000. For other deaths on or after October 1, 2026, it's up to $1,032, plus up to $1,032 toward a plot if the veteran isn't buried in a national cemetery. These amounts change each October, and eligibility rules apply."
+   },
+   {
+    "p": "Claims for deaths not connected to service generally have to be filed within two years. Families usually apply on VA Form 21P-530EZ."
+   },
+   {
+    "h": "Planning ahead"
+   },
+   {
+    "p": "Veterans can apply for a pre-need eligibility decision, meaning the VA confirms ahead of time that they qualify for burial in a national cemetery. A copy of the discharge papers, often a DD-214, kept with the plan makes this much easier."
+   },
+   {
+    "tip": "There is no $25,000 VA burial benefit. Calls and ads offering one are scams."
+   },
+   {
+    "current": [
+     {
+      "label": "Service-connected burial allowance (deaths after Sept 11, 2001)",
+      "fig": "up to $2,000"
+     },
+     {
+      "label": "Non-service-connected burial allowance (deaths Oct 1, 2026–Sept 30, 2027)",
+      "fig": "up to $1,032"
+     },
+     {
+      "label": "Plot allowance, same period",
+      "fig": "up to $1,032"
+     }
+    ],
+    "verified": "October 2026 against va.gov"
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Green and natural burial",
+  "pre": "No embalming, no vault, and a simple shroud or casket.",
+  "b": [
+   {
+    "p": "Green burial, also called natural burial, returns the body to the ground as simply as possible. It's become more common as people look for options that are simpler and often less expensive."
+   },
+   {
+    "h": "What it usually means"
+   },
+   {
+    "list": [
+     "No embalming",
+     "A biodegradable casket, or a shroud (a simple cloth the body is wrapped in)",
+     "No concrete vault or liner",
+     "A grave often marked with a flat stone, a plant or GPS coordinates"
+    ]
+   },
+   {
+    "h": "Where it happens"
+   },
+   {
+    "table": [
+     [
+      "Type",
+      "What it is"
+     ],
+     [
+      "Natural burial ground",
+      "A cemetery set aside only for green burial, often on protected land"
+     ],
+     [
+      "Hybrid cemetery",
+      "A regular cemetery with a section for green burial"
+     ],
+     [
+      "Home or family land",
+      "Allowed in many states, subject to local zoning and health rules"
+     ]
+    ]
+   },
+   {
+    "p": "The Green Burial Council certifies cemeteries and funeral homes that meet its standards."
+   },
+   {
+    "h": "Other options families ask about"
+   },
+   {
+    "list": [
+     "Water cremation (alkaline hydrolysis), which uses water and chemicals instead of flame. Legal in some states.",
+     "Human composting (natural organic reduction), which turns the body into soil over several weeks. As of October 2026, legal in 14 states, though California's law doesn't take effect until 2027."
+    ]
+   },
+   {
+    "tip": "Because the rules vary by state and cemetery, many families ask a funeral home or green cemetery directly what's possible where they live."
+   },
+   {
+    "current": [
+     {
+      "label": "States where human composting is legal",
+      "fig": "14 (California from 2027)"
+     }
+    ],
+    "verified": "October 2026 against state legislation trackers"
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Prepaid funeral plans: what to check before buying",
+  "pre": "They can help. They can also go wrong if nobody reads the details.",
+  "b": [
+   {
+    "p": "A prepaid funeral plan lets someone choose and pay for their funeral ahead of time. It can take pressure off family. The FTC suggests asking a few questions before signing."
+   },
+   {
+    "h": "Questions people commonly ask"
+   },
+   {
+    "list": [
+     "Exactly what's included, and what isn't, such as cemetery costs or flowers",
+     "Whether the price is locked in or could go up later",
+     "Where the money goes: a trust, an insurance policy or the funeral home itself",
+     "What happens if the person moves, or the funeral home closes or is sold",
+     "Whether the plan can be cancelled, and how much would be refunded",
+     "Whether the plan can be transferred to another funeral home"
+    ]
+   },
+   {
+    "h": "Protections vary"
+   },
+   {
+    "p": "States regulate prepaid plans differently. Some require the money to be held in trust. Others offer fewer protections. State attorneys general and funeral boards often publish guides."
+   },
+   {
+    "h": "Alternatives some people use"
+   },
+   {
+    "list": [
+     "A payable-on-death bank account set aside for funeral costs. The named person gets the money directly, without waiting for probate.",
+     "Life insurance with a named beneficiary",
+     "Writing down wishes without paying anything yet"
+    ]
+   },
+   {
+    "p": "Some people on Medicaid, or expecting to need it, use an irrevocable funeral trust, money set aside for the funeral that can't be taken back, which usually doesn't count against Medicaid limits. Rules depend on the state."
+   },
+   {
+    "tip": "A plan only helps if family knows it exists. A copy of the contract kept with the binder solves that."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Who pays for the funeral, and can the estate pay you back?",
+  "pre": "Whoever signs the contract is on the hook, at least at first.",
+  "asOf": true,
+  "b": [
+   {
+    "p": "The person who signs the funeral home contract is usually responsible for paying it. If the person who died left money, the estate (everything they owned) can often pay that person back."
+   },
+   {
+    "h": "How it usually works"
+   },
+   {
+    "list": [
+     "Funeral costs are generally among the first debts an estate pays, ahead of most others. Exact rules vary by state.",
+     "Families who pay first usually keep every receipt so the executor can reimburse them.",
+     "If the estate doesn't have enough money, the person who signed may be left paying."
+    ]
+   },
+   {
+    "h": "Where the money often comes from"
+   },
+   {
+    "table": [
+     [
+      "Source",
+      "Notes"
+     ],
+     [
+      "Life insurance",
+      "Paid to the named beneficiary, often within weeks"
+     ],
+     [
+      "Payable-on-death accounts",
+      "Paid directly to the named beneficiary with a death certificate"
+     ],
+     [
+      "A prepaid funeral plan",
+      "Check what it covers"
+     ],
+     [
+      "Social Security",
+      "A one-time $255 payment to a surviving spouse or child who qualifies. It isn't paid to the funeral home."
+     ],
+     [
+      "Veterans benefits",
+      "Burial allowances for eligible veterans"
+     ],
+     [
+      "Employer or union",
+      "Some offer a death benefit or life insurance"
+     ],
+     [
+      "Workers' compensation",
+      "If the death was work-related"
+     ],
+     [
+      "State or county assistance",
+      "Some offer help with basic burial for families who can't pay"
+     ]
+    ]
+   },
+   {
+    "p": "FEMA sometimes helps with funeral costs after a federally declared disaster."
+   },
+   {
+    "tip": "Some funeral homes will wait for a life insurance payout if the family signs an assignment form, which lets the insurer pay part of the payout straight to the funeral home. It's worth asking."
+   },
+   {
+    "current": [
+     {
+      "label": "Social Security lump-sum death payment",
+      "fig": "$255"
+     }
+    ],
+    "verified": "October 2026 against ssa.gov"
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Donating a body to science",
+  "pre": "Often arranged ahead of time, and not always accepted.",
+  "b": [
+   {
+    "p": "Some people choose to donate their body to a medical school or research program. It can help train doctors and surgeons, and it often lowers costs for the family."
+   },
+   {
+    "h": "How it usually works"
+   },
+   {
+    "list": [
+     "Most people register in advance with a program, often run by a university medical school.",
+     "At death, the family or hospice calls the program, which decides whether to accept.",
+     "Many programs pay for transport within a set area and for cremation afterward.",
+     "Ashes are usually returned to the family later, often a year or more after the death."
+    ]
+   },
+   {
+    "h": "Why a donation might be turned down"
+   },
+   {
+    "p": "Programs can decline a body for many reasons, including certain infections, recent major surgery, an autopsy, body size or the program being full. Because of this, many families keep a backup plan, such as a cremation provider."
+   },
+   {
+    "h": "Other things to know"
+   },
+   {
+    "list": [
+     "Organ donation for transplant is separate. Sometimes both are possible.",
+     "There's usually no funeral with the body present, but families can hold a memorial.",
+     "Some for-profit companies also accept bodies. Many families prefer university programs and ask how remains are used."
+    ]
+   },
+   {
+    "tip": "Registration papers kept with the plan, and a family that knows about it, make the call much easier at the time."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "Obituaries: cost, where to post, and what to leave out",
+  "pre": "A newspaper notice can be expensive. Some details help scammers.",
+  "b": [
+   {
+    "p": "An obituary tells people about a death and the service. Today many families post one online, in a newspaper or both."
+   },
+   {
+    "h": "Where people post them"
+   },
+   {
+    "table": [
+     [
+      "Where",
+      "Cost"
+     ],
+     [
+      "Funeral home website",
+      "Usually included"
+     ],
+     [
+      "Social media",
+      "Free"
+     ],
+     [
+      "Newspaper",
+      "Often charged by length, and can be costly in large papers"
+     ],
+     [
+      "Memorial websites",
+      "Some free, some paid"
+     ]
+    ]
+   },
+   {
+    "p": "Newspapers often have a short death notice (just the name, dates and service details), sometimes free, and a longer paid obituary that tells the story of the person's life. Funeral homes can usually place either and tell the family the price first."
+   },
+   {
+    "h": "What families often leave out"
+   },
+   {
+    "list": [
+     "The full date of birth. The year is usually enough.",
+     "The home address",
+     "Mother's maiden name, which is a common security question",
+     "Phrases like \"the family will all be at the service,\" which tell burglars the house is empty"
+    ]
+   },
+   {
+    "p": "Some families ask a neighbor or friend to stay at the house during the funeral."
+   },
+   {
+    "h": "What's commonly included"
+   },
+   {
+    "list": [
+     "Full name and age",
+     "City or town",
+     "Close family",
+     "A few lines about their life",
+     "Service details, or where to find them",
+     "Where to send donations, if anywhere"
+    ]
+   },
+   {
+    "tip": "An obituary doesn't have to be posted before the funeral. Some families write it in the weeks after."
+   }
+  ],
+  "nlBatch": 4
+ },
+ {
+  "s": "After a loss",
+  "t": "It's okay to choose the simplest option",
+  "pre": "A simple funeral isn't a measure of love. Many families choose it on purpose.",
+  "asOf": true,
+  "nlBatch": 4,
+  "b": [
+   {
+    "p": "Families often feel that spending less on a funeral says something about how much they cared. It doesn't. Many people ask for the simplest option themselves, and many families choose it so they can put their time and money into a memorial that feels more personal."
+   },
+   {
+    "h": "The range, from simplest to most involved"
+   },
+   {
+    "table": [
+     [
+      "Option",
+      "What it usually includes",
+      "Cost"
+     ],
+     [
+      "Direct cremation",
+      "Transfer, cremation, a basic container, ashes returned. No viewing beforehand.",
+      "Lowest. Often a fraction of a full funeral, but prices vary widely by area."
+     ],
+     [
+      "Direct burial",
+      "Transfer and burial soon after death, no viewing or embalming",
+      "Low, plus cemetery costs"
+     ],
+     [
+      "Cremation with a funeral or viewing first",
+      "Embalming, viewing or service, then cremation",
+      "Median $6,280 (NFDA, 2023)"
+     ],
+     [
+      "Traditional funeral with burial",
+      "Embalming, viewing, service, hearse, casket",
+      "Median $8,300 (NFDA, 2023), plus cemetery costs"
+     ]
+    ]
+   },
+   {
+    "p": "The medians come from the National Funeral Directors Association and don't include cemetery charges such as the plot, opening the grave or a headstone. Prices for the same service can differ by thousands of dollars between funeral homes in the same town."
+   },
+   {
+    "h": "What a simple option doesn't rule out"
+   },
+   {
+    "list": [
+     "A memorial service later, at home, at a place of worship, in a park or anywhere that means something",
+     "Scattering or burying the ashes on a meaningful date",
+     "A gathering of any size, with or without a funeral home"
+    ]
+   },
+   {
+    "h": "What families often check in a quote"
+   },
+   {
+    "list": [
+     "The all-in price, including the basic services fee (the funeral home's flat charge for staff and overhead), permits, the death certificate and any medical examiner fee",
+     "Whether a package includes things they didn't ask for, which can usually be removed",
+     "Whether the lowest-priced option on the itemized price list matches what was quoted on the phone"
+    ]
+   },
+   {
+    "h": "Phrases worth noticing"
+   },
+   {
+    "list": [
+     "\"What they deserve\" or \"what you'd want for them\"",
+     "\"Most families choose…\" when describing a more expensive package",
+     "\"This is required\" without saying which law requires it"
+    ]
+   },
+   {
+    "p": "Under the FTC's Funeral Rule, funeral homes have to give an itemized price list, and families can choose only the goods and services they want, with some exceptions such as the basic services fee."
+   },
+   {
+    "tip": "Writing down a preference ahead of time, even one line like \"Keep it simple, direct cremation is fine,\" takes the guilt out of the decision for family."
+   },
+   {
+    "current": [
+     {
+      "label": "Median funeral with viewing and cremation (2023, excl. cemetery)",
+      "fig": "$6,280"
+     },
+     {
+      "label": "Median funeral with viewing and burial (2023, excl. cemetery)",
+      "fig": "$8,300"
+     }
+    ],
+    "verified": "October 2026 against nfda.org"
+   }
+  ]
  }
 ]
