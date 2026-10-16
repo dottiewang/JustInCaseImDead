@@ -45,7 +45,7 @@ th{background:#F1ECE2;font-weight:700}
 .row input{flex:1 1 260px;min-width:0;font:inherit;font-size:17px;padding:14px 16px;border:1px solid #CFC6B4;border-radius:6px;background:#fff;color:#2B2A26}
 .row input:focus{outline:none;border-color:#2F4A3A;box-shadow:0 0 0 3px rgba(47,74,58,.15)}
 .row button{font:inherit;font-size:15px;font-weight:700;padding:14px 20px;border:0;border-radius:6px;background:#2F4A3A;color:#FBF8F2;cursor:pointer}
-.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 0;font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 0;font-size:13px}
 .chips button{font:inherit;font-size:13px;padding:6px 12px;border:1px solid #E2DBCD;border-radius:999px;background:#fff;color:#2B2A26;cursor:pointer}
 .chips button:hover{border-color:#2F4A3A;color:#2F4A3A}
 #res{margin-top:14px}
@@ -63,9 +63,9 @@ th{background:#F1ECE2;font-weight:700}
 <p class="kicker">Just Ask</p>
 <h1>What do you need to find?</h1>
 <div class="row"><input id="q" type="search" placeholder="Try “death certificates” or “close a bank account”" aria-label="Just Ask" autocomplete="off"><button id="clr" type="button">Clear</button></div>
-<div id="chips" class="chips"><span class="muted">People often ask:</span><button type="button" data-q="death certificates">death certificates</button><button type="button" data-q="close a bank account">close a bank account</button><button type="button" data-q="phone passcode">phone passcode</button><button type="button" data-q="do I need a will">do I need a will</button></div>
+<p style="margin:8px 0 0;font-size:12px;font-style:italic;color:#6B665C">Searches the Answer Library. Nothing you type is saved.</p>
+<div id="chips" class="chips"><span style="color:#2B2A26;font-weight:600">People often ask:</span><button type="button" data-q="death certificates">death certificates</button><button type="button" data-q="close a bank account">close a bank account</button><button type="button" data-q="phone passcode">phone passcode</button><button type="button" data-q="do I need a will">do I need a will</button></div>
 <div id="res"></div>
-<p class="muted small" style="margin-top:10px">Searches the Answer Library. Nothing you type is saved.</p>
 <a href="/guides/start-here" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin:22px 0 0;padding:16px 18px;border-radius:6px;background:#F1ECE2;text-decoration:none;color:#2B2A26"><span style="font-family:Georgia,'Times New Roman',serif;font-size:18px;color:#2F4A3A">Feeling overwhelmed? Start here &rarr;</span><span style="font-size:14px;color:#6B665C">A short list of what comes first.</span></a>
 </section>
 <p class="small"><a href="/guides/all/">Or browse all 100+ articles &rarr;</a></p></article><script>
