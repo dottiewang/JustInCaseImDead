@@ -305,8 +305,12 @@ body.terms-page header {
 
 .premium-columns .premium-column:last-child ol,
 .premium-columns .premium-column:last-child ul {
-    padding-left: 0;
-    list-style-position: inside;
+    display: block;
+    max-width: 34em;
+    margin: 0 auto;
+    padding-left: 1.25em;
+    list-style-position: outside;
+    text-align: left;
 }
 
 .premium-column ol {
@@ -332,7 +336,7 @@ body.terms-page header {
 .feature-column {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 18px;
 }
 
 .feature-item,
@@ -512,7 +516,7 @@ button:disabled {
 
     .premium-feature-columns {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 18px;
     }
 
     .premium-feature-columns .feature-bottom {
@@ -629,7 +633,7 @@ button:disabled {
     }
 
     .subscriptions-page .premium-feature-columns {
-        gap: 6px;
+        gap: 18px;
     }
 
     .subscriptions-page .premium-feature-columns ol > li {
@@ -696,8 +700,7 @@ button:disabled {
     }
 
     .subscriptions-page .premium-feature-columns {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 18px;
     }
 
     .subscriptions-page .premium-feature-columns .feature-bottom {
