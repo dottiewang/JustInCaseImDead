@@ -370,6 +370,10 @@ body.terms-page header {
     text-decoration: underline;
 }
 
+.feature-title a {
+    color: inherit;
+}
+
 .premium-feature-bottom {
     grid-column: 1 / -1;
     display: flex;
