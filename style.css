@@ -355,10 +355,6 @@ body.terms-page header {
     font-weight: 700;
 }
 
-.feature-title-inline {
-    margin-bottom: 6px;
-}
-
 .feature-number {
     display: inline-block;
     min-width: 0.9em;
@@ -389,20 +385,6 @@ body.terms-page header {
 
 .premium-feature-item .feature-title {
     justify-content: center;
-}
-
-.beta-tag {
-    display: inline-block;
-    margin-left: 8px;
-    padding: 2px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.03);
-    color: #e8d8a3;
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    vertical-align: middle;
 }
 
 .premium-column ul {
