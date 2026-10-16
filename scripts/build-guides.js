@@ -95,7 +95,7 @@ const page = (title, desc, url, inner) => `<!DOCTYPE html>
 <style>${CSS}</style>
 </head>
 <body>
-<div class="top"><a href="/"><img src="${SITE}/logo.jpg" alt="Just In Case"></a><a href="/guides/">All guides</a></div>
+<div class="top"><a href="/"><img src="${SITE}/logo.jpg" alt="Just In Case"></a><a href="/guides/">Answer Library</a></div>
 ${inner}
 </body>
 </html>
@@ -123,15 +123,17 @@ ${DISCLAIMER}
   const items = all.filter((g, i) => all.findIndex(x => slug(x.t) === slug(g.t)) === i)
     .sort((a, b) => (a.s || '').localeCompare(b.s || '') || a.t.localeCompare(b.t))
     .map(g => `<li><a href="/guides/${slug(g.t)}">${g.t}</a>${g.pre ? `<small>${g.pre}</small>` : ''}</li>`).join('\n');
-  files['index.html'] = page('Guides', 'Plain-English guides for getting your affairs in order.', `${SITE}/guides/`,
+  files['start-here/index.html'] = page('Start here', 'Not sure where to begin? A short list of what most people read first.', `${SITE}/guides/start-here`, fs.readFileSync(path.join(__dirname, '..', 'lib', 'start-here.html'), 'utf8'));
+  files['index.html'] = page('Answer Library', 'Plain-English guides for getting your affairs in order.', `${SITE}/guides/`,
     `<article><section id="ask" class="ask">
 <p class="kicker">Just Ask</p>
 <h1>What do you need to find?</h1>
 <div class="row"><input id="q" type="search" placeholder="Try “death certificates” or “close a bank account”" aria-label="Just Ask" autocomplete="off"><button id="clr" type="button">Clear</button></div>
 <div id="chips" class="chips"><span class="muted">People often ask:</span><button type="button" data-q="death certificates">death certificates</button><button type="button" data-q="close a bank account">close a bank account</button><button type="button" data-q="phone passcode">phone passcode</button><button type="button" data-q="do I need a will">do I need a will</button></div>
 <div id="res"></div>
-<p class="muted small">Searches the guides on this site. Nothing you type is saved.</p>
-</section><p class="kicker">All guides</p><h2>Browse everything</h2><ul class="list">${items}</ul></article><script>
+<a href="/guides/start-here" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin:22px 0 0;padding:16px 18px;border-radius:6px;background:#F1ECE2;text-decoration:none;color:#2B2A26"><span style="font-family:Georgia,'Times New Roman',serif;font-size:18px;color:#2F4A3A">Feeling overwhelmed? Start here &rarr;</span><span style="font-size:14px;color:#6B665C">A short list of what comes first.</span></a>
+<p class="muted small">Searches the Answer Library. Nothing you type is saved.</p>
+</section><p class="kicker">Answer Library</p><h2>Browse everything</h2><ul class="list">${items}</ul></article><script>
 (function(){
   var docs=[],box=document.getElementById('q'),out=document.getElementById('res'),chips=document.getElementById('chips');
   function norm(s){return ' '+s.toLowerCase().replace(/[\\u2019']/g,'').replace(/[^a-z0-9$%]+/g,' ')+' ';}
