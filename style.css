@@ -352,7 +352,7 @@ body.terms-page header {
     justify-content: center;
     align-items: baseline;
     flex-wrap: wrap;
-    gap: 0;
+    gap: 0 0.3em;
     margin-bottom: 6px;
     font-size: 1.1rem;
     line-height: 1.25;
