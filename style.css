@@ -8,6 +8,8 @@ body {
     margin: 20px;
     background-color: #000;
     color: #fff;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 img {
@@ -379,6 +381,14 @@ body.terms-page header {
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
+}
+
+.feature-title a,
+.feature-title a * {
+    font-size: inherit !important;
+    font-weight: inherit;
+    line-height: inherit;
+    font-family: inherit;
 }
 
 .premium-feature-bottom {
