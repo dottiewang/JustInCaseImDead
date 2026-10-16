@@ -376,6 +376,9 @@ body.terms-page header {
 
 .feature-title a {
     color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
 }
 
 .premium-feature-bottom {

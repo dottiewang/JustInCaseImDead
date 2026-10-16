@@ -95,7 +95,7 @@ const page = (title, desc, url, inner) => `<!DOCTYPE html>
 <style>${CSS}</style>
 </head>
 <body>
-<div class="top"><a href="/"><img src="${SITE}/logo.jpg" alt="Just In Case"></a><a href="/guides/">Answer Library</a></div>
+<div class="top"><a href="/"><img src="${SITE}/logo.jpg" alt="Just In Case"></a><a href="/guides/all/">Browse all articles</a></div>
 ${inner}
 </body>
 </html>
@@ -133,7 +133,8 @@ ${DISCLAIMER}
 <div id="res"></div>
 <a href="/guides/start-here" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin:22px 0 0;padding:16px 18px;border-radius:6px;background:#F1ECE2;text-decoration:none;color:#2B2A26"><span style="font-family:Georgia,'Times New Roman',serif;font-size:18px;color:#2F4A3A">Feeling overwhelmed? Start here &rarr;</span><span style="font-size:14px;color:#6B665C">A short list of what comes first.</span></a>
 <p class="muted small">Searches the Answer Library. Nothing you type is saved.</p>
-</section><p class="kicker">Answer Library</p><h2>Browse everything</h2><ul class="list">${items}</ul></article><script>
+</section>
+<p class="small"><a href="/guides/all/">Or browse all 70+ articles &rarr;</a></p></article><script>
 (function(){
   var docs=[],box=document.getElementById('q'),out=document.getElementById('res'),chips=document.getElementById('chips');
   function norm(s){return ' '+s.toLowerCase().replace(/[\\u2019']/g,'').replace(/[^a-z0-9$%]+/g,' ')+' ';}
@@ -162,6 +163,8 @@ ${DISCLAIMER}
   chips.addEventListener('click',function(e){if(e.target.dataset.q){box.value=e.target.dataset.q;render();}});
   var p=new URLSearchParams(location.search).get('q');if(p){box.value=p;}
 })();</script>`);
+  files['all/index.html'] = page('All articles', 'Every article in the Answer Library, by topic.', `${SITE}/guides/all/`,
+    `<article><p class="kicker">Answer Library</p><h1>All articles</h1><p class="pre">Everything in one place, grouped by topic. Looking for something specific? <a href="/guides/">Just Ask</a>.</p><ul class="list">${items}</ul></article>`);
   const strip = s => String(s).replace(/<[^>]+>/g, '');
   files['search.json'] = JSON.stringify(all.filter((g, i) => all.findIndex(x => slug(x.t) === slug(g.t)) === i).map(g => ({ t: g.t, s: g.s || 'Guide', pre: strip(g.pre || ''), slug: slug(g.t), body: strip(g.b.flatMap(b => [b.p, b.h, b.tip, ...(b.list || []), ...(b.steps || []), ...((b.table || []).flat()), ...((b.timeline || []).flat())]).filter(Boolean).join(' ')) })));
   return files;
