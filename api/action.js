@@ -1,6 +1,9 @@
 const { sign, DAY, Q_TEMPLATE, getCustomer, saveMeta, send, verify, firstQForTemplate, finishUpdates, nextCheckpointUpdates } = require('../lib/core');
 
 module.exports = async (req, res) => {
+  const purpose = String(req.headers['sec-purpose'] || req.headers['purpose'] || req.headers['x-purpose'] || '');
+  if (/prefetch|prerender/i.test(purpose)) { res.statusCode = 503; res.setHeader('Cache-Control', 'no-store'); return res.end(); }
+  res.setHeader('Cache-Control', 'no-store');
   const { c, a, s } = req.query || {};
   if (!c || !a || !verify(c, a, s)) return res.status(400).send('This link is not valid.');
   const now = Date.now();

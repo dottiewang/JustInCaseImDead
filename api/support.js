@@ -83,10 +83,15 @@ function page(key, email, body) {
 }
 
 module.exports = async (req, res) => {
-  const q = req.query || {};
+  const purpose = String(req.headers['sec-purpose'] || req.headers['purpose'] || req.headers['x-purpose'] || '');
+  if (/prefetch|prerender/i.test(purpose)) { res.statusCode = 503; res.setHeader('Cache-Control', 'no-store'); return res.end(); }
+  res.setHeader('Cache-Control', 'no-store');
+  const isPost = req.method === 'POST';
+  const q = { ...(req.query || {}), ...(isPost && req.body && typeof req.body === 'object' ? req.body : {}) };
   if (!process.env.JIC_TEST_KEY || q.key !== process.env.JIC_TEST_KEY) return res.status(401).send('Unauthorized');
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
   const key = q.key, email = (q.email || '').trim();
+  const back = '/api/support?key=' + encodeURIComponent(key) + '&email=' + encodeURIComponent(email);
   if (!email) return res.send(page(key, '', '<p style="color:#6B665C;font-size:17px;line-height:1.6">Type the email address they signed up with.</p>'));
 
   const found = await stripe('customers?limit=10&email=' + encodeURIComponent(email));
@@ -99,7 +104,7 @@ module.exports = async (req, res) => {
   if (q.do) {
     const p = plan(m, q, now);
     if (p.err) top += card(`<p style="margin:0;color:#9A3B2E"><strong>${esc(p.err)}</strong></p>`);
-    else if (q.confirm !== '1') {
+    else if (!(isPost && q.confirm === '1')) {
       const rows = Object.entries(p.u).filter(([k, v]) => String(m[k] == null ? '' : m[k]) !== String(v)).map(([k, v]) => {
         const show = x => x === '' || x == null ? '(blank)' : (/next|done$/.test(k) && +x > 1e12 ? fmt(x) : esc(x));
         return `<tr><td style="padding:4px 12px 4px 0;color:#6B665C">${k.replace('jic_', '')}</td><td style="padding:4px 0">${show(m[k])} → <strong>${show(v)}</strong></td></tr>`;
@@ -108,17 +113,25 @@ module.exports = async (req, res) => {
       top += card(`<p style="margin:0 0 10px;font-size:17px"><strong>${esc(p.label)}?</strong></p>` +
         (p.send ? `<p style="margin:0 0 10px">Sends now: <strong>${esc(p.send)}</strong> · ${esc(subj(p.send))}</p>` : '') +
         (rows ? `<table style="border-collapse:collapse;font-size:15px;margin:0 0 6px">${rows}</table>` : '<p style="margin:0 0 6px;color:#6B665C">Their plan doesn\'t change.</p>') + warn +
-        `<form method="GET" action="/api/support" style="display:flex;gap:10px;margin:16px 0 0">${hidden({ ...q, confirm: '1' })}<button style="${BTN}">Yes, do it</button><a href="/api/support?key=${encodeURIComponent(key)}&email=${encodeURIComponent(email)}" style="padding:10px 18px;color:#2F4A3A;font-weight:700">Cancel</a></form>`);
+        `<form method="POST" action="/api/support" onsubmit="this.querySelector('button').disabled=true;this.querySelector('button').textContent='Working…'" style="display:flex;gap:10px;margin:16px 0 0">${hidden({ key, email, do: q.do, ...(q.n ? { n: q.n } : {}), ...(q.id ? { id: q.id } : {}), confirm: '1', t: String(now) })}<button style="${BTN}">Yes, do it</button><a href="/api/support?key=${encodeURIComponent(key)}&email=${encodeURIComponent(email)}" style="padding:10px 18px;color:#2F4A3A;font-weight:700">Cancel</a></form>`);
+    } else if (q.t && m.jic_suppt === String(q.t)) {
+      res.writeHead(303, { Location: back + '&did=' + encodeURIComponent(q.do) + (q.n ? '&n=' + encodeURIComponent(q.n) : '') + (q.id ? '&id=' + encodeURIComponent(q.id) : '') });
+      return res.end();
     } else {
       try {
         const log = (fmt(now) + ' ' + q.do + (q.n ? ' ' + q.n : '') + (q.id ? ' ' + q.id : '') + (m.jic_supp ? '; ' + m.jic_supp : '')).slice(0, 450);
-        const u = { ...p.u, jic_supp: log };
+        const u = { ...p.u, jic_supp: log, jic_suppt: String(q.t || now) };
         if (p.send) await send({ ...cus, metadata: { ...m, ...u } }, p.send);
         await saveMeta(cus.id, u);
-        Object.assign(m, u);
-        top += card(`<p style="margin:0;font-size:17px"><strong>Done: ${esc(p.label)}.</strong></p>`) + replyBox(REPLIES[p.reply](first, p.x || {}));
+        res.writeHead(303, { Location: back + '&did=' + encodeURIComponent(q.do) + (q.n ? '&n=' + encodeURIComponent(q.n) : '') + (q.id ? '&id=' + encodeURIComponent(q.id) : '') });
+        return res.end();
       } catch (e) { top += card(`<p style="margin:0;color:#9A3B2E"><strong>Failed, nothing saved:</strong> ${esc(e.message)}</p>`); }
     }
+  }
+
+  if (q.did && !q.do) {
+    const p = plan(m, { do: q.did, n: q.n, id: q.id }, now);
+    if (!p.err) top += card(`<p style="margin:0;font-size:17px"><strong>Done: ${esc(p.label)}.</strong></p><p style="margin:6px 0 0;font-size:14px;color:#6B665C">Refreshing this page won't do it again.</p>`) + replyBox(REPLIES[p.reply](first, p.x || {}));
   }
 
   const st = status(m, now).map(([a, b]) => `<tr><td style="padding:6px 16px 6px 0;color:#6B665C;vertical-align:top;white-space:nowrap">${a}</td><td style="padding:6px 0">${b}</td></tr>`).join('');
