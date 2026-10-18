@@ -68,7 +68,7 @@ const BTN = 'padding:10px 18px;border:0;border-radius:4px;background:#2F4A3A;col
 const FIELD = 'padding:10px;font-size:15px;border:1px solid #E2DBCD;border-radius:4px;background:#FBF8F2;color:#2B2A26;max-width:100%';
 
 const hidden = o => Object.entries(o).map(([k, v]) => `<input type="hidden" name="${k}" value="${esc(v)}">`).join('');
-const form = (key, email, doa, inner, label, note) => `<form method="GET" action="/api/support" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:14px 0;border-top:1px solid #E2DBCD">${hidden({ key, email, do: doa })}${inner}<button style="${BTN}">${label}</button>${note ? `<span style="flex-basis:100%;font-size:14px;color:#6B665C">${note}</span>` : ''}</form>`;
+const form = (key, email, doa, inner, label, title, when) => `<form method="GET" action="/api/support" style="padding:18px 0;border-top:1px solid #E2DBCD">${hidden({ key, email, do: doa })}<p style="margin:0 0 4px;font-size:17px;font-weight:700;color:#2B2A26">${title}</p><p style="margin:0 0 12px;font-size:16px;line-height:1.5;color:#2B2A26">${when}</p><div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">${inner}<button style="${BTN}">${label}</button></div></form>`;
 const opts = (list, sel) => list.map(([v, t]) => `<option value="${esc(v)}"${v === sel ? ' selected' : ''}>${esc(t)}</option>`).join('');
 const card = html => `<div style="background:#FBF8F2;border:1px solid #E2DBCD;border-radius:6px;padding:20px 22px;margin:0 0 24px">${html}</div>`;
 const replyBox = text => card(`<p style="margin:0 0 8px;font-weight:700">Reply you can send</p><textarea id="reply" rows="9" style="${FIELD};width:100%;box-sizing:border-box;font-family:inherit;line-height:1.5">${esc(text)}</textarea><button type="button" onclick="navigator.clipboard.writeText(document.getElementById('reply').value);this.textContent='Copied'" style="${BTN};margin-top:10px">Copy reply</button>`);
@@ -124,16 +124,16 @@ module.exports = async (req, res) => {
   const st = status(m, now).map(([a, b]) => `<tr><td style="padding:6px 16px 6px 0;color:#6B665C;vertical-align:top;white-space:nowrap">${a}</td><td style="padding:6px 0">${b}</td></tr>`).join('');
   const pos = +m.jic_pos || 0, qn = +m.jic_q || 1;
   const fixes =
-    form(key, email, 'resend', `<select name="id" style="${FIELD};flex:1 1 260px">${opts(Object.keys(EMAILS).map(k => [k, k + ' · ' + subj(k)]), m.jic_track === 'weekly' && pos ? WEEKLY[pos - 1] : 'W1')}</select>`, 'Resend', 'Sends one email again. Their plan doesn\'t move.') +
-    form(key, email, 'step', `<select name="n" style="${FIELD};flex:1 1 260px">${opts(STEP.map((s, i) => [String(i + 1), `Step ${i + 1}: ${s}`]), String(Math.max(1, pos - 1)))}</select>`, 'Move to step', 'Sends that step now, then weekly from there. Use for "I clicked Done by mistake".') +
-    form(key, email, 'question', `<select name="n" style="${FIELD};flex:1 1 260px">${opts(Array.from({ length: 16 }, (_, i) => [String(i + 1), 'Question ' + (i + 1) + ' · ' + subj('Q' + (i + 1))]), String(Math.max(1, qn - 2)))}</select>`, 'Move to question', 'Easy mode only. Sends that question now, then every few days.') +
-    form(key, email, 'restart', '', 'Start over', 'Sends the welcome email now and runs the plan from Step 1.') +
-    (m.jic_paused ? form(key, email, 'resume', '', 'Resume') : '') +
-    (m.jic_unsub === '1' ? form(key, email, 'unstop', '', 'Undo "Stop all emails"') : '') +
-    form(key, email, m.jic_news === '0' ? 'newson' : 'newsoff', '', m.jic_news === '0' ? 'Turn monthly guides on' : 'Turn monthly guides off') +
-    (m.jic_track !== 'done' ? form(key, email, 'finish', '', 'Mark plan finished', 'Skips the rest of the plan. Checkpoints start in 6 months (12 if annual).') : '');
+    form(key, email, 'resend', `<select name="id" style="${FIELD};flex:1 1 260px">${opts(Object.keys(EMAILS).map(k => [k, k + ' · ' + subj(k)]), m.jic_track === 'weekly' && pos ? WEEKLY[pos - 1] : 'W1')}</select>`, 'Resend', 'Send an email again', '“I never got it” or “I deleted it.” Sends one email again. Nothing else changes.') +
+    form(key, email, 'step', `<select name="n" style="${FIELD};flex:1 1 260px">${opts(STEP.map((s, i) => [String(i + 1), `Step ${i + 1}: ${s}`]), String(Math.max(1, pos - 1)))}</select>`, 'Move', 'Go back (or ahead) to a step', '“I clicked Done by mistake” or “I want to redo a week.” Sends that step now, then one a week from there.') +
+    (m.jic_track === 'easy' ? form(key, email, 'question', `<select name="n" style="${FIELD};flex:1 1 260px">${opts(Array.from({ length: 16 }, (_, i) => [String(i + 1), 'Question ' + (i + 1) + ' · ' + subj('Q' + (i + 1))]), String(Math.max(1, qn - 2)))}</select>`, 'Move', 'Go back (or ahead) to a question', 'Easy mode version of the one above. Sends that question now, then one every few days.') : '') +
+    form(key, email, 'restart', '', 'Start over', 'Start over from Step 1', '“I want to begin again.” Sends the welcome email now and runs the whole plan from the start. Their Google Docs aren’t touched.') +
+    (m.jic_paused ? form(key, email, 'resume', '', 'Resume', 'Un-pause', '“I stopped clicking and want back in.” Their next step goes out within a day.') : '') +
+    (m.jic_unsub === '1' ? form(key, email, 'unstop', '', 'Turn emails back on', 'Undo “Stop all emails”', '“I clicked Stop all emails by mistake.” Turns everything back on, right where they left off.') : '') +
+    form(key, email, m.jic_news === '0' ? 'newson' : 'newsoff', '', m.jic_news === '0' ? 'Turn on' : 'Turn off', m.jic_news === '0' ? 'Turn monthly guides back on' : 'Turn off monthly guides', m.jic_news === '0' ? '“I want the monthly guides again.” Plan emails aren’t affected.' : '“I don’t want the monthly guides.” Plan emails and checkpoints carry on.') +
+    (m.jic_track !== 'done' ? form(key, email, 'finish', '', 'Mark finished', 'Skip to the end', '“I’ve already filled everything in.” Stops the weekly emails. Checkpoints start in 6 months (12 if once a year).') : '');
 
   res.send(page(key, email, top +
     card(`<p style="margin:0 0 4px;font-size:19px;font-family:Georgia,serif">${esc(m.jic_first || '')} ${esc(cus.email)}</p><table style="border-collapse:collapse;font-size:15px;line-height:1.4">${st}</table><p style="margin:12px 0 0;font-size:14px"><a href="https://dashboard.stripe.com/customers/${esc(cus.id)}" target="_blank" style="color:#2F4A3A">Open in Stripe</a> (change email, cancel, refund)</p>`) +
-    card(`<p style="margin:0 0 4px;font-weight:700">Fix something</p>${fixes}`)));
+    card(`<p style="margin:0 0 4px;font-family:Georgia,serif;font-size:22px">Fix something</p><p style="margin:0 0 6px;font-size:15px;color:#2B2A26">Each button shows what will change first. Nothing happens until you click “Yes, do it”.</p>${fixes}`)));
 };
