@@ -11,19 +11,19 @@
         "timeline": [
           [
             "First 24–72 hours",
-            "If they died at home under hospice, call the hospice nurse. If it was unexpected, call 911. Tell close family, choose a funeral home, and secure the home, car and any pets."
+            "If they died at home under hospice, call the hospice nurse. If it was unexpected, call 911. Tell close family, <a href=\"https://www.justincaseimdead.com/guides/choosing-a-funeral-home-and-what-to-know-before-you-call\" style=\"color:#2F4A3A;text-decoration:underline\">choose a funeral home</a>, and secure the home, car and any pets."
           ],
           [
             "First week",
-            "Order death certificates (the funeral home usually does this). Find the will. Tell their employer. Hold off on any big decisions."
+            "<a href=\"https://www.justincaseimdead.com/guides/death-certificates-how-many-to-order-and-who-needs-one\" style=\"color:#2F4A3A;text-decoration:underline\">Order death certificates</a> (the funeral home usually does this). Find the will. Tell their employer. Hold off on any big decisions."
           ],
           [
             "First month",
-            "Notify Social Security, banks, insurers and the credit bureaus. Claim any life insurance. Cancel subscriptions."
+            "<a href=\"https://www.justincaseimdead.com/guides/notifying-social-security\" style=\"color:#2F4A3A;text-decoration:underline\">Notify Social Security</a>, banks, insurers and the credit bureaus. <a href=\"https://www.justincaseimdead.com/guides/claiming-life-insurance-step-by-step\" style=\"color:#2F4A3A;text-decoration:underline\">Claim any life insurance</a>. Cancel subscriptions."
           ],
           [
             "Months 2–12",
-            "Start probate if needed, close or transfer accounts, retitle the house and car, and file a final tax return by the next April 15."
+            "<a href=\"https://www.justincaseimdead.com/guides/probate-basics-what-it-is-and-when-its-needed\" style=\"color:#2F4A3A;text-decoration:underline\">Start probate if needed</a>, close or transfer accounts, <a href=\"https://www.justincaseimdead.com/guides/retitling-a-house-or-car\" style=\"color:#2F4A3A;text-decoration:underline\">retitle the house and car</a>, and <a href=\"https://www.justincaseimdead.com/guides/filing-a-final-tax-return-for-someone-who-died\" style=\"color:#2F4A3A;text-decoration:underline\">file a final tax return</a> by the next April 15."
           ]
         ]
       },
@@ -269,7 +269,7 @@
         "list": [
           "<strong>Get a legal pronouncement of death.</strong> Hospitals and hospice handle this. For an unexpected death at home, call 911.",
           "<strong>Tell close family and friends.</strong> Ask one person to help spread the word.",
-          "<strong>Choose a funeral home.</strong> They'll transport the body and help order death certificates. Check first for a prepaid plan or written wishes.",
+          "<strong>Choose a <a href=\"https://www.justincaseimdead.com/guides/choosing-a-funeral-home-and-what-to-know-before-you-call\" style=\"color:#2F4A3A;text-decoration:underline\">funeral home</a>.</strong> They'll transport the body and help order <a href=\"https://www.justincaseimdead.com/guides/death-certificates-how-many-to-order-and-who-needs-one\" style=\"color:#2F4A3A;text-decoration:underline\">death certificates</a>. Check first for a prepaid plan or written wishes.",
           "<strong>Secure the home and car.</strong> Lock up, take valuables, and ask a neighbor to keep an eye out.",
           "<strong>Care for pets and dependents.</strong>"
         ]
@@ -2392,7 +2392,7 @@
         "h": "If the death was unexpected"
       },
       {
-        "p": "Families call 911. Police and paramedics may come, and a medical examiner or coroner may be called in. That's the official, usually a doctor or an elected county officer, who looks into deaths that weren't expected. That's routine after a sudden death at home and doesn't mean anyone is suspected of anything."
+        "p": "Families call 911. Police and paramedics may come, and <a href=\"https://www.justincaseimdead.com/guides/autopsies-and-the-medical-examiner\" style=\"color:#2F4A3A;text-decoration:underline\">a medical examiner or coroner</a> may be called in. That's the official, usually a doctor or an elected county officer, who looks into deaths that weren't expected. That's routine after a sudden death at home and doesn't mean anyone is suspected of anything."
       },
       {
         "p": "In this situation, the person is usually left where they are until the authorities say otherwise."
@@ -2414,14 +2414,14 @@
       },
       {
         "list": [
-          "The funeral home is called once the death has been confirmed. The family chooses which one. Calling one doesn't lock the family in.",
+          "The <a href=\"https://www.justincaseimdead.com/guides/choosing-a-funeral-home-and-what-to-know-before-you-call\" style=\"color:#2F4A3A;text-decoration:underline\">funeral home</a> is called once the death has been confirmed. The family chooses which one. Calling one doesn't lock the family in.",
           "Many families take time to sit with the person, call close relatives or say a prayer before the funeral home arrives. That's allowed and common.",
           "Pets are often put in another room before anyone arrives.",
           "Hospice nurses often help dispose of leftover medications."
         ]
       },
       {
-        "tip": "If the person had a DNR (do not resuscitate) order or a POLST form (a doctor-signed sheet of end-of-life medical wishes), families often keep it where paramedics would see it, such as on the fridge. It tells emergency crews not to attempt resuscitation."
+        "tip": "If the person had a DNR (do not resuscitate) order or <a href=\"https://www.justincaseimdead.com/guides/whats-a-healthcare-directive-and-how-do-i-make-one\" style=\"color:#2F4A3A;text-decoration:underline\">a POLST form</a> (a doctor-signed sheet of end-of-life medical wishes), families often keep it where paramedics would see it, such as on the fridge. It tells emergency crews not to attempt resuscitation."
       }
     ],
     "nlBatch": 4,
@@ -2442,8 +2442,8 @@
         "steps": [
           "A doctor or nurse confirms the death. Family members can usually stay with the person for a while.",
           "Staff may ask about organ or tissue donation. Hospitals are required to notify the local organ procurement organization, the nonprofit that coordinates donations in that area, which decides whether donation is possible.",
-          "Staff may ask whether the family wants an autopsy, a medical examination after death to find out more about the cause. In some cases a medical examiner decides instead.",
-          "Staff ask which funeral home to call. The person usually stays in the hospital's morgue until the funeral home collects them.",
+          "Staff may ask whether the family wants an <a href=\"https://www.justincaseimdead.com/guides/autopsies-and-the-medical-examiner\" style=\"color:#2F4A3A;text-decoration:underline\">autopsy</a>, a medical examination after death to find out more about the cause. In some cases a medical examiner decides instead.",
+          "Staff ask which <a href=\"https://www.justincaseimdead.com/guides/choosing-a-funeral-home-and-what-to-know-before-you-call\" style=\"color:#2F4A3A;text-decoration:underline\">funeral home</a> to call. The person usually stays in the hospital's morgue until the funeral home collects them.",
           "The family collects the person's belongings, or arranges to pick them up later."
         ]
       },
@@ -2454,7 +2454,7 @@
         "p": "Hospitals generally can't hold a body for long, so they usually ask the family to name a funeral home within a day or two. The exact time varies by hospital. Families who aren't ready can usually ask for a little more time."
       },
       {
-        "p": "The death certificate is usually handled between the doctor and the funeral home. The family doesn't normally file it themselves."
+        "p": "The <a href=\"https://www.justincaseimdead.com/guides/death-certificates-how-many-to-order-and-who-needs-one\" style=\"color:#2F4A3A;text-decoration:underline\">death certificate</a> is usually handled between the doctor and the funeral home. The family doesn't normally file it themselves."
       },
       {
         "tip": "Belongings like rings, glasses and phones are easy to lose in the confusion. Many families ask staff for a list of what was collected."
@@ -2554,7 +2554,7 @@
           ],
           [
             "Closing bank accounts",
-            "Banks expect the executor, the person handling the estate, to deal with this over weeks or months."
+            "Banks expect the <a href=\"https://www.justincaseimdead.com/guides/what-an-executor-actually-does\" style=\"color:#2F4A3A;text-decoration:underline\">executor</a>, the person handling the estate, to deal with this over weeks or months."
           ],
           [
             "Probate",
@@ -2735,7 +2735,7 @@
         "h": "The funeral home"
       },
       {
-        "p": "\"My father, [name], died this morning at home. Hospice has been here. I'd like to ask about your services and get a copy of your price list.\""
+        "p": "\"My father, [name], died this morning at home. Hospice has been here. I'd like to ask about your services and get a copy of your <a href=\"https://www.justincaseimdead.com/guides/your-rights-with-a-funeral-home-the-ftc-funeral-rule\" style=\"color:#2F4A3A;text-decoration:underline\">price list</a>.\""
       },
       {
         "h": "The bank"
