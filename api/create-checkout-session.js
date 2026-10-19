@@ -66,6 +66,11 @@ module.exports = async function handler(req, res) {
         planKey,
         plan: selectedPlan.plan,
       },
+      custom_text: {
+        submit: {
+          message: 'By subscribing, you agree to our [Terms](https://www.justincaseimdead.com/terms) and [Privacy Policy](https://www.justincaseimdead.com/privacy-policy). Your plan renews automatically until you cancel. Cancel anytime from the link in any email.',
+        },
+      },
     });
 
     if (req.method === 'GET') {
