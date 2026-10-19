@@ -106,40 +106,50 @@ body.terms-page header {
 }
 
 .terms-main {
-    max-width: 1100px;
+    max-width: 920px;
     margin: 0 auto;
     padding: 0 12px 32px;
 }
 
 .legal-copy {
-    width: min(100%, 980px);
+    width: min(100%, 760px);
     margin: 0 auto;
     text-align: left;
     background: #111;
     border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 0;
-    padding: 20px 18px 16px;
-    line-height: 1.5;
+    border-radius: 12px;
+    padding: 32px 36px 28px;
+    line-height: 1.65;
 }
 
 .legal-copy h2 {
-    margin-top: 1em;
-    margin-bottom: 0.4em;
-    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    margin-top: 1.5em;
+    margin-bottom: 0.45em;
+    font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+    line-height: 1.35;
+}
+
+.legal-copy h2:first-child {
+    margin-top: 0;
+}
+
+.legal-copy h2:not(:first-child) {
+    padding-top: 0.85em;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .legal-copy p,
 .legal-copy li {
-    max-width: 72ch;
-    margin: 0.5em 0;
+    max-width: 68ch;
+    margin: 0.65em 0 0.9em;
 }
 
 .legal-copy ul {
-    padding-left: 1.4rem;
+    padding-left: 1.25rem;
 }
 
 .legal-copy li {
-    margin: 0.3em 0;
+    margin: 0.4em 0;
 }
 
 .last-updated {
@@ -499,13 +509,13 @@ button:disabled {
     }
 
     .legal-copy {
-        padding: 16px 14px 14px;
-        line-height: 1.4;
+        padding: 22px 20px 18px;
+        line-height: 1.6;
     }
 
     .legal-copy h2 {
-        margin-top: 0.8em;
-        margin-bottom: 0.3em;
+        margin-top: 1.3em;
+        margin-bottom: 0.4em;
     }
 
     .premium-columns {
