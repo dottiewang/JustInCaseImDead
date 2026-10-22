@@ -40,6 +40,10 @@
       "destination": "/faq.html"
     },
     {
+      "source": "/accessibility",
+      "destination": "/accessibility.html"
+    },
+    {
       "source": "/refund-policy",
       "destination": "/refund-policy.html"
     }

@@ -70,7 +70,7 @@ th{background:#F1ECE2;font-weight:700}
 .ask h1{margin-bottom:16px}
 .row{display:flex;gap:8px;flex-wrap:wrap}
 .row input{flex:1 1 260px;min-width:0;font:inherit;font-size:17px;padding:14px 16px;border:1px solid #CFC6B4;border-radius:6px;background:#fff;color:#2B2A26}
-.row input:focus{outline:none;border-color:#2F4A3A;box-shadow:0 0 0 3px rgba(47,74,58,.15)}
+.row input:focus{border-color:#2F4A3A;box-shadow:0 0 0 3px rgba(47,74,58,.15)}
 .row button{font:inherit;font-size:15px;font-weight:700;padding:14px 20px;border:0;border-radius:6px;background:#2F4A3A;color:#FBF8F2;cursor:pointer}
 .chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 0;font-size:13px}
 .chips button{font:inherit;font-size:13px;padding:6px 12px;border:1px solid #E2DBCD;border-radius:999px;background:#fff;color:#2B2A26;cursor:pointer}
@@ -82,7 +82,10 @@ th{background:#F1ECE2;font-weight:700}
 .hit .kicker{margin:0;font-size:11px}
 .hit strong{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:19px;line-height:26px;color:#2F4A3A}
 .hit .muted{font-size:14px;line-height:21px}
-.small{font-size:13px;margin:14px 0 0}`;
+.small{font-size:13px;margin:14px 0 0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid #2F4A3A;outline-offset:2px}
+.skip-link{position:absolute;left:-9999px;top:0}
+.skip-link:focus{left:12px;top:12px;background:#fff;color:#2F4A3A;padding:8px 12px;z-index:1000}`;
 
 const page = (title, desc, url, inner) => `<!DOCTYPE html>
 <html lang="en">
@@ -95,8 +98,11 @@ const page = (title, desc, url, inner) => `<!DOCTYPE html>
 <style>${CSS}</style>
 </head>
 <body>
-<div class="top"><a href="/"><img src="${SITE}/logo.jpg" alt="Just In Case"></a><a href="/guides/all/">Browse all articles</a></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="top"><a href="/"><img src="${SITE}/logo.jpg" alt="Just In Case"></a><nav aria-label="Answer Library"><a href="/guides/all/">Browse all articles</a></nav></header>
+<main id="main">
 ${inner}
+</main>
 </body>
 </html>
 `;
@@ -128,10 +134,10 @@ ${DISCLAIMER}
     `<article><section id="ask" class="ask">
 <p class="kicker">Just Ask</p>
 <h1>What do you need to find?</h1>
-<div class="row"><input id="q" type="search" placeholder="Try “death certificates” or “close a bank account”" aria-label="Just Ask" autocomplete="off"><button id="clr" type="button">Clear</button></div>
+<div class="row" role="search"><input id="q" type="search" placeholder="Try “death certificates” or “close a bank account”" aria-label="Just Ask" autocomplete="off"><button id="clr" type="button">Clear</button></div>
 <p style="margin:8px 0 0;font-size:12px;font-style:italic;color:#6B665C">Searches the Answer Library. Nothing you type is saved.</p>
 <div id="chips" class="chips"><span style="color:#2B2A26;font-weight:600">People often ask:</span><button type="button" data-q="death certificates">death certificates</button><button type="button" data-q="close a bank account">close a bank account</button><button type="button" data-q="phone passcode">phone passcode</button><button type="button" data-q="do I need a will">do I need a will</button></div>
-<div id="res"></div>
+<div id="res" aria-live="polite"></div>
 <a href="/guides/start-here" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin:22px 0 0;padding:16px 18px;border-radius:6px;background:#F1ECE2;text-decoration:none;color:#2B2A26"><span style="font-family:Georgia,'Times New Roman',serif;font-size:18px;color:#2F4A3A">Feeling overwhelmed? Start here &rarr;</span><span style="font-size:14px;color:#6B665C">A short list of what comes first.</span></a>
 </section>
 <p class="small"><a href="/guides/all/">Or browse all 100+ articles &rarr;</a></p></article><script>

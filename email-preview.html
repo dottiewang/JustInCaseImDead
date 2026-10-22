@@ -34,6 +34,9 @@
     .preview-bar span { color: var(--muted); font: 12px Arial, Helvetica, sans-serif; }
     iframe { display: block; width: 100%; min-height: 900px; border: 0; background: white; }
     .error { padding: 24px; color: #8b2f2f; font: 15px/1.5 Arial, Helvetica, sans-serif; }
+    a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #2F4A3A; outline-offset: 2px; }
+    .skip-link { position: absolute; left: -9999px; top: 0; }
+    .skip-link:focus { left: 12px; top: 12px; background: #fff; color: #2F4A3A; padding: 8px 12px; z-index: 1000; }
     @media (max-width: 760px) {
       .intro, main { width: min(100% - 28px, 560px); }
       main { grid-template-columns: 1fr; }
@@ -43,13 +46,14 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="intro">
       <h1>Every email we send</h1>
       <p>Choose an email to preview it as a subscriber would receive it. Links use safe sample values.</p>
     </div>
   </header>
-  <main>
+  <main id="main">
     <aside>
       <div class="list-title">Email catalog</div>
       <div id="email-list" aria-label="Email catalog"></div>
