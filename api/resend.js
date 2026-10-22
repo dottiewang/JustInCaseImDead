@@ -15,6 +15,8 @@ function page(key, msg, email, id) {
     '<form method="POST" action="/api/resend" onsubmit="this.querySelector(\'button\').disabled=true"><input type="hidden" name="key" value="' + esc(key) + '">' +
     '<label style="display:block;font-weight:700;margin:0 0 6px">Subscriber email</label><input name="email" type="email" required value="' + esc(email || '') + '" style="' + field + '">' +
     '<label style="display:block;font-weight:700;margin:0 0 6px">Email to send</label><select name="id" style="' + field + '">' + opts + '</select>' +
+    '<p style="margin:0 0 8px;font-size:15px;color:#6B665C">Only for PRICE (price-change email). Leave blank for everything else.</p>' +
+    '<input name="new_price" placeholder="New price, e.g. $59.00" style="' + field + '"><input name="change_date" placeholder="Change date, e.g. December 20, 2026" style="' + field + '">' +
     '<input type="hidden" name="go" value="1"><button style="padding:16px 32px;border:0;border-radius:4px;background:#2F4A3A;color:#FBF8F2;font-size:17px;font-weight:700;cursor:pointer">Send it</button></form>' +
     '</div></body></html>';
 }
@@ -33,7 +35,8 @@ module.exports = async (req, res) => {
   const found = await stripe('customers?limit=1&email=' + encodeURIComponent(q.email || ''));
   const cus = found.data[0];
   if (!cus || !(cus.metadata || {}).jic_track) return res.status(404).send(page(q.key, 'No subscriber with that email. Check the spelling (it must match Stripe).', q.email, q.id));
-  try { await send(cus, q.id); }
+  if (q.id === 'PRICE' && (!q.new_price || !q.change_date)) return res.status(400).send(page(q.key, 'PRICE needs the new price and the change date.', q.email, q.id));
+  try { await send(cus, q.id, undefined, q.id === 'PRICE' ? { vars: { new_price: esc(q.new_price), change_date: esc(q.change_date) } } : {}); }
   catch (e) { return res.status(500).send(page(q.key, 'Send failed: ' + esc(e.message), q.email, q.id)); }
   res.writeHead(303, { Location: '/api/resend?key=' + encodeURIComponent(q.key) + '&email=' + encodeURIComponent(cus.email) + '&id=' + encodeURIComponent(q.id) + '&sent=1' });
   res.end();

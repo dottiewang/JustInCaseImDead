@@ -44,6 +44,10 @@ function status(m, now) {
   r.push(['Monthly guides', m.jic_news === '0' ? 'Off' : (m.jic_track === 'done' ? 'On' + (m.jic_nl ? ', last sent ' + esc(m.jic_nl) : '') : 'On (start once the plan is finished)')]);
   if (+m.jic_silent) r.push(['No clicks', m.jic_silent + ' emails in a row' + (m.jic_track === 'weekly' ? ' (weekly plan pauses at 3)' : '')]);
   if (+m.jic_start) r.push(['Signed up', fmt(m.jic_start)]);
+  r.push(['Plan', { month: 'Monthly', quarter: 'Quarterly', year: 'Annual' }[m.jic_plan] || (m.jic_plan ? esc(m.jic_plan) : 'Unknown (signed up before tracking)')]);
+  r.push(['Consent', m.jic_consent ? esc(m.jic_consent) : 'Not recorded']);
+  r.push(['Confirmation sent', +m.jic_ack ? fmt(m.jic_ack) : 'Not sent']);
+  r.push(['Last yearly reminder', +m.jic_yrrem ? fmt(m.jic_yrrem) : 'None yet']);
   if (m.jic_supp) r.push(['Support log', esc(m.jic_supp)]);
   return r;
 }
@@ -137,7 +141,7 @@ module.exports = async (req, res) => {
   const st = status(m, now).map(([a, b]) => `<tr><td style="padding:6px 16px 6px 0;color:#6B665C;vertical-align:top;white-space:nowrap">${a}</td><td style="padding:6px 0">${b}</td></tr>`).join('');
   const pos = +m.jic_pos || 0, qn = +m.jic_q || 1;
   const fixes =
-    form(key, email, 'resend', `<select name="id" style="${FIELD};flex:1 1 260px">${opts(Object.keys(EMAILS).map(k => [k, k + ' · ' + subj(k)]), m.jic_track === 'weekly' && pos ? WEEKLY[pos - 1] : 'W1')}</select>`, 'Resend', 'Send an email again', '“I never got it” or “I deleted it.” Sends one email again. Nothing else changes.') +
+    form(key, email, 'resend', `<select name="id" style="${FIELD};flex:1 1 260px">${opts(Object.keys(EMAILS).filter(k => k !== 'PRICE').map(k => [k, k + ' · ' + subj(k)]), m.jic_track === 'weekly' && pos ? WEEKLY[pos - 1] : 'W1')}</select>`, 'Resend', 'Send an email again', '“I never got it” or “I deleted it.” Sends one email again. Nothing else changes.') +
     form(key, email, 'step', `<select name="n" style="${FIELD};flex:1 1 260px">${opts(STEP.map((s, i) => [String(i + 1), `Step ${i + 1}: ${s}`]), String(Math.max(1, pos - 1)))}</select>`, 'Move', 'Go back (or ahead) to a step', '“I clicked Done by mistake” or “I want to redo a week.” Sends that step now, then one a week from there.') +
     (m.jic_track === 'easy' ? form(key, email, 'question', `<select name="n" style="${FIELD};flex:1 1 260px">${opts(Array.from({ length: 16 }, (_, i) => [String(i + 1), 'Question ' + (i + 1) + ' · ' + subj('Q' + (i + 1))]), String(Math.max(1, qn - 2)))}</select>`, 'Move', 'Go back (or ahead) to a question', 'Easy mode version of the one above. Sends that question now, then one every few days.') : '') +
     form(key, email, 'restart', '', 'Start over', 'Start over from Step 1', '“I want to begin again.” Sends the welcome email now and runs the whole plan from the start. Their Google Docs aren’t touched.') +
