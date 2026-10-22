@@ -57,22 +57,8 @@ module.exports = async (req, res) => {
   }
 
   if (event.type === 'invoice.upcoming') {
-    const inv = event.data.object;
-    const subId = inv.subscription || (inv.parent && inv.parent.subscription_details && inv.parent.subscription_details.subscription);
-    if (!inv.customer || !subId) return res.status(200).send('No subscription');
-    const sub = await stripe('subscriptions/' + subId);
-    if (sub.status === 'active' && !sub.cancel_at_period_end) {
-      const cus = await getCustomer(inv.customer);
-      const m = cus.metadata || {};
-      const yearly = planInfo(sub).kind === 'year';
-      const last = +m.jic_yrrem || 0;
-      // Annual plans: every renewal. Other plans: at most once a year.
-      if (yearly || !last || now - last > 330 * DAY) {
-        // The ONE exception to "Stop all emails" (jic_unsub): a renewal notice is a legally required billing notice, not a plan email.
-        await send(cus, 'RENEW', event.id + '-RENEW', { sub });
-        await saveMeta(cus.id, { jic_yrrem: now });
-      }
-    }
+    // Renewal reminders are sent by Stripe (Dashboard setting), not by us.
+    return res.status(200).json({ received: true });
   }
 
   res.status(200).json({ received: true });

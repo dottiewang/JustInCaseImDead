@@ -46,8 +46,7 @@ function status(m, now) {
   if (+m.jic_start) r.push(['Signed up', fmt(m.jic_start)]);
   r.push(['Plan', { month: 'Monthly', quarter: 'Quarterly', year: 'Annual' }[m.jic_plan] || (m.jic_plan ? esc(m.jic_plan) : 'Unknown (signed up before tracking)')]);
   r.push(['Consent', m.jic_consent ? esc(m.jic_consent) : 'Not recorded']);
-  r.push(['Confirmation sent', +m.jic_ack ? fmt(m.jic_ack) : 'Not sent']);
-  r.push(['Last yearly reminder', +m.jic_yrrem ? fmt(m.jic_yrrem) : 'None yet']);
+  r.push(['Confirmation sent', +m.jic_ack ? fmt(m.jic_ack) : 'Not sent']);
   if (m.jic_supp) r.push(['Support log', esc(m.jic_supp)]);
   return r;
 }
