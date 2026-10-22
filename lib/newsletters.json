@@ -87,11 +87,26 @@
         "p": "A payable-on-death (POD) designation lets you name who gets the money in a bank account when you die. It's usually free, takes a few minutes, and the money passes to them directly, without going through probate."
       },
       {
+        "h": "How it works"
+      },
+      {
         "steps": [
           "You add a POD beneficiary to your checking, savings or CD account.",
           "Nothing changes while you're alive. It's still your money, and the beneficiary can't touch it.",
           "After you die, they bring a death certificate and ID to the bank.",
           "The bank pays them directly. No court, no waiting for the estate."
+        ]
+      },
+      {
+        "h": "How to add one"
+      },
+      {
+        "steps": [
+          "Log in to your bank's website or app and look for \"beneficiaries\", often under account settings or your profile.",
+          "Can't find it? Call or visit a branch and ask for a POD beneficiary form.",
+          "Add each person's full legal name. Some banks also ask for a date of birth, address or Social Security number.",
+          "Naming more than one person? Choose how to split it, for example 50/50.",
+          "Save or sign, and ask for a confirmation. It usually takes about ten minutes and costs nothing."
         ]
       },
       {
