@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
       const info = planInfo(sub);
       await send(cus, 'SUB', event.id + '-SUB', { sub });
       await saveMeta(cus.id, {
-        jic_consent: new Date(session.created * 1000).toISOString() + ' v1 ' + ((session.consent && session.consent.terms_of_service) || 'none'),
+        jic_consent: new Date(session.created * 1000).toISOString() + ' v2 ' + ((session.consent && session.consent.terms_of_service) || 'none'),
         jic_plan: info.kind,
         jic_ack: now,
       });

@@ -69,7 +69,7 @@ module.exports = async function handler(req, res) {
       consent_collection: { terms_of_service: 'required' },
       custom_text: {
         terms_of_service_acceptance: {
-          message: 'I agree to the [Terms](https://www.justincaseimdead.com/terms) and [Privacy Policy](https://www.justincaseimdead.com/privacy-policy), and I understand my plan renews automatically at the price shown, every month or year as chosen, until I cancel. I can cancel anytime from the link in any email.',
+          message: 'I agree to the [Terms](https://www.justincaseimdead.com/terms) and [Privacy Policy](https://www.justincaseimdead.com/privacy-policy), and I understand my plan renews automatically at the price shown, every quarter or year as chosen, until I cancel. I can cancel anytime from the link in any email.',
         },
       },
     });
