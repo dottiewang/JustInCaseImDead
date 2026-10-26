@@ -82,7 +82,7 @@ function Side() {
   const p1 = MOTION.enter(T, P + 0.2, 0.8) * (1 - MOTION.exit(T, K - 0.3, 0.5));
   const p2 = MOTION.enter(T, P + 5.6, 0.9) * (1 - MOTION.exit(T, K - 0.3, 0.5));
   const col = { ...abs, left: 920, width: 820 };
-  const label = { ...col, left: isMobile ? 820 : col.left, width: isMobile ? 860 : col.width, top: isMobile ? 220 : 420, fontFamily: SANS, fontSize: isMobile ? 180 : 84, lineHeight: 1.1, letterSpacing: 3, textTransform: 'uppercase', color: C.amber, opacity: lab };
+  const label = { ...col, left: isMobile ? 820 : col.left, width: isMobile ? 860 : col.width, top: isMobile ? 220 : 420, fontFamily: SANS, fontSize: isMobile ? 96 : 84, WebkitTextSizeAdjust: 'none', textSizeAdjust: 'none', whiteSpace: 'nowrap', lineHeight: 1.1, letterSpacing: 3, textTransform: 'uppercase', color: C.amber, opacity: lab };
   return (
     <>
       <div style={label}>{isMobile ? <>Three<br />days<br />after the<br />funeral</> : <>Three days after<br />the funeral</>}</div>
