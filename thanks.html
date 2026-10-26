@@ -38,7 +38,7 @@
   <main id="main">
     <h1 id="t">Got it.</h1>
     <p id="m">Thanks — we&rsquo;ve updated your plan.</p>
-    <a class="btn" href="https://drive.google.com/drive/search?q=Just%20In%20Case" target="_blank" rel="noopener">Open my templates<span class="sr-only"> (opens in new tab)</span></a>
+    <a class="btn" href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener">Open Google Drive<span class="sr-only"> (opens in new tab)</span></a>
   </main>
 </div>
 <script>
@@ -62,7 +62,6 @@
   if (M[a]) { document.getElementById('t').innerHTML = M[a][0]; document.getElementById('m').innerHTML = M[a][1]; }
   var q = new URLSearchParams(location.search);
   if (a === 'done' && q.get('p') === '1') {
-    var drive = 'https://drive.google.com/drive/search?q=Just%20In%20Case';
     document.getElementById('t').innerHTML = 'Nice work. Your Cover Sheet is started.';
     document.getElementById('m').innerHTML = 'Template 2 arrives by email in about 3 days. Here&rsquo;s a look at it now, so you can start thinking.';
     var rows = [
@@ -76,8 +75,7 @@
       '<p class="cl">The page your family opens first: what to do right away, who to call, and who looks after the pets.</p>' +
       '<ol class="rows" style="font-family:inherit">' + rows + '</ol></div>' +
       '<a class="btn" href="https://docs.google.com/document/d/1Yv3SXkTQ5AwokRpgeSFUlfuRovx4M9vEf8i0oUAJzOU/copy" target="_blank" rel="noopener">Get a head start: copy Template 2<span class="sr-only"> (opens in new tab)</span></a>' +
-      '<p class="note">Totally optional. Then click File &rarr; Move and choose your Just In Case folder. The email still comes in 3 days with step-by-step help.</p>' +
-      '<p><a href="' + drive + '" target="_blank" rel="noopener">Open my Just In Case folder<span class="sr-only"> (opens in new tab)</span></a></p>';
+      '<p class="note">Totally optional. Then click File &rarr; Move and choose your Just In Case folder. The email still comes in 3 days with       step-by-step help.</p>';
     var main = document.getElementById('main');
     main.querySelector('a.btn').remove();
     main.insertAdjacentHTML('beforeend', html);
