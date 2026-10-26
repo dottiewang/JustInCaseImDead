@@ -398,11 +398,7 @@ body.terms-page header {
 }
 
 .feature-title {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    flex-wrap: nowrap;
-    gap: 0 0.3em;
+    display: block;
     margin-bottom: 6px;
     font-size: 1.1rem;
     text-align: center;
