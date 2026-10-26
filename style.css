@@ -401,10 +401,11 @@ body.terms-page header {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0 0.3em;
     margin-bottom: 6px;
     font-size: 1.1rem;
+    text-align: center;
     line-height: 1.25;
     font-weight: 700;
 }
