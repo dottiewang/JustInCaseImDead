@@ -55,6 +55,6 @@ module.exports = async (req, res) => {
   }
   await saveMeta(c, u);
   const undo = a === 'newsoff' ? '&c=' + encodeURIComponent(c) + '&s=' + sign(c, 'newson') : '';
-  res.writeHead(302, { Location: '/thanks?a=' + encodeURIComponent(a) + undo });
+  res.writeHead(302, { Location: '/thanks?a=' + encodeURIComponent(a) + (a === 'done' && m.jic_track === 'weekly' && pos === 1 ? '&p=1' : '') + undo });
   res.end();
 };

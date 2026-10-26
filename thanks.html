@@ -7,7 +7,7 @@
 <title>Got it · Just In Case</title>
 <style>
   body{margin:0;background:#F1ECE2;color:#2B2A26;font-family:Georgia,"Times New Roman",serif}
-  a{color:#2F4A3A} a:hover{color:#A0703F}
+  a{color:#2F4A3A} a:hover{color:#8A6135}
   .wrap{max-width:560px;margin:0 auto;padding:64px 24px;text-align:center}
   img{width:120px;height:auto;margin-bottom:40px}
   h1{font-weight:normal;font-size:34px;line-height:1.2;margin:0 0 16px}
@@ -17,6 +17,17 @@
   a:focus-visible{outline:3px solid #2F4A3A;outline-offset:2px}
   .skip-link{position:absolute;left:-9999px;top:0}
   .skip-link:focus{left:12px;top:12px;background:#fff;color:#2F4A3A;padding:8px 12px;z-index:1000}
+  .sans{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+  .card{background:#FBF8F2;border:1px solid #D3CBBB;border-radius:4px;padding:28px;text-align:left;margin:0 0 28px}
+  .card .lab{font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:#8A6135;margin:0 0 10px}
+  .card .ct{font-size:26px;line-height:1.2;color:#2F4A3A;margin:0 0 10px}
+  .card .cl{font-size:15px;line-height:1.5;color:#4A463F;margin:0 0 20px}
+  .rows{border-top:1px solid #E3DCCE;margin:0;padding:0;list-style:none}
+  .rows li{display:flex;gap:14px;padding-top:16px}
+  .rows .n{font-size:22px;line-height:1.2;color:#8A6135;min-width:22px}
+  .rows b{display:block;font-size:16px;color:#2B2A26;margin-bottom:2px}
+  .rows span.d{font-size:15px;line-height:1.5;color:#4A463F}
+  .note{font-size:14px;line-height:1.5;color:#6B665C;margin:14px 0 28px}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 </head>
@@ -50,6 +61,27 @@
   var a = new URLSearchParams(location.search).get('a');
   if (M[a]) { document.getElementById('t').innerHTML = M[a][0]; document.getElementById('m').innerHTML = M[a][1]; }
   var q = new URLSearchParams(location.search);
+  if (a === 'done' && q.get('p') === '1') {
+    var drive = 'https://drive.google.com/drive/search?q=Just%20In%20Case';
+    document.getElementById('t').innerHTML = 'Nice work. Your Cover Sheet is started.';
+    document.getElementById('m').innerHTML = 'Template 2 arrives by email in about 3 days. Here&rsquo;s a look at it now, so you can start thinking.';
+    var rows = [
+      ['What to do first', 'Already written for you. You&rsquo;ll just add anything missing.'],
+      ['Bank &amp; investment accounts', 'Which accounts do you have? Is someone named to get each one (POD or TOD)?'],
+      ['Who to contact', 'Who should your family call first?'],
+      ['Pet care', 'Vet, medical notes, and who takes them. No pets? You&rsquo;ll skip it.']
+    ].map(function (r, i) { return '<li><span class="n">' + (i + 1) + '</span><div><b>' + r[0] + '</b><span class="d">' + r[1] + '</span></div></li>'; }).join('');
+    var html = '<div class="card sans"><p class="lab">Coming next &middot; Template 2 &middot; About 15 min</p>' +
+      '<h2 class="ct" style="font-family:Georgia,\'Times New Roman\',serif;font-weight:normal">Read This First</h2>' +
+      '<p class="cl">The page your family opens first: what to do right away, who to call, and who looks after the pets.</p>' +
+      '<ol class="rows" style="font-family:inherit">' + rows + '</ol></div>' +
+      '<a class="btn" href="https://docs.google.com/document/d/1Yv3SXkTQ5AwokRpgeSFUlfuRovx4M9vEf8i0oUAJzOU/copy" target="_blank" rel="noopener">Get a head start: copy Template 2<span class="sr-only"> (opens in new tab)</span></a>' +
+      '<p class="note">Totally optional. Then click File &rarr; Move and choose your Just In Case folder. The email still comes in 3 days with step-by-step help.</p>' +
+      '<p><a href="' + drive + '" target="_blank" rel="noopener">Open my Just In Case folder<span class="sr-only"> (opens in new tab)</span></a></p>';
+    var main = document.getElementById('main');
+    main.querySelector('a.btn').remove();
+    main.insertAdjacentHTML('beforeend', html);
+  }
   if (a === 'newsoff' && q.get('c') && q.get('s')) document.getElementById('m').insertAdjacentHTML('afterend', '<p>Changed your mind? <a href="/api/action?a=newson&c=' + encodeURIComponent(q.get('c')) + '&s=' + encodeURIComponent(q.get('s')) + '">Turn monthly guides back on</a></p>');
 </script>
 </body>
