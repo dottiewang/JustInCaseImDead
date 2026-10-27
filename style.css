@@ -807,10 +807,6 @@ button:disabled {
     }
 }
 
-.parent-line span {
-    font-family: Georgia, serif;
-}
-
 .parent-line a {
     font-weight: bold;
     font-size: inherit !important;
