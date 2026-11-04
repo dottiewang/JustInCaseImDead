@@ -32,6 +32,10 @@
   .done-card{background:#FBF8F2;border:1px solid #D3CBBB;border-radius:4px;padding:28px;margin:0 0 24px}
   .done-card h2{font-size:21px;font-weight:normal;color:#2F4A3A;margin:0 0 8px}
   .done-card p{font-size:15px;margin:0}
+  .template-next{margin:26px 0 0;text-align:center}
+  .template-next .prompt{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:#2B2A26;margin:0 0 14px}
+  .template-next p{font-size:14px;color:#6B665C;margin:12px 0}
+  .template-next a{font-size:14px;text-decoration:underline}
   .confetti{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:10}
   .confetti-piece{position:absolute;top:-12px;width:6px;height:9px;animation:confetti-fall 2.5s ease-in forwards}
   @keyframes confetti-fall{to{transform:translateY(105vh) rotate(720deg);opacity:0}}
@@ -92,7 +96,55 @@
       }
       box.insertAdjacentHTML('beforeend', '<p style="margin-top:12px">Or leave it, and it comes next week as usual.</p>');
     } else box.insertAdjacentHTML('beforeend', '<p>' + (a === 'done' ? 'Your next step arrives in about 3 days.' : 'Your next step arrives next week.') + '</p>');
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  }
+  var template2Preview = a === 'done' && q.get('p') === '1';
+  var template2Sent = a === 'sent' && q.get('p') === '1';
+  if (template2Preview || template2Sent) {
+    if (template2Preview) {
+      document.getElementById('t').innerHTML = 'Nice work. Your Cover Sheet is started.';
+      document.getElementById('m').innerHTML = 'Template 2 arrives by email in about 3 days. Here&rsquo;s a look at it now, so you can start thinking.';
+    } else {
+      document.getElementById('t').innerHTML = 'Nice work.';
+      document.getElementById('m').innerHTML = 'That&rsquo;s one more part of your plan your family won&rsquo;t have to guess at.';
+    }
+    var c = q.get('c'), t = q.get('t');
+    if (template2Preview) {
+      var html = '<div class="card sans"><p class="lab">Coming next &middot; Template 2 &middot; About 15 min</p>' +
+      '<h2 class="ct" style="font-family:Georgia,\'Times New Roman\',serif;font-weight:normal">Read This First</h2>' +
+      '<p class="cl">The page your family opens first: what to do right away, who to call, and who looks after the pets.</p>' +
+      '<ol class="rows" style="font-family:inherit">' +
+      [['What to do first', 'Already written for you. You&rsquo;ll just add anything missing.'],
+       ['Bank &amp; investment accounts', 'Which accounts do you have? Is someone named to get each one (POD or TOD)?'],
+       ['Who to contact', 'Who should your family call first?'],
+       ['Pet care', 'Vet, medical notes, and who takes them. No pets? You&rsquo;ll skip it.']]
+        .map(function (r, i) { return '<li><span class="n">' + (i + 1) + '</span><div><b>' + r[0] + '</b><span class="d">' + r[1] + '</span></div></li>'; }).join('') +
+      '</ol></div>';
+      var main = document.getElementById('main');
+      main.insertAdjacentHTML('beforeend', html);
+      var next = document.createElement('section');
+      next.className = 'template-next sans';
+      next.innerHTML = '<div class="prompt">Want to keep going?</div><p>Arrives in a few minutes, with step-by-step help. Or do nothing: it comes in 3 days.</p><a href="https://docs.google.com/document/d/1Yv3SXkTQ5AwokRpgeSFUlfuRovx4M9vEf8i0oUAJzOU/copy" target="_blank" rel="noopener">Or just copy Template 2 now</a>';
+      if (c && t) {
+        var form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/api/send-now';
+        form.innerHTML = '<input type="hidden" name="c"><input type="hidden" name="t"><button class="btn" type="submit">Send me Template 2 now</button>';
+        form.elements.c.value = c;
+        form.elements.t.value = t;
+        next.insertBefore(form, next.querySelector('p'));
+      } else {
+        next.insertAdjacentHTML('afterbegin', '<p>This send link is no longer available. Please use the link in your email.</p>');
+      }
+      main.appendChild(next);
+    } else {
+      var sentCard = document.createElement('div');
+      sentCard.className = 'done-card sans';
+      sentCard.innerHTML = '<h2>Look out for your next email</h2><p>Template 2 arrives in a few minutes.</p>';
+      main.appendChild(sentCard);
+    }
+  }
+  if (((a === 'done' && q.get('p') !== '1') || a === 'doneweek' || a === 'donenow' || template2Preview || template2Sent) &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       var colors = ['#2F4A3A', '#8A6135', '#E6D9BF', '#F2B640', '#6E8577'];
       var layer = document.createElement('div');
       layer.className = 'confetti';
@@ -107,25 +159,6 @@
       }
       document.body.appendChild(layer);
       window.setTimeout(function () { layer.remove(); }, 3200);
-    }
-  }
-  if (a === 'done' && q.get('p') === '1') {
-    document.getElementById('t').innerHTML = 'Nice work. Your Cover Sheet is started.';
-    document.getElementById('m').innerHTML = 'Template 2 arrives by email in about 3 days. Here&rsquo;s a look at it now, so you can start thinking.';
-    var rows = [
-      ['What to do first', 'Already written for you. You&rsquo;ll just add anything missing.'],
-      ['Bank &amp; investment accounts', 'Which accounts do you have? Is someone named to get each one (POD or TOD)?'],
-      ['Who to contact', 'Who should your family call first?'],
-      ['Pet care', 'Vet, medical notes, and who takes them. No pets? You&rsquo;ll skip it.']
-    ].map(function (r, i) { return '<li><span class="n">' + (i + 1) + '</span><div><b>' + r[0] + '</b><span class="d">' + r[1] + '</span></div></li>'; }).join('');
-    var html = '<div class="card sans"><p class="lab">Coming next &middot; Template 2 &middot; About 15 min</p>' +
-      '<h2 class="ct" style="font-family:Georgia,\'Times New Roman\',serif;font-weight:normal">Read This First</h2>' +
-      '<p class="cl">The page your family opens first: what to do right away, who to call, and who looks after the pets.</p>' +
-      '<ol class="rows" style="font-family:inherit">' + rows + '</ol></div>' +
-      '<a class="btn" href="https://docs.google.com/document/d/1Yv3SXkTQ5AwokRpgeSFUlfuRovx4M9vEf8i0oUAJzOU/copy" target="_blank" rel="noopener">Get a head start: copy Template 2<span class="sr-only"> (opens in new tab)</span></a>' +
-      '<p class="note">Totally optional. Then click File &rarr; Move and choose your Just In Case folder. The email still comes in 3 days with       step-by-step help.</p>';
-    var main = document.getElementById('main');
-    main.insertAdjacentHTML('beforeend', html);
   }
   if (a === 'newsoff' && q.get('c') && q.get('s')) document.getElementById('m').insertAdjacentHTML('afterend', '<p>Changed your mind? <a href="/api/action?a=newson&c=' + encodeURIComponent(q.get('c')) + '&s=' + encodeURIComponent(q.get('s')) + '">Turn monthly guides back on</a></p>');
 </script>

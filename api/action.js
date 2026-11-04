@@ -38,6 +38,7 @@ module.exports = async (req, res) => {
       if (a === 'donenow' && m.jic_track === 'weekly' && pos < 11) {
         u.jic_nowt = crypto.randomBytes(32).toString('hex');
         u.jic_nowp = pos;
+        u.jic_nowp1 = '';
       }
       break;
     case 'snooze':
@@ -67,9 +68,14 @@ module.exports = async (req, res) => {
     case 'newson': u.jic_news = ''; break;
     default: return res.status(400).send('Unknown action.');
   }
+  if (a === 'done' && m.jic_track === 'weekly' && pos === 1) {
+    u.jic_nowt = crypto.randomBytes(32).toString('hex');
+    u.jic_nowp = pos;
+    u.jic_nowp1 = '1';
+  }
   await saveMeta(c, u);
   const undo = a === 'newsoff' ? '&c=' + encodeURIComponent(c) + '&s=' + sign(c, 'newson') : '';
-  const doneNow = a === 'donenow' && u.jic_nowt ? '&c=' + encodeURIComponent(c) + '&t=' + encodeURIComponent(u.jic_nowt) : '';
+  const doneNow = u.jic_nowt ? '&c=' + encodeURIComponent(c) + '&t=' + encodeURIComponent(u.jic_nowt) : '';
   res.writeHead(302, { Location: '/thanks?a=' + encodeURIComponent(a) + (a === 'done' && m.jic_track === 'weekly' && pos === 1 ? '&p=1' : '') + doneNow + undo });
   res.end();
 };

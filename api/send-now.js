@@ -35,7 +35,8 @@ module.exports = async (req, res) => {
     jic_silent: (+m.jic_silent || 0) + 1,
     jic_nowt: '',
     jic_nowp: '',
+    jic_nowp1: '',
   });
-  res.writeHead(303, { Location: '/thanks?a=sent' });
+  res.writeHead(303, { Location: '/thanks?a=sent' + (m.jic_nowp1 === '1' ? '&p=1' : '') });
   res.end();
 };
