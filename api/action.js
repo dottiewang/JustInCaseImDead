@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const { sign, DAY, Q_TEMPLATE, getCustomer, saveMeta, send, verify, firstQForTemplate, finishUpdates, nextCheckpointUpdates } = require('../lib/core');
 
 module.exports = async (req, res) => {
@@ -24,6 +25,19 @@ module.exports = async (req, res) => {
       } else if (m.jic_track === 'easy') {
         if (a === 'skip') { const last = (+m.jic_q || 2) - 1; u.jic_skips = [m.jic_skips, last].filter(Boolean).join(','); }
         u.jic_next = soon(m.jic_next);
+      }
+      break;
+    case 'doneweek':
+    case 'donenow':
+      if (m.jic_track === 'done') {
+        if (m.jic_cpstyle !== 'guided' && m.jic_cpact === '1') Object.assign(u, nextCheckpointUpdates(m, now));
+      } else if (m.jic_track === 'weekly' && pos >= 11) {
+        Object.assign(u, finishUpdates(m, now));
+      }
+      if (m.jic_track === 'weekly' || m.jic_track === 'easy') u.jic_silent = 0;
+      if (a === 'donenow' && m.jic_track === 'weekly' && pos < 11) {
+        u.jic_nowt = crypto.randomBytes(32).toString('hex');
+        u.jic_nowp = pos;
       }
       break;
     case 'snooze':
@@ -55,6 +69,7 @@ module.exports = async (req, res) => {
   }
   await saveMeta(c, u);
   const undo = a === 'newsoff' ? '&c=' + encodeURIComponent(c) + '&s=' + sign(c, 'newson') : '';
-  res.writeHead(302, { Location: '/thanks?a=' + encodeURIComponent(a) + (a === 'done' && m.jic_track === 'weekly' && pos === 1 ? '&p=1' : '') + undo });
+  const doneNow = a === 'donenow' && u.jic_nowt ? '&c=' + encodeURIComponent(c) + '&t=' + encodeURIComponent(u.jic_nowt) : '';
+  res.writeHead(302, { Location: '/thanks?a=' + encodeURIComponent(a) + (a === 'done' && m.jic_track === 'weekly' && pos === 1 ? '&p=1' : '') + doneNow + undo });
   res.end();
 };

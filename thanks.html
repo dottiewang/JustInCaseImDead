@@ -12,9 +12,9 @@
   img{width:120px;height:auto;margin-bottom:40px}
   h1{font-weight:normal;font-size:34px;line-height:1.2;margin:0 0 16px}
   p{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6;color:#6B665C;margin:0 0 28px}
-  .btn{display:inline-block;padding:14px 26px;border-radius:4px;background:#2F4A3A;color:#FBF8F2;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-weight:700;text-decoration:none}
+  .btn{display:inline-block;padding:14px 26px;border:0;border-radius:4px;background:#2F4A3A;color:#FBF8F2;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-weight:700;text-decoration:none;font-size:16px;cursor:pointer}
   .btn:hover{background:#243A2D;color:#FBF8F2}
-  a:focus-visible{outline:3px solid #2F4A3A;outline-offset:2px}
+  a:focus-visible,button:focus-visible{outline:3px solid #2F4A3A;outline-offset:2px}
   .skip-link{position:absolute;left:-9999px;top:0}
   .skip-link:focus{left:12px;top:12px;background:#fff;color:#2F4A3A;padding:8px 12px;z-index:1000}
   .sans{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
@@ -29,6 +29,13 @@
   .rows span.d{font-size:15px;line-height:1.5;color:#4A463F}
   .note{font-size:14px;line-height:1.5;color:#6B665C;margin:14px 0 28px}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .done-card{background:#FBF8F2;border:1px solid #D3CBBB;border-radius:4px;padding:28px;margin:0 0 24px}
+  .done-card h2{font-size:21px;font-weight:normal;color:#2F4A3A;margin:0 0 8px}
+  .done-card p{font-size:15px;margin:0}
+  .confetti{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:10}
+  .confetti-piece{position:absolute;top:-12px;width:6px;height:9px;animation:confetti-fall 2.5s ease-in forwards}
+  @keyframes confetti-fall{to{transform:translateY(105vh) rotate(720deg);opacity:0}}
+  @media(prefers-reduced-motion:reduce){.confetti{display:none}.confetti-piece{animation:none}}
 </style>
 </head>
 <body>
@@ -38,12 +45,14 @@
   <main id="main">
     <h1 id="t">Got it.</h1>
     <p id="m">Thanks — we&rsquo;ve updated your plan.</p>
-    <a class="btn" href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener">Open Google Drive<span class="sr-only"> (opens in new tab)</span></a>
   </main>
 </div>
 <script>
   var M = {
-    done: ['Nice work.', 'Your next step will arrive in about 3 days.'],
+    done: ['Nice work.', 'That&rsquo;s one more part of your plan your family won&rsquo;t have to guess at.'],
+    doneweek: ['Nice work.', 'That&rsquo;s one more part of your plan your family won&rsquo;t have to guess at.'],
+    donenow: ['Nice work.', 'That&rsquo;s one more part of your plan your family won&rsquo;t have to guess at.'],
+    sent: ['Nice work.', 'On its way. Check your inbox in a few minutes.'],
     skip: ['No problem.', 'We&rsquo;ll bring that one back at the end. Your next email arrives in a few days.'],
     snooze: ['No problem.', 'We&rsquo;ll send this again later. Nothing is lost.'],
     easy: ['You&rsquo;re on easy mode.', 'Check your inbox &mdash; we&rsquo;ve just sent you the details. Your first question arrives in 2 days.<br><br>Changed your mind? Every easy mode email has a &ldquo;Switch back to weekly steps&rdquo; link at the bottom. You&rsquo;ll pick up where you left off.'],
@@ -61,6 +70,45 @@
   var a = new URLSearchParams(location.search).get('a');
   if (M[a]) { document.getElementById('t').innerHTML = M[a][0]; document.getElementById('m').innerHTML = M[a][1]; }
   var q = new URLSearchParams(location.search);
+  if ((a === 'done' && q.get('p') !== '1') || a === 'doneweek' || a === 'donenow') {
+    var title = a === 'done' ? 'Look out for your next email' : a === 'donenow' ? 'Ready for your next step?' : 'Look out for your next email';
+    var box = document.createElement('div');
+    box.className = 'done-card sans';
+    box.innerHTML = '<h2>' + title + '</h2>';
+    var main = document.getElementById('main');
+    main.appendChild(box);
+    if (a === 'donenow') {
+      var c = q.get('c'), t = q.get('t');
+      if (c && t) {
+        var form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/api/send-now';
+        form.innerHTML = '<input type="hidden" name="c"><input type="hidden" name="t"><button class="btn" type="submit">Send it now</button>';
+        form.elements.c.value = c;
+        form.elements.t.value = t;
+        box.appendChild(form);
+      } else {
+        box.insertAdjacentHTML('beforeend', '<p style="margin-top:12px">This send link is no longer available. Please use the link in your email.</p>');
+      }
+      box.insertAdjacentHTML('beforeend', '<p style="margin-top:12px">Or leave it, and it comes next week as usual.</p>');
+    } else box.insertAdjacentHTML('beforeend', '<p>' + (a === 'done' ? 'Your next step arrives in about 3 days.' : 'Your next step arrives next week.') + '</p>');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var colors = ['#2F4A3A', '#8A6135', '#E6D9BF', '#F2B640', '#6E8577'];
+      var layer = document.createElement('div');
+      layer.className = 'confetti';
+      layer.setAttribute('aria-hidden', 'true');
+      for (var i = 0; i < 40; i++) {
+        var piece = document.createElement('span');
+        piece.className = 'confetti-piece';
+        piece.style.left = Math.random() * 100 + '%';
+        piece.style.backgroundColor = colors[i % colors.length];
+        piece.style.animationDelay = Math.random() * 0.5 + 's';
+        layer.appendChild(piece);
+      }
+      document.body.appendChild(layer);
+      window.setTimeout(function () { layer.remove(); }, 3200);
+    }
+  }
   if (a === 'done' && q.get('p') === '1') {
     document.getElementById('t').innerHTML = 'Nice work. Your Cover Sheet is started.';
     document.getElementById('m').innerHTML = 'Template 2 arrives by email in about 3 days. Here&rsquo;s a look at it now, so you can start thinking.';
@@ -77,7 +125,6 @@
       '<a class="btn" href="https://docs.google.com/document/d/1Yv3SXkTQ5AwokRpgeSFUlfuRovx4M9vEf8i0oUAJzOU/copy" target="_blank" rel="noopener">Get a head start: copy Template 2<span class="sr-only"> (opens in new tab)</span></a>' +
       '<p class="note">Totally optional. Then click File &rarr; Move and choose your Just In Case folder. The email still comes in 3 days with       step-by-step help.</p>';
     var main = document.getElementById('main');
-    main.querySelector('a.btn').remove();
     main.insertAdjacentHTML('beforeend', html);
   }
   if (a === 'newsoff' && q.get('c') && q.get('s')) document.getElementById('m').insertAdjacentHTML('afterend', '<p>Changed your mind? <a href="/api/action?a=newson&c=' + encodeURIComponent(q.get('c')) + '&s=' + encodeURIComponent(q.get('s')) + '">Turn monthly guides back on</a></p>');
