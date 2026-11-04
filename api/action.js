@@ -13,6 +13,7 @@ module.exports = async (req, res) => {
   const u = { jic_silent: 0 };
   const soon = t => Math.min(+t || Infinity, now + 3 * DAY);
   const pos = +m.jic_pos || 0;
+  const w1Done = a === 'done' && pos === 1 && m.jic_track !== 'easy' && m.jic_track !== 'done';
 
   switch (a) {
     case 'done':
@@ -68,7 +69,7 @@ module.exports = async (req, res) => {
     case 'newson': u.jic_news = ''; break;
     default: return res.status(400).send('Unknown action.');
   }
-  if (a === 'done' && m.jic_track === 'weekly' && pos === 1) {
+  if (w1Done) {
     u.jic_nowt = crypto.randomBytes(32).toString('hex');
     u.jic_nowp = pos;
     u.jic_nowp1 = '1';
@@ -76,6 +77,6 @@ module.exports = async (req, res) => {
   await saveMeta(c, u);
   const undo = a === 'newsoff' ? '&c=' + encodeURIComponent(c) + '&s=' + sign(c, 'newson') : '';
   const doneNow = u.jic_nowt ? '&c=' + encodeURIComponent(c) + '&t=' + encodeURIComponent(u.jic_nowt) : '';
-  res.writeHead(302, { Location: '/thanks?a=' + encodeURIComponent(a) + (a === 'done' && m.jic_track === 'weekly' && pos === 1 ? '&p=1' : '') + doneNow + undo });
+  res.writeHead(302, { Location: '/thanks?a=' + encodeURIComponent(a) + (w1Done ? '&p=1' : '') + doneNow + undo });
   res.end();
 };
