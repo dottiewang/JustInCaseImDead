@@ -376,6 +376,9 @@ function Stage({
     } catch { return 0; }
   });
   const [playing, setPlaying] = React.useState(autoplay);
+  const [speed, setSpeed] = React.useState(1);
+  const speedRef = React.useRef(1);
+  speedRef.current = speed;
   // The external-playback latch: true while the HOST play bar is driving
   // time forward as genuine continuous playback (its play-loop seeks
   // carry detail.playing === true). The engine's own clock stays paused
@@ -434,7 +437,7 @@ function Stage({
     passesRef.current = 0;
     const step = (ts) => {
       if (lastTsRef.current == null) lastTsRef.current = ts;
-      const dt = (ts - lastTsRef.current) / 1000;
+      const dt = ((ts - lastTsRef.current) / 1000) * speedRef.current;
       lastTsRef.current = ts;
       setTime((t) => {
         let next = t + dt;
@@ -635,6 +638,14 @@ function Stage({
           onReplay={() => { setTime(0); setPlaying(true); }}
         />
       </div>
+      <PlaybackBar
+        time={displayTime} duration={duration} playing={playing}
+        speed={speed} onSpeed={setSpeed}
+        onPlayPause={() => { if (!playing && time >= duration) setTime(0); setPlaying(p => !p); }}
+        onReset={() => setTime(0)}
+        onSeek={(t) => setTime(clamp(t, 0, duration))}
+        onHover={setHoverTime}
+      />
     </div>
   );
 }
@@ -682,7 +693,7 @@ function VideoControls({ visible, onReplay }) {
 // Play/pause, return-to-begin, scrub track, time display.
 // Uses fixed-width time fields so layout doesn't thrash.
 
-function PlaybackBar({ time, duration, playing, onPlayPause, onReset, onSeek, onHover }) {
+function PlaybackBar({ time, duration, playing, speed = 1, onSpeed, onPlayPause, onReset, onSeek, onHover }) {
   const trackRef = React.useRef(null);
   const [dragging, setDragging] = React.useState(false);
 
@@ -836,6 +847,14 @@ function PlaybackBar({ time, duration, playing, onPlayPause, onReset, onSeek, on
       }}>
         {fmt(duration)}
       </div>
+
+      {onSpeed && (
+        <button
+          onClick={() => { const s = [0.5, 0.75, 1, 1.25, 1.5, 2]; onSpeed(s[(s.indexOf(speed) + 1) % s.length]); }}
+          title="Playback speed"
+          style={{ minWidth: 44, height: 24, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 5, color: '#f6f4ef', cursor: 'pointer', fontFamily: mono, fontSize: 12, padding: '0 6px' }}
+        >{speed}x</button>
+      )}
 
     </div>
   );
