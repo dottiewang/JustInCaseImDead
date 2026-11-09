@@ -741,7 +741,12 @@ function PlaybackBar({ time, duration, playing, speed = 1, onSpeed, onPlayPause,
   }, [dragging, timeFromEvent, onSeek]);
 
   const pct = duration > 0 ? (time / duration) * 100 : 0;
-  const fmt = (t) => `${Math.floor(Math.max(0, t))}s`;
+  const fmt = (t) => {
+    const total = Math.max(0, t);
+    const m = Math.floor(total / 60);
+    const s = Math.floor(total % 60);
+    return `${m}:${String(s).padStart(2, '0')}`;
+  };
 
   const mono = 'JetBrains Mono, ui-monospace, SFMono-Regular, monospace';
 
