@@ -57,7 +57,7 @@
           [
             "Written password book",
             "People who prefer paper; easy for family to use",
-            "Keep it locked away, and update it when passwords change"
+            "Often kept in a home safe or locked drawer; needs updating when passwords change"
           ],
           [
             "Saved in the browser",
@@ -72,7 +72,7 @@
         ]
       },
       {
-        "p": "Many people use a mix: a password manager for everyday logins, plus a sealed note in the binder with the master password and phone passcode."
+        "p": "Many people use a mix: a password manager for everyday logins, plus a sealed note in the binder with the master password and phone passcode. The binder itself often lives in a home safe or locked drawer, with one trusted person knowing the code or where the key is."
       }
     ],
     "n": 2,
